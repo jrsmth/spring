@@ -9,7 +9,7 @@
 <br>
 <br>
 
-<img src="./resources/spring-guru.png" alt="Spring Guru" width=200>
+<img src="./resources/spring-guru.png" alt="Spring Guru" width=150>
 * Spring Guru Udemy Course: [Spring Framework 5 - Beginner to Guru](https://www.udemy.com/course/spring-framework-5-beginner-to-guru/)
 
 <br>
