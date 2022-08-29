@@ -1,4 +1,10 @@
-<img src="./resources/spring-icon.svg" alt="Spring Logo" width=500>
+# Spring
+*Spring Training*
+
+<br>
+
+<img src="./resources/spring-icon.svg" alt="Spring Logo" width=300>
+
 <br>
 
 ## Content
