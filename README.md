@@ -10,7 +10,7 @@
 <br>
 
 ## Content
-* [This & That](./content/this.md)
+* [This](./content/this.md)
 
 <br>
 
