@@ -10,7 +10,7 @@
 <br>
 
 ## Content
-* [This & that](./content/this.md)
+* [Section 2: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
 
 <br>
 
