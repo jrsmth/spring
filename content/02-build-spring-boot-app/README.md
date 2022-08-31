@@ -35,6 +35,10 @@
 ## JPA Entities
 * POJO: Plain-Old Java Object
     * There seems to be a non-trivial [discussion](https://stackoverflow.com/questions/3326319/what-is-meaning-of-plain-old-java-object-pojo) of what constitutes a POJO
-    * I use the term in reference to a Java class that is not bound to a specific framework and is typically a class with fields, a constructor and setter/getter only  
-        * To be precise, this is probably too strict a definition because it can probably also contain business logic within extra methods. 
-            * However, I find myself using the term in reference to Java objects that serve as JPA entities, hence my tighter definition 
+    * I use the term in reference to a Java class that is not bound to a specific framework and is typically a class with fields, a constructor and getters/setters only  
+        * To be precise, this is perhaps too strict a definition because it can probably also contain business logic within extra methods. 
+        * However, I find myself using the term in reference to Java objects that serve as JPA entities, hence my tighter definition 
+* `@Entity` is used to convert our POJO into a JPA entity
+    * For our JPA entity we need to specify an ID and a generation strategy for that ID, using the following annotations:
+        * `@Id`
+        * `@GeneratedValue(strategy = GenerationType.AUTO)`
