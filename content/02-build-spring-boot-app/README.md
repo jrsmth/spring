@@ -39,6 +39,7 @@
         * To be precise, this is perhaps too strict a definition because it can probably also contain business logic within extra methods. 
         * However, I find myself using the term in reference to Java objects that serve as JPA entities, hence my tighter definition 
 * `@Entity` is used to convert our POJO into a JPA entity
-    * For our JPA entity we need to specify an ID and a generation strategy for that ID, using the following annotations:
-        * `@Id`
-        * `@GeneratedValue(strategy = GenerationType.AUTO)`
+    * For our JPA entity we need to specify an ID and a generation strategy for that ID
+        * We apply the following annotations to the desired field:
+            * `@Id`
+            * `@GeneratedValue(strategy = GenerationType.AUTO)`
