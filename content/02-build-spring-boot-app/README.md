@@ -28,3 +28,13 @@
     * In the associated `pom.xml` we configure the project meta-data and specify the required dependencies
     * A best-practise convention is to ommit the version numbers for dependencies, where possible:
         * Instead, relying on the dependency versions that come from the `spring-boot-starter-parent` POM, as they are managed by the Spring team ('curated-dependencies')
+
+<br>
+<br>
+
+## JPA Entities
+* POJO: Plain-Old Java Object
+    * There seems to be a non-trivial [discussion](https://stackoverflow.com/questions/3326319/what-is-meaning-of-plain-old-java-object-pojo) of what constitutes a POJO
+    * I use the term in reference to a Java class that is not bound to a specific framework and is typically a class with fields, a constructor and setter/getter only  
+        * To be precise, this is probably too strict a definition because it can probably also contain business logic within extra methods. 
+            * However, I find myself using the term in reference to Java objects that serve as JPA entities, hence my tighter definition 
