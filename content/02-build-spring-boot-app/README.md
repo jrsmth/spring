@@ -39,7 +39,10 @@
         * To be precise, this is perhaps too strict a definition because it can probably also contain business logic within extra methods. 
         * However, I find myself using the term in reference to Java objects that serve as JPA entities, hence my tighter definition 
 * `@Entity` is used to convert our POJO into a JPA entity
-    * For our JPA entity we need to specify an ID and a generation strategy for that ID
+    * For our JPA entity, we need to specify an ID and a generation strategy for that ID
         * We apply the following annotations to the desired field:
             * `@Id`
             * `@GeneratedValue(strategy = GenerationType.AUTO)`
+    * We can set the relationships between our JPA entitites by using annotations such as `@ManyToMany`
+        * Likewsie, we may wish to define a join table and can do so by using `@JoinTable`
+        * We can see an example of this relationship between the `Author` and `Book` entities with the [Introductory Webapp](./content/02-build-spring-boot-app/exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/domain/Book.java)
