@@ -45,4 +45,4 @@
             * `@GeneratedValue(strategy = GenerationType.AUTO)`
     * We can set the relationships between our JPA entitites by using annotations such as `@ManyToMany`
         * Likewsie, we may wish to define a join table and can do so by using `@JoinTable`
-        * We can see an example of this relationship between the `Author` and `Book` entities with the [Introductory Webapp](./content/02-build-spring-boot-app/exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/domain/Book.java)
+        * We can see an example of this relationship between the `Author` and `Book` entities with the [Introductory Webapp](./exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/domain/Book.java)
