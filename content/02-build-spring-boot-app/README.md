@@ -31,7 +31,7 @@
 ## JPA Entities
 * POJO: Plain-Old Java Object
     * There seems to be a non-trivial [discussion](https://stackoverflow.com/questions/3326319/what-is-meaning-of-plain-old-java-object-pojo) of what constitutes a POJO
-    * I use the term in reference to a Java class that is not bound to a specific framework and is typically a class with fields, a constructor and getters/setters only  
+    * I use the term in reference to a Java class that is not bound to a specific framework and is typically a class with fields, a constructor and getters/setters only
         * To be precise, this is perhaps too strict a definition because it can probably also contain business logic within extra methods. 
         * However, I find myself using the term in reference to Java objects that serve as JPA entities, hence my tighter definition 
 * `@Entity` is used to convert our POJO into a JPA entity
@@ -42,3 +42,11 @@
     * We can set the relationships between our JPA entitites by using annotations such as `@ManyToMany`
         * Likewsie, we may wish to define a join table and can do so by using `@JoinTable`
         * We can see an example of this relationship between the `Author` and `Book` entities with the [Introductory Webapp](./exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/domain/Book.java)
+    * JPA requires our entities to have a no-args contructor
+* Equality in Hibernate:
+    * We *can* provide a custom implementation of an entity's `hashCode()` and `equals()` methods in order to define what it means for our objects to be equal
+    * This is a contentious topic, with the most popular approach being found in this [article](https://web.archive.org/web/20171211235806/http://www.onjava.com/pub/a/onjava/2006/09/13/dont-let-hibernate-steal-your-identity.html) and Stack Overflow [post](https://stackoverflow.com/questions/5031614/the-jpa-hashcode-equals-dilemma)
+        * In summary:
+            * "Object identity is deceptively hard to implement correctly when objects are persisted to a database. However, the problems stem entirely from allowing objects to exist without an id before they are saved. We can solve these problems by taking the responsibility of assigning object IDs away from object-relational mapping frameworks such as Hibernate. **Instead, object IDs can be assigned as soon as the object is instantiated.** This makes object identity simple and error-free and reduces the amount of code needed in the domain model."
+        * TLDR: GRoT - don't bother overriding the equality
+    * If you ever did want to override the `hashcode()`/`toString()`/`equals()` methods, an example can be found in the `Book` [class](./exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/domain/Book.java)
