@@ -53,7 +53,7 @@
 
 <br>
 
-## H2
+## H2
 * Console:
     * We can access the H2 console by setting the following property in our `application.properties` and going to `http://localhost:8080/h2-console`
         * `spring.h2.console.enabled=true`
