@@ -41,7 +41,7 @@
             * `@GeneratedValue(strategy = GenerationType.AUTO)`
     * We can set the relationships between our JPA entitites by using annotations such as `@ManyToMany`
         * Likewsie, we may wish to define a join table and can do so by using `@JoinTable`
-        * We can see an example of this relationship between the `Author` and `Book` entities with the [Introductory Webapp](./exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/domain/Book.java)
+        * We can see an example of this relationship between the `Author` and `Book` entities with the [Introductory Webapp](./exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/model/Book.java)
     * JPA requires our entities to have a no-args contructor
 * Equality in Hibernate:
     * We *can* provide a custom implementation of an entity's `hashCode()` and `equals()` methods in order to define what it means for our objects to be equal
@@ -49,4 +49,4 @@
         * In summary:
             * "Object identity is deceptively hard to implement correctly when objects are persisted to a database. However, the problems stem entirely from allowing objects to exist without an id before they are saved. We can solve these problems by taking the responsibility of assigning object IDs away from object-relational mapping frameworks such as Hibernate. **Instead, object IDs can be assigned as soon as the object is instantiated.** This makes object identity simple and error-free and reduces the amount of code needed in the domain model."
         * TLDR: GRoT - don't bother overriding the equality
-    * If you ever did want to override the `hashcode()`/`toString()`/`equals()` methods, an example can be found in the `Book` [class](./exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/domain/Book.java)
+    * If you ever did want to override the `hashcode()`/`toString()`/`equals()` methods, an example can be found in the `Book` [class](./exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/model/Book.java)
