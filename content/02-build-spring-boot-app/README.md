@@ -50,3 +50,13 @@
             * "Object identity is deceptively hard to implement correctly when objects are persisted to a database. However, the problems stem entirely from allowing objects to exist without an id before they are saved. We can solve these problems by taking the responsibility of assigning object IDs away from object-relational mapping frameworks such as Hibernate. **Instead, object IDs can be assigned as soon as the object is instantiated.** This makes object identity simple and error-free and reduces the amount of code needed in the domain model."
         * TLDR: GRoT - don't bother overriding the equality
     * If you ever did want to override the `hashcode()`/`toString()`/`equals()` methods, an example can be found in the `Book` [class](./exercises/introduction/src/main/java/com/jrsmiffy/springguru/introduction/model/Book.java)
+
+<br>
+
+## H2
+* Console:
+    * We can access the H2 console by setting the following property in our `application.properties` and going to `http://localhost:8080/h2-console`
+        * `spring.h2.console.enabled=true`
+    * If we do not set a JDBC url in the config, we can find the temporary JDBC url in the tomcat startup logs 
+        * `H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:909af60b-c298-4c9c-a9dd-85f3e7e44aa8'`
+            * We use `jdbc:h2:mem:909af60b-c298-4c9c-a9dd-85f3e7e44aa8` as the JDBC url, with a user:pass combo of `sa`:none

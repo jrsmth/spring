@@ -25,6 +25,9 @@ public class Book {
     @NonNull private String title; // note: @RequiredArgsConstructor applies to final fields and those annotated with @NonNull
     @NonNull private String isbn;
 
+    @OneToOne
+    @NonNull private Publisher publisher;
+
     @ManyToMany
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors = new HashSet<>(); // note: the join table stores which authors are matched to which books
