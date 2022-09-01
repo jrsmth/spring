@@ -2,12 +2,10 @@
 *High-level introduction to Spring Boot applications*
 
 <br>
-<br>
 
 ## Exercises
 * [Introductory Webapp](./exercises/introduction)
 
-<br>
 <br>
 
 ## Spring Initialzr
@@ -21,7 +19,6 @@
     * IntelliJ UE allows us to create Spring Boot projects (via the Spring Initializr API), through the 'new project' wizard
 
 <br>
-<br>
 
 ## Project Management
 * In the 'Introductory' exercise, we're using maven.
@@ -29,7 +26,6 @@
     * A best-practise convention is to ommit the version numbers for dependencies, where possible:
         * Instead, relying on the dependency versions that come from the `spring-boot-starter-parent` POM, as they are managed by the Spring team ('curated-dependencies')
 
-<br>
 <br>
 
 ## JPA Entities
