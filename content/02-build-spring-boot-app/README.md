@@ -65,7 +65,7 @@
 
 ## Spring MVC
 * MVC Pattern:
-    * 'Model-View-Controller' is an architectural pattern for building applications that accept a request, processe it and serve a response back to the user
+    * 'Model-View-Controller' is an architectural pattern for building applications that accept a request, process it and serve a response back to the user
     * Note, the order of the MVC name (Model, then View, then Controller):
         * I see this as moving back from the database to the user, from the user to the databse would be CVM (Controller, then View, then Model).
         * First, the request hits the controller, which creates the view to be returned by manipulating the model. The view, in this sense, is not the UI but rather the response containing the manipulated model.
