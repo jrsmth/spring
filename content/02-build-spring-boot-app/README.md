@@ -60,3 +60,62 @@
     * If we do not set a JDBC url in the config, we can find the temporary JDBC url in the tomcat startup logs 
         * `H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:909af60b-c298-4c9c-a9dd-85f3e7e44aa8'`
             * We use `jdbc:h2:mem:909af60b-c298-4c9c-a9dd-85f3e7e44aa8` as the JDBC url, with a user:pass combo of `sa`:none
+
+<br>
+
+## Spring MVC
+* MVC Pattern:
+    * 'Model-View-Controller' is an architectural pattern for building applications that accept a request, processe it and serve a response back to the user
+    * Note, the order of the MVC name (Model, then View, then Controller):
+        * I see this as moving back from the database to the user, from the user to the databse would be CVM (Controller, then View, then Model).
+        * First, the request hits the controller, which creates the view to be returned by manipulating the model. The view, in this sense, is not the UI but rather the response containing the manipulated model.
+
+    <br>
+    <br>
+
+    <img src="./res/mvc-pattern.png" alt="MVC Pattern" width=300>
+
+    <br>
+    <br>
+
+    * Components:
+        * Model: 
+            * Simple POJO with collection of properties used by the view; it is not the data itself, rather the wrapper in which in the data gets pass around within the app
+        * View: 
+            * The data requested by the client, which is rendered to the screen in the UI but is not the UI itself; the view contains the manipulated model data
+        * Controller: 
+            * Handles the request and returns the response (the view)
+                * The controller is the interface between the user and the application and as such should contain no/minimal business logic for manipulating the model (creating the view) - this should be delegated to a service layer
+    * Advantages:
+        * The MVC pattern allow us to segregate the business logic (service layer), data (database) and the UI (frontend + view) so each responsibility can be implemented independently and changes to one, do not effect the others
+            * In this sense, the controller layer, repository layer and model are just nuts and bolts the allow data to flow through the app, with:
+                * The controller layer being an interface between the frontend and backend
+                * The repository layer being an interface between the backend and the database
+                * The model being a wrapper that allows data to be passed between components of the application
+    * How does MVC fit into the structure of modern Spring Boot apps?
+
+    <br>
+    <br>
+
+    <img src="./res/modern-springboot.png" alt="Spring MVC" width=600>
+
+    <br>
+    <br>
+
+* Spring MVC
+    * Spring MVC is a Spring module that combines the advantages of the MVC pattern with the convenience of Spring.
+
+    <br>
+    <br>
+
+    <img src="./res/spring-mvc.png" alt="Spring MVC" width=600>
+
+    <br>
+    <br>
+
+    * Overview:
+        * When a request comes in, Spring registers a Dispatcher Servlet within the Tomcat Server that the application is running on
+        * The Dispatch Servlet is akin to a Main Controller that routes requests to the desired endpoint in our custom controller layer
+        * Our controller layer invokes the desired business logic in the service layer, which in turn manipulates the data model that has been retrieved using the Spring Data JPA module
+        * The service hands the manipulated model back to the controller, which passes it to the Dispatcher Servlet
+        * The Dispatcher Servlet creates the view from the manipulated model and renders it for the user via the selected template engine (JSP, Thymeleaf, etc)
