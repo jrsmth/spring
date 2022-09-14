@@ -97,7 +97,7 @@
     <br>
     <br>
 
-    <img src="./res/modern-springboot.png" alt="Spring MVC" width=600>
+    <img src="./res/modern-springboot.png" alt="Spring MVC" width=800>
 
     <br>
     <br>
@@ -108,7 +108,7 @@
     <br>
     <br>
 
-    <img src="./res/spring-mvc.png" alt="Spring MVC" width=600>
+    <img src="./res/spring-mvc.png" alt="Spring MVC" width=800>
 
     <br>
     <br>
