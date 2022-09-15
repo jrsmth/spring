@@ -119,3 +119,9 @@
         * Our controller layer invokes the desired business logic in the service layer, which in turn manipulates the data model that has been retrieved using the Spring Data JPA module
         * The service hands the manipulated model back to the controller, which passes it to the Dispatcher Servlet
         * The Dispatcher Servlet creates the view from the manipulated model and renders it for the user via the selected template engine (JSP, Thymeleaf, etc)
+* Controllers:
+    * In a Controller class, we associate a request path with a method
+        * This is done by annotating the method with `@RequestMapping` and providing the relative path to be mapped on to it
+    * The `@Controller` annotation registers our class as a Spring Bean and as a Controller within Spring MVC
+        * Using `@RestController` instead, will implicitly apply `@ResponseBody` to each method; which converts the method return value into the body of a HTTP response
+            * In practise, this means that return objects are automatically converted into JSON

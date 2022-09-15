@@ -13,11 +13,14 @@ import org.springframework.stereotype.Component;
 
 /**
  * Sets up data for our application
+ *
+ * @author jamessmith
+ * @since Thursday 1st September 2022
  */
 @Component
 @AllArgsConstructor
 @Slf4j
-public class BootStrapData implements CommandLineRunner {
+public class BootstrapData implements CommandLineRunner {
 
     private final AuthorRepository authorRepository;
     private final BookRepository bookRepository;
