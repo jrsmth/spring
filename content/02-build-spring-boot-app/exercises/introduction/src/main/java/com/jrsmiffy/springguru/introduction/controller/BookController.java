@@ -3,7 +3,7 @@ package com.jrsmiffy.springguru.introduction.controller;
 import com.jrsmiffy.springguru.introduction.repository.BookRepository;
 
 /**
- * Controller for Books
+ * Controller for Books Mappings
  *
  * @author jamessmith
  * @since Thursday 15th September 2022
