@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> <!-- Note: HTML is a subset of XML -->
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring Framework Guru</title>
+</head>
+<body>
+<h1>Author List</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Books</th>
+    </tr>
+    <tr th:each="author : ${authors}">
+        <td th:text="${author.id}"></td>
+        <td><span th:text="${author.firstName}"></span> <span th:text="${author.lastName}"></span></td>
+        <td th:text="${author.books}"></td> <!-- Note: requires some non-trivial formatting; currently displays the memory reference for the Set object -->
+    </tr>
+</table>
+
+</body>
+</html>
