@@ -1,6 +1,9 @@
 package com.jrsmiffy.springguru.introduction.controller;
 
 import com.jrsmiffy.springguru.introduction.repository.BookRepository;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Controller for Books Mappings
@@ -19,9 +22,10 @@ public class BookController {
 
     @RequestMapping("/books")
     public String getBooks(Model model){
-
         model.addAttribute("books", bookRepository.findAll());
 
-        return "books";
+        return "books/list.html";
+
     }
+
 }
