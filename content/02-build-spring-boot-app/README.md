@@ -1,4 +1,4 @@
-# Building a Spring Boot App
+# Section 2: Building a Spring Boot App
 *High-level introduction to Spring Boot applications*
 
 <br>
