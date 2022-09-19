@@ -18,6 +18,7 @@
 * Note, the class-level has been used to illustrate the point here but the same applies from the field and method levels all the way up to the level of micro-services
 
 #### Open Closed
+* Classes should be OPEN for EXTENSION but CLOSED to MODIFICATION
 
 #### Liskov Substitution
 
