@@ -11,6 +11,7 @@
 
 ## Content
 * [Section 2: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
+* [Section 3: Dependency Injection With Spring](./content/02-dependency-injection)
 
 <br>
 
