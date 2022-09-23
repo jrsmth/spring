@@ -4,7 +4,7 @@
 <br>
 
 ## Exercises
-* [RM if unnec.](./exercises/introduction)
+* [Dependency Injection](./exercises/dependency-injection)
 
 <br>
 
