@@ -1,4 +1,4 @@
-# Section 3: Dependency Injection With Spring
+# Section 3: Dependency Injection with Spring
 *Description*
 
 <br>
@@ -45,3 +45,18 @@
         * This makes code more maintainable, easier to test and easier to extend over time
     * Software development is about trade-offs:
         * We should be pragmatic when using SOLID, rather dogmatic
+
+<br>
+
+## The Spring Application Context
+* The Spring Application Context is an object that provides configuration information for the rest of the app.
+    * It represents the Spring IoC container and is responsible for instantiating, configuring and assembling the beans.
+    * The responsibilites of the `ApplicationContext` interface include, but are not limited to:
+        * Bean Factory for application components
+        * Bean injection
+        * Application listeners
+        * Logger
+        * Loading config files (`.properties`, `.yaml`, etc)
+* Good References:
+    * [Stack Overflow post](https://stackoverflow.com/questions/19615972/application-context-what-is-this)
+    * [Zetcode article](https://zetcode.com/springboot/applicationcontext/)
