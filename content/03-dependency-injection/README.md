@@ -80,8 +80,22 @@
             * Dependencies can be `final`
             * Dependencies can be mocked in testing
                 * Without tricks like reflection
+        * Constructor injection with interfaces is preferred over concrete classes:
+            * It enables the exact implementation to be decided at runtime
+            * It makes mocking even easier
+            * It follows the Integration Segregation SOLID principle
         * Good reference:
             * [Stack Overflow post](https://stackoverflow.com/questions/40620000/spring-autowire-on-properties-vs-constructor)
 * Note, you don't have to defer to the Spring Context to manage every object
     * You should be pragmatic in the use of constructor injection, field injection (`@Autowired`) and plain old instantiation with `new`
-        * Each one has there place
+        * Each one has its place
+* Inversion of Control (IoC):
+    * This is the technique that allows dependencies to be injected at runtime
+        * Where the control for which implementation is injected is deletegated to the framework, rather than the class receiving them
+        * Good reference:
+            * [Stack Overflow post](https://stackoverflow.com/questions/3058/what-is-inversion-of-control)
+    * IoC vs DI:
+        * DI refers to the composition of your class
+            * In the sense that we define objects without creating them
+        * IoC is part of the runtime environment for our application
+            * Which is responsible for performing the actual dependency injection; here, that control is inverted, delegated from the class to the framework
