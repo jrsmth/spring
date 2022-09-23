@@ -1,5 +1,5 @@
 # Section 3: Dependency Injection with Spring
-*Description*
+*Allowing the framework to create and manage dependencies for us*
 
 <br>
 
@@ -57,6 +57,10 @@
         * Application listeners
         * Logger
         * Loading config files (`.properties`, `.yaml`, etc)
-* Good References:
-    * [Stack Overflow post](https://stackoverflow.com/questions/19615972/application-context-what-is-this)
-    * [Zetcode article](https://zetcode.com/springboot/applicationcontext/)
+    * Good References:
+        * [Stack Overflow post](https://stackoverflow.com/questions/19615972/application-context-what-is-this)
+        * [Zetcode article](https://zetcode.com/springboot/applicationcontext/)
+        * [Spring docs](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html)
+* The hallmark of dependency injection is allowing the Spring framework to create and manage our dependencies for us
+    * We can see in the example [here](./exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/DependencyInjectionApplication.java), that by annotating with `@Controller`, the class is automatically loaded into the application context.
+    * Note, `SpringApplication.run()` in the app's `main()` method returns an instance of `ApplicationContext`
