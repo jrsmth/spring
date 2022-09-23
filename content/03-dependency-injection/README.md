@@ -97,4 +97,5 @@
     * IoC vs DI:
         * DI refers to the composition of your class; in the sense that we define objects without creating them
         * IoC is part of the runtime environment for our application
-            * Which is responsible for performing the actual dependency injection; here, that control is inverted, delegated from the class to the framework
+            * Which is responsible for performing the actual dependency injection
+                * Here, that control is inverted, delegated from the class to the framework
