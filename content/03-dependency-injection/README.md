@@ -73,8 +73,8 @@
         * They are just made available to us, auto-magically.
         * The class bears no responsibility about how its dependencies are instantiated
 * Constructor vs Field Injection:
-    * Spring prefers constructor injection
-        * That is, it is better more often than not, to list your dependencies as constructor parameters; rather than declare them as fields and use `@Autowired`
+    * Spring prefers constructor injection:
+        * It is better, more often than not, to list your dependencies as constructor parameters; rather than declare them as fields and use `@Autowired`
         * Rationale:
             * Dependencies are clearly identifiable
             * Dependencies can be `final`
