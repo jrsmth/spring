@@ -63,4 +63,25 @@
         * [Spring docs](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html)
 * The hallmark of dependency injection is allowing the Spring framework to create and manage our dependencies for us
     * We can see in the [example](./exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/DependencyInjectionApplication.java), that the `@Controller` annotation, automatically loads our class into the application context.
-    * Note, `SpringApplication.run()` in the app's `main()` method returns an instance of `ApplicationContext`
+        * Note, `SpringApplication.run()` in the app's `main()` method returns an instance of `ApplicationContext`
+
+<br>
+
+## Dependency Injection
+* In our code, we create a class by specifying the composite classes (dependencies) that are required for it's function
+    * At runtime, Spring provides these dependencies without us having to be concerned about the process
+        * They are just made available to us, auto-magically.
+        * The class bears no responsibility about how its dependencies are instantiated
+* Constructor vs Field Injection:
+    * Spring prefers constructor injection
+        * That is, it is better more often than not, to list your dependencies as constructor parameters; rather than declare them as fields and use `@Autowired`
+        * Rationale:
+            * Dependencies are clearly identifiable
+            * Dependencies can be `final`
+            * Dependencies can be mocked in testing
+                * Without tricks like reflection
+        * Good reference:
+            * [Stack Overflow post](https://stackoverflow.com/questions/40620000/spring-autowire-on-properties-vs-constructor)
+* Note, you don't have to defer to the Spring Context to manage every object
+    * You should be pragmatic in the use of constructor injection, field injection (`@Autowired`) and plain old instantiation with `new`
+        * Each one has there place
