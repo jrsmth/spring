@@ -130,5 +130,5 @@
 * `@Qualifier`:
     * The `@Qualifier` annotation allows us to specify which bean we wish to inject, by providing its name
         * This avoids a `NoUniqueBeanDefinitionException` because it disambiguates the selection, if more than one bean of the same type exists
-            * One [example use](./exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/service/ConstructorGreetingService.java) would be to differentiate which service we want injected into our controller, should there be multiple implementations
+            * One [example use](./exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/controller/ConstructorInjectedController.java) would be to differentiate which service we want injected into our controller, should there be multiple implementations
     * [Baeldung Reference](https://www.baeldung.com/spring-qualifier-annotation)
