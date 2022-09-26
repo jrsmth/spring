@@ -116,7 +116,7 @@
                         }
                     ```
                     * [Good Stack Overflow](https://stackoverflow.com/questions/28024942/how-to-autowire-resttemplate-using-annotations)
-        * `Autowired` can be applied to the constructor (required before Spring 4.2), the setter or the field directly
+        * `@Autowired` can be applied to the constructor (required before Spring 4.2), the setter or the field directly
             * I see no reason to ever apply it to the constructor or setter; use it on the field only
         * Reminder: constructor-injection is recommended in Spring
             * IntelliJ will raise a warning saying as much, on `@Autowired` fields
