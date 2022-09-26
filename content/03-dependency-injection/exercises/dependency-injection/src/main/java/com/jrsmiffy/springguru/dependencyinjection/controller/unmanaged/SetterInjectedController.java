@@ -1,15 +1,14 @@
-package com.jrsmiffy.springguru.dependencyinjection.controller;
+package com.jrsmiffy.springguru.dependencyinjection.controller.unmanaged;
 
 import com.jrsmiffy.springguru.dependencyinjection.service.GreetingService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 
-@Controller
+// note: controllers in the 'unmanaged' package have not been marked as Spring beans, to showcase manual D.I
 public class SetterInjectedController {
+    // note: this class, plus its test, showcases how to manually inject dependencies (w/o Spring), using setters
+        // Obviously not recommended...
 
     private GreetingService greetingService;
 
-    @Autowired // note: You can autowire a property through its setter
     public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
@@ -19,4 +18,3 @@ public class SetterInjectedController {
     }
 
 }
-

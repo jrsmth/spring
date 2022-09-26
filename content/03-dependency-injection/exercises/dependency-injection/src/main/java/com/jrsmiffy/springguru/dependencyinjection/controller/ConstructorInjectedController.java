@@ -1,13 +1,14 @@
 package com.jrsmiffy.springguru.dependencyinjection.controller;
 
 import com.jrsmiffy.springguru.dependencyinjection.service.GreetingService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
-    // note: this class, plus its test, showcases how to manually inject dependencies (w/o Spring), using constructors
-        // Constructor injection is recommended but should be delegated to Spring!
 
-    private final GreetingService greetingService; // note: best practise to use final for our dependencies
+    private final GreetingService greetingService; // note: no @Autowired required, Spring automatically injects via the public constructor
 
+    // note: Until Spring 4.2, you had to annotate the constructor with @Autowired
     public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
@@ -15,4 +16,6 @@ public class ConstructorInjectedController {
     public String getGreeting() {
         return greetingService.sayGreeting();
     }
+
 }
+

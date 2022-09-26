@@ -1,5 +1,6 @@
-package com.jrsmiffy.springguru.dependencyinjection.controller;
+package com.jrsmiffy.springguru.dependencyinjection.controller.unmanaged;
 
+import com.jrsmiffy.springguru.dependencyinjection.controller.unmanaged.SetterInjectedController;
 import com.jrsmiffy.springguru.dependencyinjection.service.GreetingServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;

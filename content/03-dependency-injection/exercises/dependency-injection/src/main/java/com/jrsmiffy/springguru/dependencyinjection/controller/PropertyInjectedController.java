@@ -1,12 +1,14 @@
 package com.jrsmiffy.springguru.dependencyinjection.controller;
 
 import com.jrsmiffy.springguru.dependencyinjection.service.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class PropertyInjectedController {
-    // note: this class, plus its test, showcases how to manually inject dependencies (w/o Spring), using properties
-        // Obviously not recommended...
 
-    public GreetingService greetingService; // note: public to allow direct access in the test (demo purposes)
+    @Autowired // note: GreetingService must be a bean to be autowired -> requires @Service
+    public GreetingService greetingService;
 
     public String getGreeting() {
         return greetingService.sayGreeting();
@@ -14,3 +16,4 @@ public class PropertyInjectedController {
 
 
 }
+

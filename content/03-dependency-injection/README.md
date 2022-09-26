@@ -99,3 +99,31 @@
         * IoC is part of the runtime environment for our application
             * Which is responsible for performing the actual dependency injection
                 * Here, that control is inverted and delegated from the class to the framework
+* `@Autowired`:
+    * All Spring Beans are managed by the framework; that is, they live inside a container, called the Application Context
+        * Autowiring is the process by which an instance of one bean is injected into the desired field of another bean
+            * Therefore, the `@Autowired` annotation marks that desired field for dependency injection at runtime
+                * [Good Stack Overflow](https://stackoverflow.com/questions/3153546/how-does-autowiring-work-in-spring)
+    * Note:
+        * Only other managed beans can be injected with `@Autowired`
+            * Typical err: `Could not autowire. No beans of 'GreetingService' type found`
+                * We need to ensure `GreetingService` is annotated with `@Service`
+                * With examples like `RestTemplate`, we need to manually create the instance:
+                    ```java
+                        @Bean
+                        public RestTemplate restTemplate(RestTemplateBuilder builder) {
+                            return builder.build();
+                        }
+                    ```
+                    * [Good Stack Overflow](https://stackoverflow.com/questions/28024942/how-to-autowire-resttemplate-using-annotations)
+        * `Autowired` can be applied to the constructor (required before Spring 4.2), the setter or the field directly
+            * I see no reason to ever apply it to the constructor or setter; use it on the field only
+        * Reminder: constructor-injection is recommended in Spring
+            * IntelliJ will raise a warning saying as much, on `@Autowired` fields
+        * `@Inject` is similar annotation for dependency injection
+            * However, it comes from Java's core technology and is separate from Spring
+            *  [Good Stack Overflow](https://stackoverflow.com/questions/7142622/what-is-the-difference-between-inject-and-autowired-in-spring-framework-which)        
+
+<br>
+
+### Spring Beans
