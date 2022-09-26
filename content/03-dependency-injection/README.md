@@ -123,7 +123,6 @@
         * `@Inject` is similar annotation for dependency injection
             * However, it comes from Java's core technology and is separate from Spring
             *  [Good Stack Overflow](https://stackoverflow.com/questions/7142622/what-is-the-difference-between-inject-and-autowired-in-spring-framework-which)        
-
 * Spring Beans:
     * Objects that are managed by the Spring IoC Container are called "beans"
         * A Bean is an object that is instantiated, assembled and managed by the Spring IoC Container
