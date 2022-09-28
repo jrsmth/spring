@@ -133,4 +133,4 @@
             * One [example use](./exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/controller/ConstructorInjectedController.java) would be to differentiate which service we want injected into our controller, should there be multiple implementations
         * [Baeldung Reference](https://www.baeldung.com/spring-qualifier-annotation)
     * Similarly, the `@Primary` annotation tells Spring which bean to prioritise for injection, when we have multiple beans of the same type
-        * It contrasts from `@Qualifier` in that, `@Primary` is applied to the dependency, whereas `@Qualifier` is applied in the dependent class.
+        * It contrasts from `@Qualifier` in that `@Primary` is applied to the dependency, whereas `@Qualifier` is applied in the dependent class.
