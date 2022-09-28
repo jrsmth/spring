@@ -127,8 +127,10 @@
     * Objects that are managed by the Spring IoC Container are called "beans"
         * A Bean is an object that is instantiated, assembled and managed by the Spring IoC Container
     * [Good Stack Overflow](https://stackoverflow.com/questions/17193365/what-in-the-world-are-spring-beans)
-* `@Qualifier`:
+* Qualifiers:
     * The `@Qualifier` annotation allows us to specify which bean we wish to inject, by providing its name
         * This avoids a `NoUniqueBeanDefinitionException` because it disambiguates the selection, if more than one bean of the same type exists
             * One [example use](./exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/controller/ConstructorInjectedController.java) would be to differentiate which service we want injected into our controller, should there be multiple implementations
-    * [Baeldung Reference](https://www.baeldung.com/spring-qualifier-annotation)
+        * [Baeldung Reference](https://www.baeldung.com/spring-qualifier-annotation)
+    * Similarly, the `@Primary` annotation tells Spring which bean to prioritise for injection, when we have multiple beans of the same type
+        * It contrasts from `@Qualifier` in that, `@Primary` is applied to the dependency, whereas `@Qualifier` is applied in the dependent class.
