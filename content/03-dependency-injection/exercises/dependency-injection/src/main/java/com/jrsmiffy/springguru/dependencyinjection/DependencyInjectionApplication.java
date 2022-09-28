@@ -35,6 +35,10 @@ public class DependencyInjectionApplication {
 		ConstructorInjectedController constructorController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		log.info(constructorController.getGreeting());
 
+		/** Showcasing @Primary */
+		log.info("--- Showcasing @Primary ---");
+		log.info(controller.getGreeting());
+
 	}
 
 }
