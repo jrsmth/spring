@@ -149,5 +149,5 @@
         * `spring.profiles.default=<PROFILE_NAME>`
 * Active profile:
     * We can set the active profile in two ways:
-        1. In the application config: `spring.profiles.active=<PROFILE_NAME>`
-        2. As a command-line parameter: `-Dspring.profiles.active=PROFILE_NAME>`
+        * In the application config: `spring.profiles.active=<PROFILE_NAME>`
+        * As a command-line parameter: `-Dspring.profiles.active=PROFILE_NAME>`
