@@ -144,4 +144,10 @@
     * In other words, a bean with an attached profile will only be available for dependency injection, if that profile is active at runtime
 * Default profile:
     * There exists a `default` profile that is considered active, if no other profile has been set
-    * [Example](./exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/service/SpanishGreetingService.java) that uses `default` as a backup profile to ensure the bean is wired into the context even if the other profile is inactive
+        * Any bean that does not specify a profile belongs to the default profile
+    * We can set the default profile to be set at runtime, via the application config:
+        * `spring.profiles.default=<PROFILE_NAME>`
+* Active profile:
+    * We can set the active profile in two ways:
+        1. In the application config: `spring.profiles.active=<PROFILE_NAME>`
+        2. As a command-line parameter: `-Dspring.profiles.active=PROFILE_NAME>`
