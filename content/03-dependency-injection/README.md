@@ -145,9 +145,11 @@
 * Default profile:
     * There exists a `default` profile that is considered active, if no other profile has been set
         * Any bean that does not specify a profile belongs to the default profile
-    * We can set the default profile to be set at runtime, via the application config:
+    * We can set our own profile to be used at runtime by default, via the application config:
         * `spring.profiles.default=<PROFILE_NAME>`
 * Active profile:
     * We can set the active profile in two ways:
         * In the application config: `spring.profiles.active=<PROFILE_NAME>`
         * As a command-line parameter: `-Dspring.profiles.active=PROFILE_NAME>`
+    * When a non-default profile is active, configuration from the `application-<PROFILE_NAME>.properties` file will be applied
+        * By the same token, the default profile is always active and so the 'default' `application.properties` file is always applied
