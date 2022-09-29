@@ -142,3 +142,6 @@
     * They allow us to have beans in our configuration that will take on different characteristics at runtime
 * If a bean has an inactive profile applied to it, that bean will not be loaded into the Spring Context
     * In other words, a bean with an attached profile will only be available for dependency injection, if that profile is active at runtime
+* Default profile:
+    * There exists a `default` profile that is considered active, if no other profile has been set
+    * An [example](./exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/service/SpanishGreetingService.java) using `default` as a backup profile to ensure a bean is wired into the context even if the other profile is inactive
