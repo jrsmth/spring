@@ -134,3 +134,11 @@
         * [Baeldung Reference](https://www.baeldung.com/spring-qualifier-annotation)
     * Similarly, the `@Primary` annotation tells Spring which bean to prioritise for injection, when we have multiple beans of the same type
         * It contrasts from `@Qualifier` in that `@Primary` is applied to the dependency, whereas `@Qualifier` is applied in the dependent class.
+
+<br>
+
+## Spring Profiles
+* Profiles are a commonly-used feature of dependency injection within the Spring framework
+    * They allow us to have beans in our configuration that will take on different characteristics at runtime
+* If a bean has an inactive profile applied to it, that bean will not be loaded into the Spring Context
+    * In other words, a bean with an attached profile will only be available for dependency injection, if that profile is active at runtime

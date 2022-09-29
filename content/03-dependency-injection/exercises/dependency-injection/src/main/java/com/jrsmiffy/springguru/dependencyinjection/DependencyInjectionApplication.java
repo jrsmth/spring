@@ -1,9 +1,6 @@
 package com.jrsmiffy.springguru.dependencyinjection;
 
-import com.jrsmiffy.springguru.dependencyinjection.controller.ConstructorInjectedController;
-import com.jrsmiffy.springguru.dependencyinjection.controller.ConversationController;
-import com.jrsmiffy.springguru.dependencyinjection.controller.PropertyInjectedController;
-import com.jrsmiffy.springguru.dependencyinjection.controller.SetterInjectedController;
+import com.jrsmiffy.springguru.dependencyinjection.controller.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -38,6 +35,12 @@ public class DependencyInjectionApplication {
 		/** Showcasing @Primary */
 		log.info("--- Showcasing @Primary ---");
 		log.info(controller.getGreeting());
+
+		/** Showcasing Spring Profiles */
+		log.info("--- Showcasing Spring Profiles ---");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		log.info(i18nController.welcome());
+		// note: this will welcome() in English or Spanish, depending on the profile set in app.prop
 
 	}
 
