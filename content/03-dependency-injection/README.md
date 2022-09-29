@@ -154,5 +154,5 @@
     * When a non-default profile is active, configuration from the `application-<PROFILE_NAME>.properties` file will be applied
         * By the same token, the default profile is always active and so the 'default' `application.properties` file is always applied
             * Therefore, we do not have to repeat properties in our non-default profiles
-                * We can avoid duplication by putting as much generalised config into the default `application.properties`
+                * We can avoid duplication by putting all generalised config into the default `application.properties`
             * Note, `application-default.yml` is functionally equivalent to `application.properties`
