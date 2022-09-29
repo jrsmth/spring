@@ -145,7 +145,7 @@
 * Default profile:
     * There exists a `default` profile that is always considered active, even if another profile has also been set
         * Any bean that does not specify a profile belongs to the default profile
-    * We can set a custom profile to be used by default, via the application config:
+    * Spring also provides a way to set the default profile when no other profile is active, via the application config:
         * `spring.profiles.default=<PROFILE_NAME>`
 * Active profile:
     * We can set the active profile in two ways:
