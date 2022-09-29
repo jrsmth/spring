@@ -143,7 +143,7 @@
 * If a bean has an inactive profile applied to it, that bean will not be loaded into the Spring Context
     * In other words, a bean with an attached profile will only be available for dependency injection, if that profile is active at runtime
 * Default profile:
-    * There exists a `default` profile that is considered active, if no other profile has been set
+    * There exists a `default` profile that is always considered active, even if another profile has also been set
         * Any bean that does not specify a profile belongs to the default profile
     * We can set a custom profile to be used by default, via the application config:
         * `spring.profiles.default=<PROFILE_NAME>`
@@ -153,3 +153,6 @@
         * As a command-line parameter: `-Dspring.profiles.active=PROFILE_NAME>`
     * When a non-default profile is active, configuration from the `application-<PROFILE_NAME>.properties` file will be applied
         * By the same token, the default profile is always active and so the 'default' `application.properties` file is always applied
+            * Therefore, we do not have to repeat properties in our non-default profiles
+                * We can avoid duplication by putting as much generalised config into the default `application.properties`
+            * Note, `application-default.yml` is functionally equivalent to `application.properties`
