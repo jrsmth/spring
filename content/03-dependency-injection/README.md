@@ -158,3 +158,22 @@
             * Therefore, we do not have to repeat properties in our non-default profiles
                 * We can avoid duplication by putting all generalised config into the default `application.properties`
             * Note, `application-default.yml` is functionally equivalent to `application.properties`
+
+<br>
+
+## Spring Bean Lifecycle
+* Steps:
+    1. Instantiate the class
+    2. Set up the properties of the class
+    3. Spring will call the `setBeanName()` method, if you've implemented `BeanNameAware`
+    4. Spring will call the `setBeanFactory()`, if you've implemented `BeanFactoryAware`
+    5. Spring will call `setApplicationContext`, if you've implemented `ApplicationContextAware`
+
+<br>
+
+<img src="./res/spring_bean_lifecycle.png" width="800">
+
+<br>
+<br>
+
+* This & that
