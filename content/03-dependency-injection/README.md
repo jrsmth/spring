@@ -162,7 +162,7 @@
 <br>
 
 ## Spring Bean Lifecycle
-* Steps:
+* Startup Steps:
     1. Instantiate the class
     2. Set up the properties of the class
     3. Spring will call the `setBeanName()` method, if you've implemented `BeanNameAware`
@@ -181,4 +181,28 @@
 <br>
 <br>
 
-* This & that
+* Shutdown steps:
+    1. Container shutdown is initiated
+    2. Methods annotated with `@PreDestroy` are executed
+    3. Spring will call the `destroy()` method, if `DisposableBean` is implemented
+
+<br>
+
+<img src="./res/spring_bean_deathcycle.png" width="800">
+
+<br>
+<br>
+
+* Callback Interfaces:
+    * You can implement the following interfaces for call back events:
+        * `InitializingBean.afterPropertiesSet()`:
+            * Called after the properties are set during start up
+        * `DisposableBean.destroy()`:
+            * Called as part of bean destruction during shutdown
+* Lifecycle Annotations:
+    * Spring provides two annotations that allow us to hook into the bean lifecyle:
+        * `@PostConstruct`:
+            * Annotated methods will be called after the bean is constructed but before it is returned to the requesting object
+        * `@PreDestroy`:
+            * Annotated methods will be called just before the bean is destroyed by the container
+* Good [article](https://dzone.com/articles/spring-bean-lifecycle) on the Spring Bean Lifecycle
