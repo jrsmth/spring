@@ -179,7 +179,6 @@
 <img src="./res/spring_bean_lifecycle.png" width="800">
 
 <br>
-<br>
 
 * Shutdown steps:
     1. Container shutdown is initiated
@@ -190,7 +189,6 @@
 
 <img src="./res/spring_bean_deathcycle.png" width="800">
 
-<br>
 <br>
 
 * Callback Interfaces:
