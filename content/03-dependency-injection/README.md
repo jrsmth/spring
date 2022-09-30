@@ -167,7 +167,12 @@
     2. Set up the properties of the class
     3. Spring will call the `setBeanName()` method, if you've implemented `BeanNameAware`
     4. Spring will call the `setBeanFactory()`, if you've implemented `BeanFactoryAware`
-    5. Spring will call `setApplicationContext`, if you've implemented `ApplicationContextAware`
+    5. Spring will call `setApplicationContext()`, if you've implemented `ApplicationContextAware`
+    6. Pre-Initialisation stage (using Bean Post-Processors)
+    7. Spring will call the `afterPropertiesSet()` method of the `InitializingBean` interface
+    8. Custom init methods will be run
+    9. Post-Initialisation stage (using Bean Post-Processors)
+    10. The bean is now ready for use; the application is ready when all beans are wired into the context
 
 <br>
 
