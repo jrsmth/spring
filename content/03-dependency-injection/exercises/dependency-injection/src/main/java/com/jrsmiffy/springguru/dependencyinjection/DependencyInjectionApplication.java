@@ -1,6 +1,7 @@
 package com.jrsmiffy.springguru.dependencyinjection;
 
 import com.jrsmiffy.springguru.dependencyinjection.controller.*;
+import com.jrsmiffy.springguru.dependencyinjection.pet.PetController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -41,6 +42,11 @@ public class DependencyInjectionApplication {
 		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
 		log.info(i18nController.welcome());
 		// note: this will welcome() in English or Spanish, depending on the profile set in app.prop
+
+		/** D.I Assignment :: Favourite Pet */
+		log.info("--- D.I Assignment :: Favourite Pet ---");
+		PetController petController = ctx.getBean("petController", PetController.class);
+		log.info("The best pet is {}", petController.getFavouritePetType());
 
 	}
 
