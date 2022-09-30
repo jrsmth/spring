@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 // Question :: Is this understanding correct?
 @Service
 public class DogService implements PetService {
+
     public String getPetType(){
         return "a dog!";
     }
