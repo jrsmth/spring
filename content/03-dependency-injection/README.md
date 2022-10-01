@@ -51,11 +51,7 @@
         * Such changes can have rippling effects across the application making the application fragile.
 * To reiterate, the core message of Dependency Inversion is that instead of high-level modules depending on low-level modules, both should depend on an abstraction:
 
-<br>
-
 <img src="./res/dependency_inversion.png" width="500">
-
-<br>
 
 * In the figure above, without Dependency Inversion, Object A in Package A refers Object B in Package B. 
     * With Dependency Inversion, an Interface A is introduced as an abstraction in Package A. 
