@@ -120,10 +120,10 @@
             * I see no reason to ever apply it to the constructor or setter; use it on the field only
         * Reminder: constructor-injection is recommended in Spring
             * IntelliJ will raise a warning saying as much, on `@Autowired` fields
+            * Whilst you *can* use dependency injection against a private field in Spring (via Reflection), it is considered bad practise    
         * `@Inject` is similar annotation for dependency injection
             * However, it comes from Java's core technology and is separate from Spring
-            *  [Good Stack Overflow](https://stackoverflow.com/questions/7142622/what-is-the-difference-between-inject-and-autowired-in-spring-framework-which) 
-        * Whilst you *can* use dependency injection against a private field in Spring (via Reflection), it is considered bad practise       
+            *  [Good Stack Overflow](https://stackoverflow.com/questions/7142622/what-is-the-difference-between-inject-and-autowired-in-spring-framework-which)    
 * Spring Beans:
     * Objects that are managed by the Spring IoC Container are called "beans"
         * A Bean is an object that is instantiated, assembled and managed by the Spring IoC Container
