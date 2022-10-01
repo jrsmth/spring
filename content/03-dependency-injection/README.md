@@ -49,6 +49,7 @@
     * When we instantiate a dependency of our class with the `new` keyword, we tightly couple the two classes together
     * When one class knows explicitly about the design and implementation of another class, changes to one class raise the risk of breaking the other class. 
         * Such changes can have rippling effects across the application making the application fragile.
+* To reiterate, the core message of Dependency Inversion is that instead of high-level modules depending on low-level modules, both should depend on an abstraction:
 
 <br>
 
@@ -56,7 +57,12 @@
 
 <br>
 
-* The core message of Dependency Inversion is that instead of high-level modules depending on low-level modules, both should depend on an abstraction.
+* In the figure above, without Dependency Inversion, Object A in Package A refers Object B in Package B. 
+    * With Dependency Inversion, an Interface A is introduced as an abstraction in Package A. 
+        * Object A now refers Interface A and Object B inherits from Interface A. 
+    * What the principle has done is:
+        1. Both Object A and Object B now depends on Interface A, the abstraction.
+        2. It inverted the dependency that existed from Object A to Object B into Object B being dependent on the abstraction (Interface A).
 
 <br>
 
