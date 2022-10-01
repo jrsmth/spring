@@ -64,8 +64,6 @@
         1. Both Object A and Object B now depends on Interface A, the abstraction.
         2. It inverted the dependency that existed from Object A to Object B into Object B being dependent on the abstraction (Interface A).
 
-<br>
-
 #### Summary
 * A key theme of SOLID is to avoid the tight-coupling of software components
     * This makes code more maintainable, easier to test and easier to extend over time
