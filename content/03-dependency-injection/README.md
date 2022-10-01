@@ -67,10 +67,10 @@
 <br>
 
 #### Summary
-    * A key theme of SOLID is to avoid the tight-coupling of software components
-        * This makes code more maintainable, easier to test and easier to extend over time
-    * Software development is about trade-offs:
-        * We should be pragmatic when using SOLID, rather dogmatic
+* A key theme of SOLID is to avoid the tight-coupling of software components
+    * This makes code more maintainable, easier to test and easier to extend over time
+* Software development is about trade-offs:
+    * We should be pragmatic when using SOLID, rather dogmatic
 
 <br>
 
