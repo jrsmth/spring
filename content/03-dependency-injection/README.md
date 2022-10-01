@@ -20,8 +20,11 @@
 #### Open Closed
 * Classes should be open for extension but closed to modification
 * This means that you can extend the functionality of a class, without modifying the exisiting functionality
-* Use abstract base classes, where appropriate
-* Use encapsulation - adding public getters and setters, where appropriate
+* The answer to this in Java-land is abstraction:
+    * We can create abstractions through interfaces and abstract base classes 
+        * These should be fixed yet represent an unbounded group of potential behaviours that we can extend through concrete subclasses
+            * Hence, we should default to interfaces and abstract base classes where appropriate
+    * We should also default to encapsulation in order to limit the modification of our classes
 
 #### Liskov Substitution
 * Liskov Substitution states that: 
