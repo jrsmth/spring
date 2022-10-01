@@ -203,4 +203,17 @@
             * Annotated methods will be called after the bean is constructed but before it is returned to the requesting object
         * `@PreDestroy`:
             * Annotated methods will be called just before the bean is destroyed by the container
+* Bean Post-Processors:
+    * Provides a way to tap into the Spring context lifecycle and interact with beans as they are processed
+        * These are called for all beans in the context
+    * The `BeanPostProcessor` interface offers us two methods:
+        * `postProcessBeforeInitalization()`:
+            * Called before the bean initialization method
+        * `postProcessAfterInitialization()`:
+            * Called after bean initialization
+* `Aware` Interfaces:
+    * There exists 14+ `Aware` interfaces, that are used to access the Spring Framework infrastructure
+        * They are used frequently by the Spring Framework, itself
+            * However, are rarely used by us, the developers
+    * Examples include: `ApplicationContextAware`, `BeanNameAware` & `MessageSourceAware`
 * Good [article](https://dzone.com/articles/spring-bean-lifecycle) on the Spring Bean Lifecycle
