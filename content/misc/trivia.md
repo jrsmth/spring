@@ -6,3 +6,8 @@
 ### The Spring Framework was created by Rod Johnson as an alternative to what framework?
 * J2EE, known today as JEE, or Java Enterprise Edition
 
+<br>
+
+### Who is the original author of the SOLID principles?
+* Robert C. Martin, a.k.a 'Uncle Bob'
+

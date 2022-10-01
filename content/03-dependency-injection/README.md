@@ -122,7 +122,8 @@
             * IntelliJ will raise a warning saying as much, on `@Autowired` fields
         * `@Inject` is similar annotation for dependency injection
             * However, it comes from Java's core technology and is separate from Spring
-            *  [Good Stack Overflow](https://stackoverflow.com/questions/7142622/what-is-the-difference-between-inject-and-autowired-in-spring-framework-which)        
+            *  [Good Stack Overflow](https://stackoverflow.com/questions/7142622/what-is-the-difference-between-inject-and-autowired-in-spring-framework-which) 
+        * Whilst you *can* use dependency injection against a private field in Spring (via Reflection), it is considered bad practise       
 * Spring Beans:
     * Objects that are managed by the Spring IoC Container are called "beans"
         * A Bean is an object that is instantiated, assembled and managed by the Spring IoC Container
