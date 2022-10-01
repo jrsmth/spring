@@ -24,7 +24,7 @@
     * We can create abstractions through interfaces and abstract base classes 
         * These should be fixed yet represent an unbounded group of potential behaviours that we can extend through concrete subclasses
             * Hence, we should default to interfaces and abstract base classes where appropriate
-    * We should also default to encapsulation in order to limit the modification of our classes
+* We should also default to encapsulation in order to limit the modification of our classes
 
 #### Liskov Substitution
 * Liskov Substitution states that: 
@@ -39,12 +39,24 @@
     * Instead, many client-specific interfaces are better than one general-purpose interface
 * Interface Segregation is linked closely with Single Responsibility: 
     * Both advocate that your software components are small, focused and highly cohesive 
-    * The difference is that Single Responsibility is concerned with classes, while Interface Segregation is concerned with interfaces.
+    * The difference is that Single Responsibility is concerned with classes, while Interface Segregation is concerned with interfaces
 
 #### Dependency Inversion
 * Abstractions should not depend on details; Details (concrete implementations) should depend on abstractions
 * High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces)
 * Note, this is not the same Dependency Injection; which is how objects obtain their dependencies at runtime
+* As much as possible, we want to avoid tightly-coupled software components:
+    * When we instantiate a dependency of our class with the `new` keyword, we tightly couple the two classes together
+    * When one class knows explicitly about the design and implementation of another class, changes to one class raise the risk of breaking the other class. 
+        * Such changes can have rippling effects across the application making the application fragile.
+
+<br>
+
+<img src="./res/dependency_inversion.png" width="800">
+
+<br>
+
+* The core message of Dependency Inversion is that instead of high-level modules depending on low-level modules, both should depend on an abstraction.
 
 <br>
 
