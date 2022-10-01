@@ -217,3 +217,4 @@
             * However, are rarely used by us, the developers
     * Examples include: `ApplicationContextAware`, `BeanNameAware` & `MessageSourceAware`
 * Good [article](https://dzone.com/articles/spring-bean-lifecycle) on the Spring Bean Lifecycle
+* Bean Lifecycle [Demo](./exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/lifecycle/LifecycleDemoBean.java)
