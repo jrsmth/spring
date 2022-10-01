@@ -52,7 +52,7 @@
 
 <br>
 
-<img src="./res/dependency_inversion.png" width="800">
+<img src="./res/dependency_inversion.png" width="500">
 
 <br>
 
