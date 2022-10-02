@@ -5,6 +5,7 @@
 
 ## Exercises
 * [Dependency Injection](./exercises/dependency-injection)
+* [S.O.L.I.D](./exercises/solid)
 
 <br>
 
