@@ -48,7 +48,8 @@
 * As much as possible, we want to avoid tightly-coupled software components:
     * When we instantiate a dependency of our class with the `new` keyword, we tightly couple the two classes together
     * When one class knows explicitly about the design and implementation of another class, changes to one class raise the risk of breaking the other class. 
-        * Such changes can have rippling effects across the application making the application fragile.
+        * Such changes can have rippling effects across the application making the application fragile
+* In essence, Dependency Inversion is a combination of the Open Closed and Liskov Substitution principles
 * To reiterate, the core message of Dependency Inversion is that instead of high-level modules depending on low-level modules, both should depend on an abstraction:
 
 <img src="./res/dependency_inversion.png" width="500">
