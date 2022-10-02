@@ -2,6 +2,9 @@ package com.jrsmiffy.springguru.solid.openClosed.bad;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Responsible for validating health insurance claims
+ */
 @Slf4j
 public class HealthInsuranceSurveyor {
 
