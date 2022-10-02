@@ -26,7 +26,7 @@
         * These should be fixed yet represent an unbounded group of potential behaviours that we can extend through concrete subclasses
             * Hence, we should default to interfaces and abstract base classes where appropriate
 * We should also default to encapsulation in order to limit the modification of our classes
-* Open Closed [demo](content/03-dependency-injection/exercises/solid/src/test/java/com/jrsmiffy/springguru/solid/openClosed/good/ClaimApprovalManagerTest.java)
+* Open Closed [demo](./exercises/solid/src/test/java/com/jrsmiffy/springguru/solid/openClosed/good/ClaimApprovalManagerTest.java)
 
 #### Liskov Substitution
 * Liskov Substitution states that: 
