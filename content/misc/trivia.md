@@ -8,6 +8,6 @@
 
 <br>
 
-### Who is the original author of the SOLID principles?
+### Who is the original author of the SOLID principles?
 * Robert C. Martin, a.k.a 'Uncle Bob'
 
