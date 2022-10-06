@@ -30,3 +30,5 @@ public class ToyHouse implements Toy {
 
     In summary: The Toy interface violates Interface Segregation by forcing its clients (implementation classes) to depend on methods that they do not use.
  */
+
+
