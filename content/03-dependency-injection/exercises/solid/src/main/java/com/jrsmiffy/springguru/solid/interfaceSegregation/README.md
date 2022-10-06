@@ -1,2 +1,2 @@
 # Interface Segregation Principle
-* Make interfaces fine-grained; they should not force the implementing class to implement a method that it does not need
+* Make interfaces fine-grained so that they do not force their clients to implement redundant methods
