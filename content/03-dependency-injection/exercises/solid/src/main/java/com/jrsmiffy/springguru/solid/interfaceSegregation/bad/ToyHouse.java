@@ -25,5 +25,5 @@ public class ToyHouse implements Toy {
         We would be better off splitting the Toy interface into multiple role interfaces each for a specific behavior:
             Such as Movable() or Flyable()
 
-    In summary: The Toy interface forces clients (implementation classes) to depend on methods that they do not use.
+    In summary: The Toy interface violates Interface Segregation by forcing its clients (implementation classes) to depend on methods that they do not use.
  */

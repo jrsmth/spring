@@ -38,7 +38,7 @@
 * Keep components focused on a single responsibility and minimise dependence between them
 * We should avoid 'fat interfaces', which are bloated with methods that some clients do not require
     * Uncle Bob: "Clients should not be forced to depend on methods that they do not use"
-        * An interface should not force the implementing class to implement a method that it does not need
+        * An interface should not force an implementation class to implement a method that it does not need
     * Instead, many client-specific interfaces are better than one general-purpose interface
 * Interface Segregation is linked closely with Single Responsibility: 
     * Both advocate that your software components are small, focused and highly cohesive 
