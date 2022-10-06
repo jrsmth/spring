@@ -71,6 +71,8 @@
         2. It inverted the dependency that existed from Object A to Object B into Object B being dependent on the abstraction (Interface A).
 * Dependency Inversion [demo](./exercises/solid/src/main/java/com/jrsmiffy/springguru/solid/dependencyInversion/bad/ElectricPowerSwitch.java)
 
+---
+
 #### Summary
 * A key theme of SOLID is to avoid the tight-coupling of software components
     * This makes code more maintainable, easier to test and easier to extend over time
