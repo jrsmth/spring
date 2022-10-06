@@ -45,7 +45,8 @@
     * The difference is that Single Responsibility is concerned with classes, while Interface Segregation is concerned with interfaces
 * In summary:
     * Make interfaces fine-grained so that they do not force their clients to implement redundant methods
-        * Interfaces should represent a specific behaviour (*Do*-able) and include methods that pertain to that behaviour only
+        * Interfaces should represent a specific behaviour and include methods that pertain to that behaviour only
+            * In this sense, Classes are nouns and Interfaces are verbs (e.g `Runnable()`, `Fly()`)
 * Interface Segregation [demo](./exercises/solid/src/test/java/com/jrsmiffy/springguru/solid/interfaceSegregation/...)
 
 #### Dependency Inversion
