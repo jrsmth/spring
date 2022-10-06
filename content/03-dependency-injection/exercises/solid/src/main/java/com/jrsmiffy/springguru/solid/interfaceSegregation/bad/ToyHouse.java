@@ -2,18 +2,21 @@ package com.jrsmiffy.springguru.solid.interfaceSegregation.bad;
 
 public class ToyHouse implements Toy {
 
-    double price;
-    String color;
+    private double price;
+    private String colour;
+
     @Override
     public void setPrice(double price) {
         this.price = price;
     }
     @Override
-    public void setColor(String color) {
-        this.color=color;
+    public void setColour(String colour) {
+        this.colour = colour;
     }
+
     @Override
     public void move(){} // note: redundant method that violates the Interface Segregation principle
+
     @Override
     public void fly(){} // note: redundant method that violates the Interface Segregation principle
 
