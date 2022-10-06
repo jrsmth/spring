@@ -15,10 +15,10 @@ public class ToyHouse implements Toy {
     }
 
     @Override
-    public void move(){} // note: redundant method that violates the Interface Segregation principle
+    public void move(){} // note: redundant method which violates the Interface Segregation principle
 
     @Override
-    public void fly(){} // note: redundant method that violates the Interface Segregation principle
+    public void fly(){} // note: redundant method which violates the Interface Segregation principle
 
 }
 /**

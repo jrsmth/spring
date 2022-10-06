@@ -31,7 +31,7 @@ public class ToyPlane implements Toy, Movable, Flyable {
 
     @Override
     public String toString(){
-        return "Plane :: Price: " + price + " & Colour: " + colour;
+        return "Plane :: Price: £" + price + " & Colour: " + colour;
     }
 
 }

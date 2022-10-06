@@ -26,7 +26,7 @@ public class ToyCar implements Toy, Movable {
 
     @Override
     public String toString(){
-        return "Car :: Price: " + price + " & Colour: " + colour;
+        return "Car :: Price: £" + price + " & Colour: " + colour;
     }
 
 }

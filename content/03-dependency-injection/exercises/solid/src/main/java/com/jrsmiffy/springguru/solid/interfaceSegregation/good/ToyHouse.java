@@ -20,7 +20,7 @@ public class ToyHouse implements Toy {
 
     @Override
     public String toString(){
-        return "House :: Price: " + price + " & Colour: " + color;
+        return "House :: Price: £" + price + " & Colour: " + color;
     }
 
 }

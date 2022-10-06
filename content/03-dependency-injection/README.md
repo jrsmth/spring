@@ -26,7 +26,7 @@
         * These should be fixed yet represent an unbounded group of potential behaviours that we can extend through concrete subclasses
             * Hence, we should default to interfaces and abstract base classes where appropriate
 * We should also default to encapsulation in order to limit the modification of our classes
-* Open Closed [demo](./exercises/solid/src/test/java/com/jrsmiffy/springguru/solid/openClosed/good/ClaimApprovalManagerTest.java)
+* Open Closed [demo](./exercises/solid/src/main/java/com/jrsmiffy/springguru/solid/openClosed/bad/ClaimApprovalManager.java)
 
 #### Liskov Substitution
 * Liskov Substitution states that: 
@@ -58,7 +58,8 @@
     * When one class knows explicitly about the design and implementation of another class, changes to one class raise the risk of breaking the other class. 
         * Such changes can have rippling effects across the application making the application fragile
 * In essence, Dependency Inversion is a combination of the Open Closed and Liskov Substitution principles
-* To reiterate, the core message of Dependency Inversion is that instead of high-level modules depending on low-level modules, both should depend on an abstraction:
+* To reiterate, the core message of Dependency Inversion is:
+    * Instead of high-level modules depending on low-level modules, both should depend on an abstraction:
 
 <img src="./res/dependency_inversion.png" width="500">
 
@@ -68,6 +69,7 @@
     * What the principle has done is:
         1. Both Object A and Object B now depends on Interface A, the abstraction.
         2. It inverted the dependency that existed from Object A to Object B into Object B being dependent on the abstraction (Interface A).
+* Dependency Inversion [demo](./exercises/solid/src/main/java/com/jrsmiffy/springguru/solid/dependencyInversion/bad/ElectricPowerSwitch.java)
 
 #### Summary
 * A key theme of SOLID is to avoid the tight-coupling of software components
