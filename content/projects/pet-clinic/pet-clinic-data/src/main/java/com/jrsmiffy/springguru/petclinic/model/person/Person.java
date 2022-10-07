@@ -1,4 +1,4 @@
-package com.jrsmiffy.springguru.petclinic.model;
+package com.jrsmiffy.springguru.petclinic.model.person;
 
 import lombok.Getter;
 import lombok.Setter;
