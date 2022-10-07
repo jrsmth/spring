@@ -43,10 +43,17 @@
 * Interface Segregation is linked closely with Single Responsibility: 
     * Both advocate that your software components are small, focused and highly cohesive 
     * The difference is that Single Responsibility is concerned with classes, while Interface Segregation is concerned with interfaces
+* Side note:
+    * Interface naming conventions:
+        * As Interfaces should represent a specific behaviour, their names should represent that action, rather than an entity (like Classes do)
+            * In this sense, Classes are nouns and Interfaces are verbs (e.g `Runnable()`, `Fly()`)
+            * The exception to this rule is with our service layer (`-Service`)
+                * Implementation classes of these service interfaces can follow the `-Impl` naming convention, if only one exists
+                    * Else, we need to be more specific in our naming (e.g `-HashMapImpl`, `JpaImpl`)
+                        * EXAMPLE HERE!?
 * In summary:
     * Make interfaces fine-grained so that they do not force their clients to implement redundant methods
         * Interfaces should represent a specific behaviour and include methods that pertain to that behaviour only
-            * In this sense, Classes are nouns and Interfaces are verbs (e.g `Runnable()`, `Fly()`)
 * Interface Segregation [demo](./exercises/solid/src/main/java/com/jrsmiffy/springguru/solid/interfaceSegregation/bad/ToyHouse.java)
 
 #### Dependency Inversion
