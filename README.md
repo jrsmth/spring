@@ -12,6 +12,7 @@
 ## Content
 * [Section 2: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
 * [Section 3: Dependency Injection with Spring](./content/03-dependency-injection)
+* [Section 4: Building a Jokes App](./content/04-build-jokes-app)
 
 <br>
 
