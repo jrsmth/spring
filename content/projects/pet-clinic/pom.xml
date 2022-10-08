@@ -58,7 +58,7 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:git@github.com:jrsmiffy/spring/content/projects/pet-clinic.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:jrsmiffy/spring.git</developerConnection>
 		<tag>pet-clinic-0.0.1</tag>
 	</scm>
 
