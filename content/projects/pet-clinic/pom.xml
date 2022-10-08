@@ -60,6 +60,6 @@
 	</build>
 	<scm>
 		<developerConnection>scm:git:https://github.com/JRSmiffy/spring.git</developerConnection>
-	  <tag>HEAD</tag>
+	  	<tag>HEAD</tag>
   </scm>
 </project>
