@@ -53,10 +53,18 @@
 					<goals>install</goals>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<additionalJOption>-Xdoclint:none</additionalJOption>
+					<!-- Fix for JDOC generation error during mvn:release-perform -->
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<scm>
 		<developerConnection>scm:git:https://github.com/JRSmiffy/spring.git</developerConnection>
-		<tag>pet-clinic-0.0.1</tag>
+		<tag>pet-clinic-0.0.3</tag>
 	</scm>
 </project>
