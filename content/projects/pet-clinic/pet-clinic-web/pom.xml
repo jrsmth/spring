@@ -9,8 +9,10 @@
     <name>Pet Clinic :: Web Module</name>
     <url>https://maven.apache.org</url>
     <properties>
-        <!-- Fix for JDOC generation error during mvn:release-perform -->
-        <additionalparam>-Xdoclint:none</additionalparam>
+        <additionalJOptions>
+            <!-- Fix for JDOC generation error during mvn:release-perform -->
+            <additionalJOption>-Xdoclint:none</additionalJOption>
+        </additionalJOptions>
     </properties>
     <dependencies>
         <dependency>
