@@ -5,5 +5,4 @@
 
 ## Showcase
 * [Multi-Module Maven Builds](./pom.xml)
-
-
+* [Maven Release Plugin for tags on GitHub](./pom.xml)
