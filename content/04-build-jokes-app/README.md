@@ -4,8 +4,10 @@
 <br>
 
 ## Exercises
-* [This & That](./exercises/this-and-that)
+* [Jokes](./exercises/jokes)
 
 <br>
 
-## This & That
+## Assignment
+* Build a Spring MVC app that uses Spring Guru's 'Chuck Norris Joke' generator
+    * Instructions [here](./res/AssnBuildSBJokesApp.pdf)
