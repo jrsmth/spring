@@ -8,12 +8,6 @@
     <artifactId>pet-clinic-web</artifactId>
     <name>Pet Clinic :: Web Module</name>
     <url>https://maven.apache.org</url>
-    <properties>
-        <additionalJOptions>
-            <!-- Fix for JDOC generation error during mvn:release-perform -->
-            <additionalJOption>-Xdoclint:none</additionalJOption>
-        </additionalJOptions>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -33,4 +27,16 @@
             <version>0.0.2-SNAPSHOT</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <additionalJOption>-Xdoclint:none</additionalJOption>
+                    <!-- Fix for JDOC generation error during mvn:release-perform -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
