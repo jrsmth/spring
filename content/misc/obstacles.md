@@ -1,9 +1,9 @@
 # Obstacles
-*Obstacles faced and the lessons learnt*
+*Lessons learnt along the way*
 
 <br>
 
-### Maven Release Plugin: failing `release:perform`
+### Maven Release Plugin: failing on release:perform
 * Error Message:
     * `Failed to execute goal org.apache.maven.plugins:maven-javadoc-plugin:3.4.1:jar (attach-javadocs): MavenReportException: Error while generating Javadoc:`
 * Solution:
