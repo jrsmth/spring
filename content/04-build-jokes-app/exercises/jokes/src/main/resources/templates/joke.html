@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <link th:href="@{/css/joke.css}" rel="stylesheet" />
+        <title>Spring Guru :: Section 4 - Jokes</title>
+    </head>
+    <body>
+        <div id="container">
+            <h1 th:text="${joke}"></h1>
+        </div>
+        <img th:src="@{/res/chuck-norris.png}">
+    </body>
+</html>

@@ -1,0 +1,33 @@
+* {
+  font-family: "Monospaced", sans-serif;
+}
+
+html, body {
+  background-color: #1b1b1b;
+  height: 100%;
+  margin-top: -50px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+h1 {
+  color: #a5c260;
+  width: 50%;
+  text-align: center;
+  z-index: 1;
+}
+
+img {
+  position: absolute;
+  width: 800px;
+  bottom: 0px;
+  left: 50%;
+  opacity: 0.1;
+}
