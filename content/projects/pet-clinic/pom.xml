@@ -14,7 +14,7 @@
 	</parent>
 	<groupId>com.jrsmiffy.springguru</groupId>
 	<artifactId>pet-clinic</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>pet-clinic</name>
 	<description>Spring Guru :: Examples - Pet Clinic</description>
 	<properties>
@@ -58,7 +58,7 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:https://github.com/JRSmiffy/spring/tree/main/content/projects/pet-clinic.git</developerConnection>
+		<developerConnection>scm:git:https://github.com/JRSmiffy/spring.git</developerConnection>
 		<tag>pet-clinic-0.0.1</tag>
 	</scm>
 </project>
