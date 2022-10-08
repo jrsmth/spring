@@ -49,6 +49,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
+				<!-- RUN A RELEASE -->
+				<!-- release:prepare -->
+				<!-- release:perform -->
 				<configuration>
 					<goals>install</goals>
 				</configuration>
@@ -57,6 +60,5 @@
 	</build>
 	<scm>
 		<developerConnection>scm:git:https://github.com/JRSmiffy/spring.git</developerConnection>
-		<tag>pet-clinic-0.0.3</tag>
 	</scm>
 </project>
