@@ -15,5 +15,6 @@
     * Build out the functionality using TDD (with Spock)
 
 <br>
+<br>
 
 <img src="./res/joke-generator.png" width="800">
