@@ -2,6 +2,12 @@
 *[Spring Example Project](https://github.com/spring-projects/spring-petclinic)*
 
 <br>
+<br>
+
+<img src="./res/pet-clinic-banner.png" width="800">
+
+<br>
+<br>
 
 ## Showcase
 * [Multi-Module Maven Builds](./pom.xml)
