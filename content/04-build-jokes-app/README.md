@@ -1,5 +1,5 @@
 # Section 4: Build a Spring Boot Jokes App
-*This & That*
+*Using the knowledge built so far to create a spring boot app that tells jokes*
 
 <br>
 
