@@ -12,7 +12,8 @@
 * XML-based Configuration:
     * Introduced in Spring 2
     * Still commonly used in legacy apps
-        * However, now the industry has moved on to Java/Annotation-based configurations becauses they are more readable and flexible
+        * However, now the industry has moved on to Java/Annotation-based configurations 
+            * These are more readable and flexible
 * Annotation-based Configuration:
     * Introduced in Spring 3 (Java 5)
     * Spring Beans are found via 'Component Scans'
