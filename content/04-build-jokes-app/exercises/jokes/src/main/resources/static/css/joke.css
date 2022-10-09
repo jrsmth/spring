@@ -26,8 +26,8 @@ h1 {
 
 img {
   position: absolute;
-  width: 800px;
+  height: 90%;
   bottom: 0px;
-  left: 50%;
+  left: 55%;
   opacity: 0.1;
 }
