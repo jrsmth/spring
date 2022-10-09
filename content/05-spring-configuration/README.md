@@ -15,7 +15,7 @@
         * However, now the industry has moved on to Java/Annotation-based configurations 
             * These are more readable and flexible
 * Annotation-based Configuration:
-    * Introduced in Spring 3 (Java 5)
+    * Introduced in Spring 3 (after annotations were added with Java 5)
     * Spring Beans are found via 'Component Scans'
         * Component Scans locate Beans via class-level annotations:
             * Such as: `@Component`, `@Controller`, `@Service`, `Repository`
