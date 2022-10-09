@@ -4,7 +4,7 @@
 <br>
 <br>
 
-<img src="./res/pet-clinic-banner.png" width="800">
+<img src="./res/pet-clinic-banner.png" width="400">
 
 <br>
 <br>

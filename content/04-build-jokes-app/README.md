@@ -17,4 +17,4 @@
 <br>
 <br>
 
-<img src="./res/joke-generator.png" width="400">
+<img src="./res/joke-generator.png" width="800">
