@@ -13,3 +13,7 @@
     * Instructions [here](./res/AssnBuildSBJokesApp.pdf)
 * Extra:
     * Build out the functionality using TDD (with Spock)
+
+<br>
+
+<img src="./res/joke-generator.png" width="800">
