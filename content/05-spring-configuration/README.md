@@ -48,3 +48,8 @@
 * The `@Controller`, `@Repository` and `@Service` annotations inherit from `@Component`
     * Functionally, there is no difference between them
 * `@RestController` adds `@ResponseBody` to methods in your controller, ensuring they return JSON by default
+
+<br>
+
+## Component Scans
+* Component Scan [demo](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/DependencyInjectionApplication.java)

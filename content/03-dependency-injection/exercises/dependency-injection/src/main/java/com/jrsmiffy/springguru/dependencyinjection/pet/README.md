@@ -1,14 +1,2 @@
 # Section 3: Dependency Injection
-* Originally, the following classes lived in this package but were moved in order to demonstrate `@ComponentScan`, as part of "Section 5: Spring Configuration"
-
-<br>
-
-* Classes:
-  * `CatService`
-  * `DogService`
-  * `PetController`
-  * `PetService`
-
-<br>
-
-* Moved [here](../../pet)
+* As part of "Section 5: Spring Configuration", classes in this package were [moved](../../pet) to demonstrate `@ComponentScan`
