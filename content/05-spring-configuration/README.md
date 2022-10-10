@@ -4,7 +4,7 @@
 <br>
 
 ## Exercises
-* [Dependency Injection [Section 3]](../content/03-dependency-injection/exercises/dependency-injection) 
+* [Dependency Injection [Section 3]](../03-dependency-injection/exercises/dependency-injection) 
 
 <br>
 
