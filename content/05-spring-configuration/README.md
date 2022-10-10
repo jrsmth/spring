@@ -27,4 +27,24 @@
 * Groovy-based Configuration:
     * Introduced in Spring 4
     * Beans can be defined via a Groovy DSL
-        * Borrowed from Grails; which is built on top of Spring, using Groovy
+        * Borrowed from Grails; which is a framework built on top of Spring (using Groovy)
+
+<br>
+
+## Spring Stereotypes
+* Spring Stereotypes are class-level annotations that define Spring Beans
+    * When annotated classes are detected via the Component Scan, an instance of the class is added to the Spring Context
+        * Component Scans will automatically scan for annotated classes in the `/main` package and its sub-packages
+            * If we want to scan a class that exists outside of `/main`, we need to annotate it with `@ComponentScan`
+* The available Stereotypes are:
+    * `@Component`
+    * `@Controller`
+    * `@RestController`
+    * `@Repository`
+    * `@Service`
+
+<img src="./res/spring-stereotypes.png" width="800">
+
+* The `@Controller`, `@Repository` and `@Service` annotations inherit from `@Component`
+    * Functionally, there is no difference between them
+* `@RestController` adds `@ResponseBody` to methods in your controller, ensuring they return JSON by default
