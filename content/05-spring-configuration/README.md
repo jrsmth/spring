@@ -54,4 +54,21 @@
 * `@SpringBootApplication` defines an automatic component scan on the package where the annotation is used, plus all of its sub-packages
     * If you want to scan a package outside of the base package, you need to to specify it using `@ComponentScan(basePackages={})`
         * Good [article](https://www.springboottutorial.com/spring-boot-and-component-scan)
+* On very large applications, with 100's of components, there is a noticeable performance impact caused by the Component Scan
+    * This is because the Component Scan uses Java's `ReflectionUtils` to look inside the class, which is considered a slow process
+        * Whilst this is a trivial issue on standard applications, we can use Java-based configurations to avoid relying on the component scan
 * Component Scan [demo](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/DependencyInjectionApplication.java)
+
+<br>
+
+## Java-based Configuration
+* To define a Bean via Java-based Configuration is to create a configuration class
+    * Plus, a method that returns an instance of the class to be loaded into the Spring Context
+        * We signal the presence of a Bean to Spring via the class-level annotation `@Configuration` and the method-level annotation `@Bean`
+* From the Spring [docs]():
+    * `@Configuration` indicates that a class declares one or more `@Bean` methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime
+* Typically, we would define a Bean using Java-based Configuration if it was a 3rd party component
+    * GRoT:
+        * If you own the code, define the Bean using the Stereotype annotation
+        * If you do not own the code, define the Bean with Java-based Configuration (`@Configuration` + `@Bean`)
+* Java-based Configuration [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/GreetingServiceConfig.java)
