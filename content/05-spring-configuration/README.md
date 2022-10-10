@@ -34,8 +34,6 @@
 ## Spring Stereotypes
 * Spring Stereotypes are class-level annotations that define Spring Beans
     * When annotated classes are detected via the Component Scan, an instance of the class is added to the Spring Context
-        * Component Scans will automatically scan for annotated classes in the `/main` package and its sub-packages
-            * If we want to scan a class that exists outside of `/main`, we need to annotate it with `@ComponentScan`
 * The available Stereotypes are:
     * `@Component`
     * `@Controller`
@@ -52,4 +50,8 @@
 <br>
 
 ## Component Scans
+* `@ComponentScan` searches for class-level stereotype annotations; these identify beans to be loaded into the Spring Context
+* `@SpringBootApplication` defines an automatic component scan on package where the annotation is used, plus all of its sub-packages
+    * If you want to scan a package outside of the base package, you need to to specify it using `@ComponentScan(basePackages={})`
+        * Good [article](https://www.springboottutorial.com/spring-boot-and-component-scan)
 * Component Scan [demo](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/DependencyInjectionApplication.java)
