@@ -4,7 +4,7 @@
 <br>
 
 ## Exercises
-* [This & That](./exercises/this-that)
+* [Dependency Injection [Section 3]](../content/03-dependency-injection/exercises/dependency-injection) 
 
 <br>
 
