@@ -65,7 +65,7 @@
 * To define a Bean via Java-based Configuration is to create a configuration class
     * Plus, a method that returns an instance of the class to be loaded into the Spring Context
         * We signal the presence of a Bean to Spring via the class-level annotation `@Configuration` and the method-level annotation `@Bean`
-* From the Spring [docs]():
+* From the Spring [docs](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html):
     * `@Configuration` indicates that a class declares one or more `@Bean` methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime
 * Typically, we would define a Bean using Java-based Configuration if it was a 3rd party component
     * GRoT:
