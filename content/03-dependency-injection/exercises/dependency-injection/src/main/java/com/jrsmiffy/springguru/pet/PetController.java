@@ -1,4 +1,4 @@
-package com.jrsmiffy.springguru.dependencyinjection.pet;
+package com.jrsmiffy.springguru.pet;
 
 import org.springframework.stereotype.Controller;
 

@@ -1,13 +1,16 @@
 package com.jrsmiffy.springguru.dependencyinjection;
 
 import com.jrsmiffy.springguru.dependencyinjection.controller.*;
-import com.jrsmiffy.springguru.dependencyinjection.pet.PetController;
+import com.jrsmiffy.springguru.pet.PetController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication @Slf4j
+@Slf4j
+@ComponentScan(basePackages = {"com.jrsmiffy.springguru.dependencyinjection", "com.jrsmiffy.springguru.pet"})
+@SpringBootApplication
 public class DependencyInjectionApplication {
 
 	public static void main(String[] args) {

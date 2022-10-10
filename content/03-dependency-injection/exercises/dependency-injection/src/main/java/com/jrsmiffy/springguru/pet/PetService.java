@@ -1,4 +1,4 @@
-package com.jrsmiffy.springguru.dependencyinjection.pet;
+package com.jrsmiffy.springguru.pet;
 
 public interface PetService {
     String getPetType();
