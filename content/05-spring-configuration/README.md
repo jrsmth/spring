@@ -51,7 +51,7 @@
 
 ## Component Scans
 * `@ComponentScan` searches for class-level stereotype annotations; these identify beans to be loaded into the Spring Context
-* `@SpringBootApplication` defines an automatic component scan on package where the annotation is used, plus all of its sub-packages
+* `@SpringBootApplication` defines an automatic component scan on the package where the annotation is used, plus all of its sub-packages
     * If you want to scan a package outside of the base package, you need to to specify it using `@ComponentScan(basePackages={})`
         * Good [article](https://www.springboottutorial.com/spring-boot-and-component-scan)
 * Component Scan [demo](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/DependencyInjectionApplication.java)
