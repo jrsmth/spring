@@ -6,14 +6,30 @@ import com.jrsmiffy.springguru.dependencyinjection.service.ConstructorGreetingSe
 import com.jrsmiffy.springguru.dependencyinjection.service.EnglishGreetingService;
 import com.jrsmiffy.springguru.dependencyinjection.service.PrimaryGreetingService;
 import com.jrsmiffy.springguru.dependencyinjection.service.SpanishGreetingService;
+import com.jrsmiffy.springguru.pet.PetService;
+import com.jrsmiffy.springguru.pet.PetServiceFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
 
 @Configuration // note: tells Spring that we are defining Beans here
 public class GreetingServiceConfig {
+
+    @Bean
+    PetServiceFactory petServiceFactory() {
+        return new PetServiceFactory();
+    }
+
+    @Bean @Profile({"dog", "default"})
+    PetService dogService(PetServiceFactory petServiceFactory) { // note: showcasing factory beans
+        return petServiceFactory.getPetService("dog");
+    }
+
+    @Bean @Profile("cat")
+    PetService catService(PetServiceFactory petServiceFactory) { // note: showcasing factory beans
+        return petServiceFactory.getPetService("cat");
+    }
 
     @Bean
     EnglishGreetingRepository englishGreetingRepository() {
