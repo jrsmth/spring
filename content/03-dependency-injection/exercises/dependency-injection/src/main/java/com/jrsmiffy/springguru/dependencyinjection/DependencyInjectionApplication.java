@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @Slf4j
 @ComponentScan(basePackages = {"com.jrsmiffy.springguru.dependencyinjection", "com.jrsmiffy.springguru.pet"})
+// note: ^@ComponentScan is no longer required after [05-76] "Factory beans" because we are directly creating the beans with Java-based Config
 @SpringBootApplication
 public class DependencyInjectionApplication {
 
