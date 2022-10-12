@@ -71,4 +71,7 @@
     * GRoT:
         * If you own the code, define the Bean using the Stereotype annotation
         * If you do not own the code, define the Bean with Java-based Configuration (`@Configuration` + `@Bean`)
+* We can apply the `@Primary` and `@Profile` annotations to our Java-based Configuration beans
+    * When using the Spring Stereotype annotations (like `@Service`), `@Primary`/`@Profile` are applied at the class-level
+        * In our `@Configuration`-marked class, we apply `@Primary`/`@Profile` at the method level - alongside `@Bean`
 * Java-based Configuration [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/GreetingServiceConfig.java)
