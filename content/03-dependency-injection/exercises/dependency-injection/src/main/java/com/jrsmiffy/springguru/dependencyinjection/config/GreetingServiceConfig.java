@@ -1,5 +1,7 @@
 package com.jrsmiffy.springguru.dependencyinjection.config;
 
+import com.jrsmiffy.springguru.dependencyinjection.repository.EnglishGreetingRepository;
+import com.jrsmiffy.springguru.dependencyinjection.repository.EnglishGreetingRepositoryImpl;
 import com.jrsmiffy.springguru.dependencyinjection.service.ConstructorGreetingService;
 import com.jrsmiffy.springguru.dependencyinjection.service.EnglishGreetingService;
 import com.jrsmiffy.springguru.dependencyinjection.service.PrimaryGreetingService;
@@ -13,10 +15,15 @@ import org.springframework.stereotype.Service;
 @Configuration // note: tells Spring that we are defining Beans here
 public class GreetingServiceConfig {
 
+    @Bean
+    EnglishGreetingRepository englishGreetingRepository() {
+        return new EnglishGreetingRepositoryImpl();
+    }
+
     @Profile("english")
     @Bean("i18nService") // note: this renames the bean - used for demo purposes to conflict with SpanishGreetingService
-    EnglishGreetingService englishGreetingService() {
-        return new EnglishGreetingService();
+    EnglishGreetingService englishGreetingService(EnglishGreetingRepository englishGreetingRepository) {
+        return new EnglishGreetingService(englishGreetingRepository); // note: demo for D.I with Java-based Config
     }
 
     @Profile("spanish")

@@ -74,4 +74,6 @@
 * We can apply the `@Primary` and `@Profile` annotations to our Java-based Configuration beans
     * When using the Spring Stereotype annotations (like `@Service`), `@Primary`/`@Profile` are applied at the class-level
         * In our `@Configuration`-marked class, we apply `@Primary`/`@Profile` at the method level - alongside `@Bean`
+* We can inject dependencies into our Java-based Configuration beans by having the `@Bean`-annotated method accept an argument of the dependency type
+    * Reminder: it is best practise to code to an interface, where possible, when using dependency injection
 * Java-based Configuration [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/GreetingServiceConfig.java)
