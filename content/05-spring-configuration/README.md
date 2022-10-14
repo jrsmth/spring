@@ -87,3 +87,32 @@
     * Note: `@ImportResources` can also be applied to the main application class (marked with `@SpringBootApplication`)
         * Reminder: `@SpringBootApplication` is equivalent to `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
 * XML Configuration [example](../03-dependency-injection/exercises/dependency-injection/src/main/resources/dependencyinjection-config.xml)
+
+<br>
+
+## Bean Scopes
+* The 'Scope' of a Spring Bean refers to its lifespan and potential number of instances
+* Bean Scopes:
+    * Singleton:
+        * The default scope
+        * Only a single instance of the bean will exist in the IoC Container
+        * Every object that requests the bean will share that single instance
+    * Prototype:
+        * Contrasts Singleton, as multiple instances of the bean can exist in the IoC Container
+        * Each time the bean is requested, a new instance is created and so they are not shared
+    *  Only valid in a web-aware Spring Application Context:
+        * Request:
+            * A single instance exists per HTTP request
+        * Session:
+            * A single instance exists per HTTP session
+        * Global-Session:
+            * A single instance per global HTTP session
+        * Application:
+            * A bean is scoped to the lifecycle of a ServletContext
+        * Websocket:
+            * A bean is scoped to the lifecycle of a WebSocket
+    * Note:
+        * There also exists a 'Custom' scope that allows you to extend the web-aware Scopes
+            * Singleton and Prototype cannot be modified with the Custom Scope
+* Generally speaking, Spring Beans should be immutable and stateless
+    * As a result, we can rely on Singleton for the majority of cases
