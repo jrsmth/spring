@@ -77,3 +77,13 @@
 * We can inject dependencies into our Java-defined beans by having the `@Bean`-annotated method accept an argument of the dependency type
     * Reminder: it is best practise to code to an interface where possible, when using dependency injection
 * Java-based Configuration [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/GreetingServiceConfig.java)
+
+<br>
+
+## XML Configuration
+* We can define Spring Beans via a `<PROJECT>-config.xml` file in `/resources`
+    * In this file, all we need to specify is the `name` for the bean and point to the `class` that it represents
+* We use the `@ImportResources` annotation on our configuration class to include the `<PROJECT>-config.xml` file in the Component Scan
+    * Note, `@ImportResources` can be applied to a class marked with `@Configuration` or to the main application class (with `@SpringBootApplication`)
+        * Reminder: `@SpringBootApplication` is equivalent to `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
+* XML Configuration [example](../03-dependency-injection/exercises/dependency-injection/src/main/resources/dependencyinjection-config.xml)
