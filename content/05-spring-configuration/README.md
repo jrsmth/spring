@@ -83,7 +83,7 @@
 ## XML Configuration
 * We can define Spring Beans via a `<PROJECT>-config.xml` file in `/resources`
     * In this file, all we need to specify is the `name` for the bean and point to the `class` that it represents
-* We use `@ImportResources` on a class marked with `@Configuration` to include the `<PROJECT>-config.xml` file in the Component Scan
+* `@ImportResources` is applied to a class marked with `@Configuration` to include the XML config file in the Component Scan
     * Note: `@ImportResources` can also be applied to the main application class (marked with `@SpringBootApplication`)
         * Reminder: `@SpringBootApplication` is equivalent to `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
 * XML Configuration [example](../03-dependency-injection/exercises/dependency-injection/src/main/resources/dependencyinjection-config.xml)
