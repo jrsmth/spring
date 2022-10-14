@@ -51,7 +51,7 @@ public class GreetingServiceConfig {
         return new PrimaryGreetingService();
     }
 
-    /** @Bean // note: Bean now defined in XML configuration, as part of [05-77] "XML Configuration"
+    /** @Bean // note: This Bean is now defined in XML configuration, as part of [05-77] "XML Configuration"
     ConstructorGreetingService constructorGreetingService() {
         return new ConstructorGreetingService();
     }

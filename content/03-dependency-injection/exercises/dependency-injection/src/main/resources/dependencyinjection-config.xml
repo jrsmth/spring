@@ -6,5 +6,4 @@
     <bean name="constructorGreetingService"
           class="com.jrsmiffy.springguru.dependencyinjection.service.ConstructorGreetingService"/>
 </beans>
-
 <!--note: XML Configuration was added as part of Section 5 :: Spring Configuration -->
