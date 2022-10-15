@@ -1,5 +1,7 @@
 package com.jrsmiffy.springguru.dependencyinjection;
 
+import com.jrsmiffy.springguru.dependencyinjection.config.PrototypeBean;
+import com.jrsmiffy.springguru.dependencyinjection.config.SingletonBean;
 import com.jrsmiffy.springguru.dependencyinjection.controller.*;
 import com.jrsmiffy.springguru.pet.PetController;
 import lombok.extern.slf4j.Slf4j;
@@ -50,6 +52,29 @@ public class DependencyInjectionApplication {
 		log.info("--- D.I Assignment :: Favourite Pet ---");
 		PetController petController = ctx.getBean("petController", PetController.class);
 		log.info("The best pet is {}", petController.getFavouritePetType());
+
+		/** Section 5 :: Spring Configuration */
+		log.info("--- Section 5 :: Spring Configuration ---");
+		log.info("--- S C O P E S ---");
+
+		SingletonBean singletonOne = ctx.getBean(SingletonBean.class);
+		log.info(singletonOne.getScope());
+
+		SingletonBean singletonTwo = ctx.getBean(SingletonBean.class);
+		log.info(singletonTwo.getScope());
+
+		PrototypeBean prototypeOne = ctx.getBean(PrototypeBean.class);
+		log.info(prototypeOne.getScope());
+
+		PrototypeBean prototypeTwo = ctx.getBean(PrototypeBean.class);
+		log.info(prototypeTwo.getScope());
+
+		/** note:
+		 * In the scope example above, one SingletonBean will be created upon application start
+		 * Each time .getScope() is called, the one SingletonBean instance is shared
+		 * PrototypeBean is not created until .getScope() is called
+		 * Each time it is, a new instance of PrototypeBean is created in the IoC Container
+		 */
 
 	}
 

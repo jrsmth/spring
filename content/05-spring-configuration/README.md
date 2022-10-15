@@ -116,3 +116,4 @@
             * Singleton and Prototype cannot be modified with the Custom Scope
 * Generally speaking, Spring Beans should be immutable and stateless
     * As a result, we can rely on Singleton for the majority of cases
+* Bean Scope [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/PrototypeBean.java)
