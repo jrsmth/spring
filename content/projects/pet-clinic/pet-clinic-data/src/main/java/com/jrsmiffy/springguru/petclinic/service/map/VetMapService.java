@@ -1,11 +1,11 @@
 package com.jrsmiffy.springguru.petclinic.service.map;
 
 import com.jrsmiffy.springguru.petclinic.model.person.Vet;
-import com.jrsmiffy.springguru.petclinic.service.CrudService;
+import com.jrsmiffy.springguru.petclinic.service.VetService;
 
 import java.util.Set;
 
-public class VetMapService extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
@@ -30,6 +30,11 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements Crud
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Vet findByLastName(String lastName) {
+        return null;
     }
 
 }

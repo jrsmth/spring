@@ -1,8 +1,7 @@
 package com.jrsmiffy.springguru.petclinic.model.person;
 
 import com.jrsmiffy.springguru.petclinic.model.BaseEntity;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter @Setter
 public class Person extends BaseEntity {
