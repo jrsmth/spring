@@ -4,23 +4,16 @@ import com.jrsmiffy.springguru.petclinic.model.person.Owner;
 import com.jrsmiffy.springguru.petclinic.model.person.Vet;
 import com.jrsmiffy.springguru.petclinic.service.OwnerService;
 import com.jrsmiffy.springguru.petclinic.service.VetService;
-import com.jrsmiffy.springguru.petclinic.service.map.OwnerMapService;
-import com.jrsmiffy.springguru.petclinic.service.map.VetMapService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component @Slf4j
+@Component @Slf4j @RequiredArgsConstructor
 public class BootstrapData implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
-
-    public BootstrapData() {
-        this.ownerService = new OwnerMapService();
-        this.vetService = new VetMapService();
-    }
 
     @Override
     public void run(String... args) {
