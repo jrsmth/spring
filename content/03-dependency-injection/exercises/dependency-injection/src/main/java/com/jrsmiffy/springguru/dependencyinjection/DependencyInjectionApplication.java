@@ -70,7 +70,7 @@ public class DependencyInjectionApplication {
 		log.info(prototypeTwo.getScope());
 
 		/** note:
-		 * In the scope example above, one SingletonBean will be created upon application start
+		 * In the `SCOPES` example above, one SingletonBean will be created upon application start
 		 * Each time .getScope() is called, the one SingletonBean instance is shared
 		 * PrototypeBean is not created until .getScope() is called
 		 * Each time it is, a new instance of PrototypeBean is created in the IoC Container
