@@ -5,6 +5,7 @@
         <title>Pet Clinic - Owners</title>
     </head>
     <body>
+    <!--/*@thymesVar id="owner" type="com.jrsmiffy.springguru.petclinic.model.person.Owner"*/-->
         <h2 th:text="'List of Owners'">Owners List</h2>
 
         <table class="table table-striped">
@@ -16,11 +17,11 @@
             </tr>
             </thead>
             <tbody>
-        <!--    <tr th:each="owner : ${owners}">-->
-        <!--        <td th:text="${owner.id}">1</td>-->
-        <!--        <td th:text="${owner.firstName}">Joe</td>-->
-        <!--        <td th:text="${owner.lastName}">Buck</td>-->
-        <!--    </tr>-->
+            <tr th:each="owner : ${owners}">
+                <td th:text="${owner.id}">1</td>
+                <td th:text="${owner.firstName}">Joe</td>
+                <td th:text="${owner.lastName}">Buck</td>
+            </tr>
             </tbody>
         </table>
     </body>
