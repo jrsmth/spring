@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Pet Clinic - Vets</title>
-</head>
-<body>
-<h2>Veterinarians</h2>
-<table id="vets" class="table table-striped">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Specialties</th>
-    </tr>
-    </thead>
-    <tbody>
-<!--    <tr th:each="vet : ${vets}">-->
-<!--        <td th:text="${vet.firstName + ' ' + vet.lastName}"></td>-->
-<!--        <td><span th:each="specialty : ${vet.specialities}"-->
-<!--                  th:text="${specialty.description + ' '}" /> <span-->
-<!--                th:if="${vet?.specialities?.size() == 0}">none</span></td>-->
-<!--    </tr>-->
-    </tbody>
-</table>
-</body>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Pet Clinic - Vets</title>
+    </head>
+    <body>
+    <!--/*@thymesVar id="vet" type="com.jrsmiffy.springguru.petclinic.model.person.Vet"*/-->
+    <!-- note: this^ enables IntelliSense for the IDE on the Vet object in thymeleaf -->
+        <h2 th:text="'List of Vets'">Vets List</h2>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th style="width: 150px;">Id</th>
+                <th style="width: 150px;">First Name</th>
+                <th style="width: 150px;">Last Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="vet : ${vets}">
+                <td th:text="${vet.id}"></td>
+                <td th:text="${vet.firstName}"></td>
+                <td th:text="${vet.lastName}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
 </html>

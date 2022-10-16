@@ -6,6 +6,7 @@
     </head>
     <body>
     <!--/*@thymesVar id="owner" type="com.jrsmiffy.springguru.petclinic.model.person.Owner"*/-->
+    <!-- note: this^ enables IntelliSense for the IDE on the Owner object in thymeleaf -->
         <h2 th:text="'List of Owners'">Owners List</h2>
 
         <table class="table table-striped">
@@ -18,9 +19,9 @@
             </thead>
             <tbody>
             <tr th:each="owner : ${owners}">
-                <td th:text="${owner.id}">1</td>
-                <td th:text="${owner.firstName}">Joe</td>
-                <td th:text="${owner.lastName}">Buck</td>
+                <td th:text="${owner.id}"></td>
+                <td th:text="${owner.firstName}"></td>
+                <td th:text="${owner.lastName}"></td>
             </tr>
             </tbody>
         </table>

@@ -38,9 +38,9 @@ public class BootstrapData implements CommandLineRunner {
         vetService.save(vetOne);
 
         Vet vetTwo = new Vet();
-        vetTwo.setId(1L);
-        vetTwo.setFirstName("Sam");
-        vetTwo.setLastName("Axe");
+        vetTwo.setId(2L);
+        vetTwo.setFirstName("Jessie");
+        vetTwo.setLastName("Porter");
         vetService.save(vetTwo);
 
         log.info("--- Data Loaded :: Vet   ---");
