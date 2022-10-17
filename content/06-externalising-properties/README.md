@@ -1,10 +1,10 @@
 # Section 6: Externalising Properties
-*This & That*
+*Externalise an application's config so the behaviour can change with the environment*
 
 <br>
 
 ## Exercises
-* [This & That]](./exercises/this-and-that) 
+* [This & That](./exercises/this-and-that) 
 
 <br>
 
