@@ -4,12 +4,12 @@
 <br>
 
 ## Exercises
-* [This & That](./exercises/this-and-that) 
+* [Dependency Injection [Section 3]](../03-dependency-injection/exercises/dependency-injection) 
 
 <br>
 
 ## Overview
-* It is best practise to store configuration data in the environment so we can change an application's behaviour without rebuilding the code
+* It is best practise to store configuration data in the environment so we can change an application's behaviour without a rebuild
     * This allows a single immutable artefact to move through each environment on its way to production
     * We should avoid hard-coding any value that is subject to change
 * Externalising configuration is also a good idea for security reasons:

@@ -1,5 +1,6 @@
 package com.jrsmiffy.springguru.dependencyinjection.config;
 
+import com.jrsmiffy.springguru.dependencyinjection.datasource.DummyDataSource;
 import com.jrsmiffy.springguru.dependencyinjection.repository.EnglishGreetingRepository;
 import com.jrsmiffy.springguru.dependencyinjection.repository.EnglishGreetingRepositoryImpl;
 import com.jrsmiffy.springguru.dependencyinjection.service.EnglishGreetingService;
@@ -7,12 +8,27 @@ import com.jrsmiffy.springguru.dependencyinjection.service.PrimaryGreetingServic
 import com.jrsmiffy.springguru.dependencyinjection.service.SpanishGreetingService;
 import com.jrsmiffy.springguru.pet.PetService;
 import com.jrsmiffy.springguru.pet.PetServiceFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
+@PropertySource("classpath:datasource.properties")
 @ImportResource("classpath:dependencyinjection-config.xml")
 // note: ^this tells Spring where our XML-defined beans are; could also be used on @SpringBootApplication main class
 @Configuration // note: tells Spring that we are defining Beans here
 public class GreetingServiceConfig {
+
+    @Bean
+    DummyDataSource dummyDataSource(@Value("${datasource.username}") String username,
+                                    @Value("${datasource.password}") String password,
+                                    @Value("${datasource.jdbcUrl}") String jdbcUrl) {
+        DummyDataSource dummyDataSource = new DummyDataSource();
+        dummyDataSource.setUsername(username);
+        dummyDataSource.setPassword(password);
+        dummyDataSource.setJdbcUrl(jdbcUrl);
+
+        return dummyDataSource;
+
+    }
 
     @Bean // note: the method name here drives the Bean name in the Spring Context ("petServiceFactory")
     PetServiceFactory petServiceFactory() {
