@@ -1,5 +1,5 @@
 # Section 6: Externalising Properties
-*Externalising application config to change behaviours using the environment*
+*Externalising properties to change application behaviour using the environment*
 
 <br>
 
