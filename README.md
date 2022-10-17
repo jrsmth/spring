@@ -14,6 +14,7 @@
 * [Section 3: Dependency Injection with Spring](./content/03-dependency-injection)
 * [Section 4: Building a Jokes App](./content/04-build-jokes-app)
 * [Section 5: Spring Configuration](./content/05-spring-configuration)
+* [Section 6: Externalising Properties](./content/05-externalising-properties)
 
 <br>
 
