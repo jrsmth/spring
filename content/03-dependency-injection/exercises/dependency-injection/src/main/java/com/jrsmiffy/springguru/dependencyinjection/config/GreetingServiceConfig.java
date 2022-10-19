@@ -17,7 +17,7 @@ import org.springframework.context.annotation.*;
 @Configuration // note: tells Spring that we are defining Beans here
 public class GreetingServiceConfig {
 
-    @Bean
+    @Bean // note: this bean demonstrates the use of @Value and @PropertySource as part of "[06-88] @PropertySource"
     DummyDataSource dummyDataSource(@Value("${datasource.username}") String username,
                                     @Value("${datasource.password}") String password,
                                     @Value("${datasource.jdbcUrl}") String jdbcUrl) {

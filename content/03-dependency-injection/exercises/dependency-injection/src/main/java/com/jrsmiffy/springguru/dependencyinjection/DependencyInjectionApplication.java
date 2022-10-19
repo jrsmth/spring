@@ -3,6 +3,7 @@ package com.jrsmiffy.springguru.dependencyinjection;
 import com.jrsmiffy.springguru.dependencyinjection.config.PrototypeBean;
 import com.jrsmiffy.springguru.dependencyinjection.config.SingletonBean;
 import com.jrsmiffy.springguru.dependencyinjection.controller.*;
+import com.jrsmiffy.springguru.dependencyinjection.datasource.DummyDataSource;
 import com.jrsmiffy.springguru.pet.PetController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -75,6 +76,15 @@ public class DependencyInjectionApplication {
 		 * PrototypeBean is not created until .getScope() is called
 		 * Each time it is, a new instance of PrototypeBean is created in the IoC Container
 		 */
+
+		/** Section 6 :: Externalising Properties */
+		log.info("--- Section 6 :: Externalising Properties ---");
+
+		log.info("--- @PropertySource ---");
+		DummyDataSource dummyDataSource = ctx.getBean(DummyDataSource.class);
+		log.info("Username Property :: {}", dummyDataSource.getUsername());
+		log.info("Password Property :: {}", dummyDataSource.getPassword());
+		log.info("JDBC URL Property :: {}", dummyDataSource.getJdbcUrl());
 
 	}
 

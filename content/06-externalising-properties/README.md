@@ -44,3 +44,11 @@
 * Spring Cloud Config:
     * Is a further option for cloud environments, where Spring applications obtain config from a configuration server
         * Out of scope for this course
+
+<br>
+
+## `@PropertySource`
+* We can reference properties that defined in external files by loading the file into the Spring Context with `@PropertySource`
+    * The `@PropertySource` annotation can be applied to a class marked with `@Configuration`
+* The `@Value` annotation is used to reference individual properties with Spring Expression Language (`${}`)
+* `@PropertySource` [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/GreetingServiceConfig.java)
