@@ -1,5 +1,5 @@
 # Section 6: Externalising Properties
-*Externalising properties to enable behavioural changes in different environments*
+*Externalising properties to enable behavioural change in different environments*
 
 <br>
 
@@ -47,8 +47,10 @@
 
 <br>
 
-## `@PropertySource`
+## @PropertySource
+* The `@PropertySource` annotation allows us to specify a source of properties in an external file and load them into the Spring Context
 * We can reference properties that defined in external files by loading the file into the Spring Context with `@PropertySource`
-    * The `@PropertySource` annotation can be applied to a class marked with `@Configuration`
-* The `@Value` annotation is used to reference individual properties with Spring Expression Language (`${}`)
+    * `@PropertySource` is applied at the class-level, to classes marked with `@Configuration`
+* The `@Value` annotation is used to reference individual properties with Spring Expression Language, SpEL (`${}`)
+    * Example: `@PropertySource("classpath:datasource.properties")`
 * `@PropertySource` [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/GreetingServiceConfig.java)
