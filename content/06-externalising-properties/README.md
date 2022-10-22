@@ -116,4 +116,4 @@
         * In order to use Constructor Property Binding on a class, we first annotate it `@ConstructorBinding` and `@ConfigurationProperties("<PROPERTY_GROUP">)`
             * Note, we don't use `@Configuration` on this class; instead, we create a Spring Bean from it by referencing `@EnableConfigurationProperties(<CLASS_NAME>.class)` in one of our other `@Configuration` classes.
                 * Constructor Property Binding is a relatively new feature of Spring Boot (`2.2`) and that is why we see a divergence in the Bean creation method
-        * Constructor Property Binding [exmaple](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/DataSourceConstructorConfig.java)
+        * Constructor Property Binding [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/DataSourceConstructorConfig.java)
