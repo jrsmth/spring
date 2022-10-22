@@ -97,9 +97,9 @@
             * Where property conflicts occur, precedence is given to profile-specifc properties file
 * Spring also allows application properties to be defined using YAML syntax (`application.yaml`)
     * YAML:
+        * Purpose: it is a human-readable data serialization language that used to express key-value pairs of information
         * Meaning: YAML ain’t markup language (a recursive acronym), which emphasizes that YAML is for data, not documents. 
         * Extension: both `.yaml` or `.yml` are accepted but the former is recommended
-        * Purpose: it is a human-readable data serialization language that used to express key-value pairs of information
     * Note, we should refrain from mixing both `application.properties` and `application.yaml` files in the same application
         * I would default to using `.yaml`, as there is less noise than with `.properties`
     * `application.yaml` [example](../03-dependency-injection/exercises/dependency-injection/src/main/resources/application-local.yaml)
