@@ -89,3 +89,9 @@
 * With Spring alone, we need to define a custom `.properties` file and load it into the context with `@PropertySource`
     * Spring Boot offers us `application.properties`, which is automatically loaded into the context
         * Reminder: Spring Boot is a wrapper that configures Spring with an opinionated set-up
+* Profile-specific application properties:
+    * We can define profile specific properties files by appending the profile name to `application.properties`
+        * Convention: `application-<PROFILE_NAME>.properties`
+    * When the profile is set at runtime, the profile-specific properties file will be loaded into the context
+        * This happens alongside the 'default' `application.properties` 
+            * Where property conflicts occur, precedence is given to profile-specifc properties file
