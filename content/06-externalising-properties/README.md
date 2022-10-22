@@ -53,3 +53,31 @@
         * Example: `@PropertySource("classpath:datasource.properties")`
 * The `@Value` annotation is used to reference individual properties with Spring Expression Language, SpEL (`${}`)
 * `@PropertySource` [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/GreetingServiceConfig.java)
+
+<br>
+
+## Environment Variables & Command-line Arguments
+* IntelliJ:
+    * We can set both environment varaibles and command-line arguments in the run configuration:
+
+<img src="./res/intellij-runtime-args.png" width="800px">
+
+* From the Terminal:
+    * We can set environment variables using the standard method:
+        * MacOS: 
+            * Add `export JAVA_HOME=/your/path` to your `bash_profile` (bash) or `zshrc` (zsh)
+    * We can set command-line arguments using `-Dspring-boot.run.arguments` (Maven) or `--args=` (Gradle)
+        * Maven: `mvn spring-boot:run -Dspring-boot.run.arguments=--person.name=Test`
+            * Reference using `${person.name}` in Spring
+        * Gradle:
+            * `build.gradle`:
+                ```groovy
+                    bootRun {
+                        if (project.hasProperty('args')) {
+                            args project.args.split(',')
+                        }
+                    }
+                ```
+            * `./gradlew bootRun --args=--spring.main.banner-mode=off,--customArgument=custom`
+* Reminder:
+    * Command-line arguments take precedence over OS-level environment variables
