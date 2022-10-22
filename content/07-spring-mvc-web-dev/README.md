@@ -1,10 +1,10 @@
 # Spring MVC Web Development
-*Building a web application with the Spring MVC framework*
+*Building a web application with Spring MVC*
 
 <br>
 
 ## Exercises
-* [Recipes App](./exercises/recipes) 
+* [Recipes](./exercises/recipes) 
 
 <br>
 
