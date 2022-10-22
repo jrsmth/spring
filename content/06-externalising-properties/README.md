@@ -63,13 +63,12 @@
 <img src="./res/intellij-runtime-args.png" width="800px">
 
 * From the Terminal:
-    * We can set environment variables using the standard method:
-        * MacOS: 
-            * Add `export JAVA_HOME=/your/path` to your `bash_profile` (bash) or `zshrc` (zsh)
+    * On MacOS, to set OS-level environment variables:
+        * Add `export VAR_NAME=value` to your `bash_profile` (bash) or `zshrc` (zsh)
     * We can set command-line arguments using `-Dspring-boot.run.arguments` (Maven) or `--args=` (Gradle)
-        * Maven: `mvn spring-boot:run -Dspring-boot.run.arguments=--person.name=Test`
+        * Maven example: `mvn spring-boot:run -Dspring-boot.run.arguments=--person.name=Test`
             * Reference using `${person.name}` in Spring
-        * Gradle:
+        * Gradle example:
             * `build.gradle`:
                 ```groovy
                     bootRun {
@@ -78,6 +77,6 @@
                         }
                     }
                 ```
-            * `./gradlew bootRun --args=--spring.main.banner-mode=off,--customArgument=custom`
+            * `./gradlew bootRun --args=--customArgument=custom`
 * Reminder:
     * Command-line arguments take precedence over OS-level environment variables
