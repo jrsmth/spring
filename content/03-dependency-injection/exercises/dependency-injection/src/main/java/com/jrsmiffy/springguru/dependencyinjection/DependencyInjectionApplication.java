@@ -81,10 +81,16 @@ public class DependencyInjectionApplication {
 		log.info("--- Section 6 :: Externalising Properties ---");
 
 		log.info("--- @PropertySource ---");
-		DummyDataSource dummyDataSource = ctx.getBean(DummyDataSource.class);
+		DummyDataSource dummyDataSource = ctx.getBean("dummyDataSource", DummyDataSource.class);
 		log.info("Username Property :: {}", dummyDataSource.getUsername());
 		log.info("Password Property :: {}", dummyDataSource.getPassword());
 		log.info("JDBC URL Property :: {}", dummyDataSource.getJdbcUrl());
+
+		log.info("--- @ConfigurationProperties (Property Binding) ---");
+		DummyDataSource dummyDataSourceBinding = ctx.getBean("dummyDataSourceBinding", DummyDataSource.class);
+		log.info("Username Property :: {}", dummyDataSourceBinding.getUsername());
+		log.info("Password Property :: {}", dummyDataSourceBinding.getPassword());
+		log.info("JDBC URL Property :: {}", dummyDataSourceBinding.getJdbcUrl());
 
 	}
 

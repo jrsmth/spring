@@ -17,6 +17,17 @@ import org.springframework.context.annotation.*;
 @Configuration // note: tells Spring that we are defining Beans here
 public class GreetingServiceConfig {
 
+    @Bean // note: this bean demonstrates the use of Property Binding as part of "[06-94] Property Binding"
+    DummyDataSource dummyDataSourceBinding(DataSourceConfig dataSourceConfig) {
+        DummyDataSource dummyDataSource = new DummyDataSource();
+        dummyDataSource.setUsername(dataSourceConfig.getUsername() + "Bound");
+        dummyDataSource.setPassword(dataSourceConfig.getPassword() + "Bound");
+        dummyDataSource.setJdbcUrl(dataSourceConfig.getJdbcUrl() + "bound");
+
+        return dummyDataSource;
+
+    }
+
     @Bean // note: this bean demonstrates the use of @Value and @PropertySource as part of "[06-88] @PropertySource"
     DummyDataSource dummyDataSource(@Value("${datasource.username}") String username,
                                     @Value("${datasource.password}") String password,

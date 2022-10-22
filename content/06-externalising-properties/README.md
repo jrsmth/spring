@@ -105,3 +105,8 @@
             * I would default to using `.yaml`, as there is less noise than with `.properties`
         * It is possible to segment multiple profiles within a single YAML file, using the `---` syntax (not recommended)
     * `application.yaml` [example](../03-dependency-injection/exercises/dependency-injection/src/main/resources/application-local.yaml)
+* Property Binding:
+    * Property Binding allows us to bind a collection of external properties to the fields of an `@Configuration`-labelled class
+        * We do this by annotating the configuration class with `@ConfigurationProperties("<PROPERTY_GROUP">)`
+            * Where `<PROPERTY_GROUP>` exists in the application properties with sub-properties matching fields in the bound class
+    * Property Binding [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/DataSourceConfig.java)
