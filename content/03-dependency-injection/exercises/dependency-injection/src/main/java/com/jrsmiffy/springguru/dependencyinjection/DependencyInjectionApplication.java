@@ -1,5 +1,6 @@
 package com.jrsmiffy.springguru.dependencyinjection;
 
+import com.jrsmiffy.springguru.dependencyinjection.config.DataSourceConstructorConfig;
 import com.jrsmiffy.springguru.dependencyinjection.config.PrototypeBean;
 import com.jrsmiffy.springguru.dependencyinjection.config.SingletonBean;
 import com.jrsmiffy.springguru.dependencyinjection.controller.*;
@@ -91,6 +92,12 @@ public class DependencyInjectionApplication {
 		log.info("Username Property :: {}", dummyDataSourceBinding.getUsername());
 		log.info("Password Property :: {}", dummyDataSourceBinding.getPassword());
 		log.info("JDBC URL Property :: {}", dummyDataSourceBinding.getJdbcUrl());
+
+		log.info("--- @EnableConfigurationProperties (Constructor Property Binding) ---");
+		DataSourceConstructorConfig dataSourceConstructorConfig = ctx.getBean(DataSourceConstructorConfig.class);
+		log.info("Username Property :: {}", dataSourceConstructorConfig.getUsername());
+		log.info("Password Property :: {}", dataSourceConstructorConfig.getPassword());
+		log.info("JDBC URL Property :: {}", dataSourceConstructorConfig.getJdbcUrl());
 
 	}
 

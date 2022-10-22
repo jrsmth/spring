@@ -1,5 +1,8 @@
 datasource:
   password: "localPassword"
+constructor:
+  datasource:
+    password: "constructorPassword"
 
 # This properties file is loaded into the context when the `local` profile is set
 # It will override properties that are specified in the `default` application.properties

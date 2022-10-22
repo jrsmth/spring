@@ -9,8 +9,11 @@ import com.jrsmiffy.springguru.dependencyinjection.service.SpanishGreetingServic
 import com.jrsmiffy.springguru.pet.PetService;
 import com.jrsmiffy.springguru.pet.PetServiceFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
 
+@EnableConfigurationProperties(DataSourceConstructorConfig.class) // note: Constructor Property Binding
+// note: This^ creates `DataSourceConstructorConfig` as a Spring component
 @PropertySource("classpath:datasource.properties")
 @ImportResource("classpath:dependencyinjection-config.xml")
 // note: ^this tells Spring where our XML-defined beans are; could also be used on @SpringBootApplication main class

@@ -109,4 +109,11 @@
     * Property Binding allows us to bind a collection of external properties to the fields of an `@Configuration`-labelled class
         * We do this by annotating the configuration class with `@ConfigurationProperties("<PROPERTY_GROUP">)`
             * Where `<PROPERTY_GROUP>` exists in the application properties with sub-properties matching fields in the bound class
-    * Property Binding [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/DataSourceConfig.java)
+        * Property Binding [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/DataSourceConfig.java)
+    * Constructor Property Binding:
+        * Binding the properties of an external file to fields in an `@Configuration` class via the constructor is considered best practise, as we can do away with setters and keep our fields marked as `final`
+            * In essence, Constructor Property Binding allows us to create immutable beans
+        * In order to use Constructor Property Binding on a class, we first annotate it `@ConstructorBinding` and `@ConfigurationProperties("<PROPERTY_GROUP">)`
+            * Note, we don't use `@Configuration` on this class; instead, we create a Spring Bean from it by referencing `@EnableConfigurationProperties(<CLASS_NAME>.class)` in one of our other `@Configuration` classes.
+                * Constructor Property Binding is a relatively new feature of Spring Boot (`2.2`) and that is why we see a divergence in the Bean creation method
+        * Constructor Property Binding [exmaple](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/DataSourceConstructorConfig.java)
