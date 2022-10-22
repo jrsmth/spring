@@ -58,9 +58,11 @@
 
 ## Environment Variables & Command-line Arguments
 * IntelliJ:
-    * We can set both environment varaibles and command-line arguments in the run configuration:
+    * We can set both environment variables and command-line arguments in the run configuration:
 
 <img src="./res/intellij-runtime-args.png" width="800px">
+
+<br>
 
 * From the Terminal:
     * On MacOS, to set OS-level environment variables:
