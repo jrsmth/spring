@@ -15,7 +15,7 @@
 * [Section 4: Building a Jokes App](./content/04-build-jokes-app)
 * [Section 5: Spring Configuration](./content/05-spring-configuration)
 * [Section 6: Externalising Properties](./content/06-externalising-properties)
-* [Section 7: Web Development with Spring MVC](./content/07-web-dev-spring-mvc)
+* [Section 7: Spring MVC Web Development](./content/07-spring-mvc-web-dev)
 
 <br>
 

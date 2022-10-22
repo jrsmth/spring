@@ -1,4 +1,4 @@
-# Web Development with Spring MVC 
+# Spring MVC Web Development
 *fixme*
 
 <br>
