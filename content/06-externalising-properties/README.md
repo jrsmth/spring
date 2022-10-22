@@ -51,6 +51,9 @@
 * The `@PropertySource` annotation allows us to specify a source of properties in an external file and load them into the Spring Context
     * It is applied at the class-level, to classes marked with `@Configuration`
         * Example: `@PropertySource("classpath:datasource.properties")`
+    * With Spring alone, we need to define a custom `.properties` file and load it into the context with `@PropertySource`
+        * Spring Boot offers us `application.properties`, which is automatically loaded into the context
+            * Reminder: Spring Boot is a wrapper that configures Spring with an opinionated set-up
 * The `@Value` annotation is used to reference individual properties with Spring Expression Language, SpEL (`${}`)
 * `@PropertySource` [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/GreetingServiceConfig.java)
 
