@@ -69,5 +69,7 @@
     * Note, true idempotency is not enforced by the protocol:
         * In essense, it is standard best-practise but a developer could choose to ignore this (at their peril)
 
+    <br>
+    
     <img src="./res/http_verbs.png" width="500">
 
