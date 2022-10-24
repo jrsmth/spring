@@ -41,8 +41,8 @@
 
 <br>
 
-## HTTP Request Methods
-* HTTP (Hyper Text Transfer Protocol) Request methods (verbs):
+## HTTP (Hyper Text Transfer Protocol) 
+* HTTP Request methods (verbs):
     * `GET`: ask the server for a resource
     * `HEAD`: akin to GET, but only requests the meta-information (without the response body)
     * `POST`: create a new resource on the server
@@ -70,6 +70,11 @@
         * In essense, it is standard best-practise but a developer could choose to ignore this (at their peril)
 
     <br>
-    
+
     <img src="./res/http_verbs.png" width="500">
+
+    <br>
+
+* HTTP Status Codes:
+    * `200` :: 
 
