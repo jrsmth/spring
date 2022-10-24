@@ -38,3 +38,36 @@
 * Thymeleaf is a natural template engine:
     * This means that it can be rendered in the browser (without a Tomcat server, for example)
         * This contrasts JSP's which cannot be viewed properly in the browser alone
+
+<br>
+
+## HTTP Request Methods
+* HTTP (Hyper Text Transfer Protocol) Request methods (verbs):
+    * `GET`: ask the server for a resource
+    * `HEAD`: akin to GET, but only requests the meta-information (without the response body)
+    * `POST`: create a new resource on the server
+    * `PUT`: update an existing resource on the server or create a new one if it doesn't exist
+    * `DELETE`: destroy a resource on the server
+    * `TRACE`: echo what was sent to the server (can be used to see if the request was altered by intermediate servers)
+    * `OPTIONS`: request the valid HTTP methods that are supported by the endpoint
+    * `CONNECT`: create a TCP tunnel (typically used to connect to a HTTPS endpoint through an unencrypted HTTP proxy)
+    * `PATCH`: apply partial modifications to a specified resource
+* Safe Methods:
+    * The following methods are considered 'safe' because they don't cause changes on the server:
+        * `GET`
+        * `HEAD`
+        * `OPTIONS`
+        * `TRACE`
+* Idempotency:
+    * Where the number of times a request is executed is independent from the outcome
+        * That is, whether you call an endpoint once or a hundred times, the result will be the same
+    * Idempotent methods include:
+        * `PUT`
+        * `DELETE`
+        * Safe Methods
+    * When speaking about the typical big four CRUD verbs (`GET`, `POST`, `PUT`, `DELETE`), all are considered idempotent bar `POST`
+    * Note, true idempotency is not enforced by the protocol:
+        * In essense, it is standard best-practise but a developer could choose to ignore this (at their peril)
+
+    <img src="./res/http_verbs.png" width="500">
+
