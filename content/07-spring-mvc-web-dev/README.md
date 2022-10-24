@@ -76,5 +76,14 @@
     <br>
 
 * HTTP Status Codes:
-    * `200` :: 
+    * `100` :: Informational
+    * `200` :: Successful
+    * `300` :: Redirect
+    * `400` :: Client-side Error
+    * `500` :: Server-side Error
 
+    <br>
+
+    <img src="./res/http_status.png" width="500">
+
+    <br>
