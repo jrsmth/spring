@@ -15,10 +15,17 @@
     * Spring MVC:
         * Is a web framework built on the Java Servlet API (part of Spring Framework Core)
             * It is used to create webapps that run on Servlet containers (such as Tomcat)
+        * MVC pattern in Spring:
+
+            <img src="./res/spring-mvc.png" width="800">
+
     * Spring Boot:
         * An opionated configuration for Spring-based projects
             * It increases developer productivity and enables Spring-based projects to be run as standalone apps (embedded server)
     * Notes:
+        * Summary:
+            * Spring MVC is the framework that we use to build web apps by leaveraging the dispatcher servlet (front controller) within the MVC pattern
+            * Spring Boot can be used in conjunction with Spring MVC to streamline the development process
         * Good [video](https://www.youtube.com/watch?v=e6Ps8I3X-g4)
 
 
