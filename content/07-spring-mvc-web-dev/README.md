@@ -35,7 +35,7 @@
 * Thymeleaf is a Java templating engine:
     * It takes a template and converts it to HTML
     * It is not a Web Framework in of itself
-    * It is a replacement for JSP's (Java Server Pages), which come from J2EE (Java Enterprise Edition)
+    * It is a replacement for JSP's (Java Server Pages), which comes from J2EE (Java Enterprise Edition)
 * Thymeleaf is a natural template engine:
     * This means that it can be rendered in the browser (without a Tomcat server, for example)
         * This contrasts JSP's which cannot be viewed properly in the browser alone
