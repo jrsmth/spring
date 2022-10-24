@@ -74,6 +74,7 @@
     <img src="./res/http_verbs.png" width="500">
 
     <br>
+    <br>
 
 * HTTP Status Codes:
     * `100` :: Informational
@@ -84,6 +85,10 @@
 
     <br>
 
-    <img src="./res/http_status.png" width="500">
+    <img src="./res/http_status.png" width="300">
 
     <br>
+
+<br>
+
+##
