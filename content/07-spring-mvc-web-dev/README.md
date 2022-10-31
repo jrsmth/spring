@@ -91,7 +91,7 @@
 
 <br>
 
-## Spring Boot Developer Tools
+## Developer Tools
 * The standard web browsers (Chrome, Safari, Firefox) offer a suite of developer tools:
     * The developer tools provide a range of useful information about the code running in the browser
         * The information includes:
@@ -100,3 +100,5 @@
             * Requests sent across the network
             * Local storage
             * JavaScript logs in the console
+* Spring Boot Developer Tools:
+    * ...
