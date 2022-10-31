@@ -91,5 +91,12 @@
 
 <br>
 
-## Developer Tools
-* Chrome Developer Tools
+## Spring Boot Developer Tools
+* The standard web browsers (Chrome, Safari, Firefox) offer a suite of developer tools:
+    * The developer tools provide a range of useful information about the code running in the browser
+        * The information includes:
+            * HTML structure and CSS styling of the page; plus the ability to test updates on the fly (empheral changes)
+            * JavaScript source files; plus the ability to set breakpoints
+            * Requests sent across the network
+            * Local storage
+            * JavaScript logs in the console
