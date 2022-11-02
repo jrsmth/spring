@@ -127,6 +127,7 @@
                 * This is significantly faster than stopping and restarting your application
             * Likewise for template changes:
                 * We can take up changes in the browser with `cmd-F9`, instead of a time-costly stop and restart on the app in IntelliJ
+                    * Make sure to enable the LiveReload extension in your respective browser
     * Sources:
         * Good [article](https://www.baeldung.com/spring-boot-devtools)
         * Spring [docs](https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html#using-boot-devtools)
