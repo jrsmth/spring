@@ -100,5 +100,35 @@
             * Requests sent across the network
             * Local storage
             * JavaScript logs in the console
-* Spring Boot Developer Tools:
-    * ...
+* Spring Boot Dev Tools:
+    * Oveview:
+        * Spring Boot already allows us to quickly get started with the development process
+            * Spring Boot Dev Tools is designed to boost productivity even more
+        * The Dev Tools are only available during development
+            * They are disabled when running a packaged application (e.g `java -jar`)
+    * Features:
+        * Automatic Restarts:   
+            * The Spring Context is restarted whenever a change to a class is detected
+        * Property Defaults:
+            * The Dev Tools will override Spring Boot auto-configurations in order to improve productivity
+                * An example is disabling Thymeleaf's template caching during development so we can see changes as quickly as possible
+        * Live Reloads:
+            * The `spring-boot-devtools` modules includes an embedded LiveReload server that triggers a browser refresh when a resource is changed
+                * To enabled this we need to add an extension in our browser (see [docs](https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html#using-boot-devtools-livereload))
+        * Global Settings:
+            * Allows us to define external property settings that are not coupled to any one application
+                * We define properties at: `~/.spring-boot-devtools.properties`
+        * Remote Applications:
+            * Allows us to debug an application that is running remotely, via HTTP
+    * Usage:
+        * First, we include the `spring-boot-devtools` module in our list of dependencies
+        * When running a Spring Boot application through IntelliJ:
+            * After an edit to a class, you can quickly take up the changes with `Build >> Build Project` or `cmd-F9`
+                * This is significantly faster than stopping and restarting your application
+            * Likewise for template changes:
+                * We can take up changes in the browser with `cmd-F9`, instead of a time-costly stop and restart on the app in IntelliJ
+    * Sources:
+        * Good [article](https://www.baeldung.com/spring-boot-devtools)
+        * Spring [docs](https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html#using-boot-devtools)
+* Takeaways:
+    * Experiment with using Firefox Developer Edition and Spring Boot Dev Tools
