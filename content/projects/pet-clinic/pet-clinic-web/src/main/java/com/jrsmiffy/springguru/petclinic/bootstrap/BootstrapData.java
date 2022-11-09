@@ -2,6 +2,7 @@ package com.jrsmiffy.springguru.petclinic.bootstrap;
 
 import com.jrsmiffy.springguru.petclinic.model.person.Owner;
 import com.jrsmiffy.springguru.petclinic.model.person.Vet;
+import com.jrsmiffy.springguru.petclinic.model.pet.Pet;
 import com.jrsmiffy.springguru.petclinic.model.pet.PetType;
 import com.jrsmiffy.springguru.petclinic.service.OwnerService;
 import com.jrsmiffy.springguru.petclinic.service.PetTypeService;
@@ -10,6 +11,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component @Slf4j @RequiredArgsConstructor
 public class BootstrapData implements CommandLineRunner {
@@ -29,11 +32,11 @@ public class BootstrapData implements CommandLineRunner {
     private void loadPetType() {
         PetType dogType = new PetType();
         dogType.setType("Dog");
-        PetType savedDogType = petTypeService.save(dogType);
+        petTypeService.save(dogType);
 
         PetType catType = new PetType();
         catType.setType("Cat");
-        PetType savedCatType = petTypeService.save(catType);
+        petTypeService.save(catType);
 
         log.info("--- Data Loaded :: Pet Type ---");
 
@@ -44,13 +47,33 @@ public class BootstrapData implements CommandLineRunner {
         ownerOne.setId(1L);
         ownerOne.setFirstName("Michael");
         ownerOne.setLastName("Weston");
+        ownerOne.setAddress("35 Your Mama's House");
+        ownerOne.setCity("Miami");
+        ownerOne.setTelephone("0123456789");
         ownerService.save(ownerOne);
+
+        Pet mikesPet = new Pet();
+        mikesPet.setType(petTypeService.findById(1L)); // note: this is a dog type
+        mikesPet.setOwner(ownerOne);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setName("Rosco");
+        ownerOne.getPets().add(mikesPet);
 
         Owner ownerTwo = new Owner();
         ownerTwo.setId(2L);
         ownerTwo.setFirstName("Fiona");
         ownerTwo.setLastName("Glennane");
+        ownerOne.setAddress("35 Noneofyour Business");
+        ownerOne.setCity("Las Vegas");
+        ownerOne.setTelephone("9876543210");
         ownerService.save(ownerTwo);
+
+        Pet fionasPet = new Pet();
+        fionasPet.setType(petTypeService.findById(2L)); // note: this is a cat type
+        fionasPet.setOwner(ownerTwo);
+        fionasPet.setBirthDate(LocalDate.now());
+        fionasPet.setName("Jessicat");
+        ownerTwo.getPets().add(fionasPet);
 
         log.info("--- Data Loaded :: Owner ---");
 
