@@ -95,5 +95,5 @@ public class BootstrapData implements CommandLineRunner {
         log.info("--- Data Loaded :: Vet   ---");
 
     }
-    
+
 }
