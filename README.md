@@ -16,7 +16,7 @@
 * [Section 5: Spring Configuration](./content/05-spring-configuration)
 * [Section 6: Externalising Properties](./content/06-externalising-properties)
 * [Section 7: Spring MVC Web Development](./content/07-spring-mvc-web-dev)
-* [Section 8: JPA Data Modelling with Hibernate & Spring](./content/08-jpa-data-modelling)
+* [Section 8: JPA Data Modelling](./content/08-jpa-data-modelling)
 
 <br>
 

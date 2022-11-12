@@ -1,4 +1,4 @@
-# JPA Data Modelling with Hibernate & Spring
+# JPA Data Modelling
 *Modelling Java objects as database entities*
 
 <br>
