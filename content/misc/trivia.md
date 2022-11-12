@@ -13,5 +13,6 @@
 
 <br>
 
-### What even is Spring?
+### What *even* is Spring?
 * Spring is a dependency injection framework. It is all about beans and wiring in dependencies.
+    * A 'Bean' is a Spring-managed Java component that can be injected into other classes at runtime.
