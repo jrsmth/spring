@@ -1,11 +1,13 @@
 package com.jrsmiffy.springguru.petclinic.bootstrap;
 
 import com.jrsmiffy.springguru.petclinic.model.person.Owner;
+import com.jrsmiffy.springguru.petclinic.model.person.Specialty;
 import com.jrsmiffy.springguru.petclinic.model.person.Vet;
 import com.jrsmiffy.springguru.petclinic.model.pet.Pet;
 import com.jrsmiffy.springguru.petclinic.model.pet.PetType;
 import com.jrsmiffy.springguru.petclinic.service.OwnerService;
 import com.jrsmiffy.springguru.petclinic.service.PetTypeService;
+import com.jrsmiffy.springguru.petclinic.service.SpecialtyService;
 import com.jrsmiffy.springguru.petclinic.service.VetService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,12 +21,20 @@ public class BootstrapData implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final PetTypeService petTypeService;
+    private final SpecialtyService specialtyService;
     private final VetService vetService;
 
     @Override
     public void run(String... args) {
+        boolean dataExists = (petTypeService.findAll().size() > 0);
+        if (!dataExists) loadData();
+
+    }
+
+    public void loadData() {
         loadPetType();
         loadOwner();
+        loadSpecialty();
         loadVet();
 
     }
@@ -38,7 +48,7 @@ public class BootstrapData implements CommandLineRunner {
         catType.setType("Cat");
         petTypeService.save(catType);
 
-        log.info("--- Data Loaded :: Pet Type ---");
+        log.info("--- Data Loaded :: Pet Type  ---");
 
     }
 
@@ -75,7 +85,24 @@ public class BootstrapData implements CommandLineRunner {
         fionasPet.setName("Jessicat");
         ownerTwo.getPets().add(fionasPet);
 
-        log.info("--- Data Loaded :: Owner ---");
+        log.info("--- Data Loaded :: Owner     ---");
+
+    }
+
+    private void loadSpecialty() {
+        Specialty radiology = new Specialty();
+        radiology.setDescription("Radiology");
+        specialtyService.save(radiology);
+
+        Specialty surgery = new Specialty();
+        surgery.setDescription("Surgery");
+        specialtyService.save(surgery);
+
+        Specialty dentistry = new Specialty();
+        dentistry.setDescription("Dentistry");
+        specialtyService.save(dentistry);
+
+        log.info("--- Data Loaded :: Specialty ---");
 
     }
 
@@ -84,15 +111,17 @@ public class BootstrapData implements CommandLineRunner {
         vetOne.setId(1L);
         vetOne.setFirstName("Sam");
         vetOne.setLastName("Axe");
+        vetOne.getSpecialties().add(specialtyService.findById(1L)); // note: this is the radiology specialty
         vetService.save(vetOne);
 
         Vet vetTwo = new Vet();
         vetTwo.setId(2L);
         vetTwo.setFirstName("Jessie");
         vetTwo.setLastName("Porter");
+        vetTwo.getSpecialties().add(specialtyService.findById(2L)); // note: this is the surgery specialty
         vetService.save(vetTwo);
 
-        log.info("--- Data Loaded :: Vet   ---");
+        log.info("--- Data Loaded :: Vet       ---");
 
     }
 

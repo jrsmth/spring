@@ -31,7 +31,6 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
         }
 
         return object;
-
     }
 
     /** Delete Object by ID */
@@ -57,7 +56,6 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
         }
 
         return nextId;
-
     }
 
 }
