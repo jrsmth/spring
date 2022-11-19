@@ -108,8 +108,6 @@
 
 <img src="./res/recipes-jdl-data-model.png" width="500">
 
-<br>
-
 ```jdl
     entity Recipe {
         description String,
