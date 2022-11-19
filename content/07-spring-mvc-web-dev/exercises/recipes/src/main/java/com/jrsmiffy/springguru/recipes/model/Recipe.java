@@ -1,11 +1,15 @@
 package com.jrsmiffy.springguru.recipes.model;
 
-import lombok.Data;
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data // Note: Equivalent to @Getter @Setter @ToString @EqualsAndHashCode @RequiredArgsConstructor
+import javax.persistence.*;
+import java.util.Set;
+
+//@Data // Note: Equivalent to @Getter @Setter @ToString @EqualsAndHashCode @RequiredArgsConstructor
 // Note: @Data is designed to generate all of the boilerplate code for a POJO, not strictly nec. here (getters & setters would do)
-@Entity
+// Note: Actually @Data is not recommended for JPA entities due to performance issues
+@Entity @Getter @Setter
 public class Recipe {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) // Note: Relies on Hibernate to generate an Id for us
@@ -24,5 +28,8 @@ public class Recipe {
 
     @OneToOne(cascade = CascadeType.ALL) // Note: We want delete operations on Recipes to cascade to the related Notes (but not the other way round!)
     private Notes note;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe") // Note: mappedBy establishes a bidirectional mapping with Ingredient
+    private Set<Ingredient> ingredients;
 
 }
