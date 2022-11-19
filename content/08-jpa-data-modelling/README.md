@@ -103,56 +103,57 @@
 * JHipster Studio is a very useful tool for defining your data model
     * https://start.jhipster.tech/jdl-studio/
 * Recipes example:
-    ```jdl
-        entity Recipe {
-            description String,
-            prepTime Integer,
-            cookTime Integer,
-            servings Integer,
-            source String,
-            url String,
-            directions String,
-            difficulty Difficulty,
-            image ImageBlob
-        }
-
-        entity Category {
-            name String
-        }
-
-        entity Ingredient {
-            description String
-            amount BigDecimal
-        }
-
-        entity Unit {
-            name String
-        }
-
-        entity Notes {
-            content String
-        }
-
-        enum Difficulty {
-            LOW, MEDIUM, HIGH
-        }
-
-        relationship OneToOne {
-        Recipe to Notes
-        Ingredient to Unit
-        }
-
-        relationship OneToMany {
-            Recipe to Ingredient
-        }
-
-        relationship ManyToMany {
-            Recipe to Category
-        }
-    ```
 
 <br>
 
 <img src="./res/recipes-jdl-data-model.png" width="500">
 
 <br>
+
+```jdl
+    entity Recipe {
+        description String,
+        prepTime Integer,
+        cookTime Integer,
+        servings Integer,
+        source String,
+        url String,
+        directions String,
+        difficulty Difficulty,
+        image ImageBlob
+    }
+
+    entity Category {
+        name String
+    }
+
+    entity Ingredient {
+        description String
+        amount BigDecimal
+    }
+
+    entity Unit {
+        name String
+    }
+
+    entity Notes {
+        content String
+    }
+
+    enum Difficulty {
+        LOW, MEDIUM, HIGH
+    }
+
+    relationship OneToOne {
+    Recipe to Notes
+    Ingredient to Unit
+    }
+
+    relationship OneToMany {
+        Recipe to Ingredient
+    }
+
+    relationship ManyToMany {
+        Recipe to Category
+    }
+```
