@@ -80,5 +80,19 @@
     * Example:
         * An Order might have a shipping address; which we could use as an Embeddable Type
     * Good [article](https://www.baeldung.com/jpa-embedded-embeddable) for further reading
-* Inheritance:
-    * Hibernate inheritance... [7:20]
+* Hibernate Inheritance:
+    * `MappedSuperclass`:
+        * Entities inherit from a super class
+        * A database table is not created for the super class
+    * Single Table:
+        * The Hibernate default
+        * One table is used for all sub-classes
+    * Joined Table:
+        * Base class and sub-classes have their own tables
+        * Fetching sub-class entities requires a join to the parent table
+    * Table-Per-Class:
+        * Each sub-class has its own table
+* Create & Update Timestamps:
+    * It is considered good practise to use create and update timestamps on your entities, for audit purposes
+    * JPA supports `@PrePersist` & `@PreUpdate`, which are used to support audit timestamps via JPA lifecycle callbacks
+    * Hibernate provides `@CreationTimestamp` and `@UpdateTimestamp`
