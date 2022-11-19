@@ -153,6 +153,6 @@
 
 <br>
 
-<img src="./res/recipes-jdl-data-model" width="500">
+<img src="./res/recipes-jdl-data-model.png" width="500">
 
 <br>
