@@ -100,13 +100,15 @@
 <br>
 
 ## Data Modelling:
-* JHipster Studio is a very useful tool for defining your data model
+* JHipster Studio is a very useful tool for defining your data model:
     * https://start.jhipster.tech/jdl-studio/
 * Recipes example:
     * [JDL example](./res/recipes-jdl-data-model.jdl)
-    
+        * Question: why have we not included the Ingredient (plus the other mapped entities) as a field on the Recipe entity?
+
 <br>
 
 <img src="./res/recipes-jdl-data-model.png" width="500">
 
+<br>
 <br>
