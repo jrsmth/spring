@@ -104,8 +104,6 @@
     * https://start.jhipster.tech/jdl-studio/
 * Recipes example:
 
-<br>
-
 <img src="./res/recipes-jdl-data-model.png" width="500">
 
 ```jdl
@@ -143,8 +141,8 @@
     }
 
     relationship OneToOne {
-    Recipe to Notes
-    Ingredient to Unit
+        Recipe to Notes
+        Ingredient to Unit
     }
 
     relationship OneToMany {
