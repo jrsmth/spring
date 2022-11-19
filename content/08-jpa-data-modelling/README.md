@@ -103,5 +103,10 @@
 * JHipster Studio is a very useful tool for defining your data model
     * https://start.jhipster.tech/jdl-studio/
 * Recipes example:
-    <img src="./res/recipes-jdl-data-model.png" width="500">
     * [JDL example](./res/recipes-jdl-data-model.jdl)
+    
+<br>
+
+<img src="./res/recipes-jdl-data-model.png" width="500">
+
+<br>
