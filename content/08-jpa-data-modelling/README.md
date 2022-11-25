@@ -102,6 +102,26 @@
         * `ORDINAL`: (default) values are stored based on their numerical order in the enum (ex: `0`, `1`, `2`, ...)
         * `STRING`: values are stored as they are in Java-land (ex: `EASY`, `MEDIUM`, `HARD`)
     * Good [article](https://www.baeldung.com/jpa-persisting-enums-in-jpa)
+* `@JoinTable`:
+    * Many-to-Many:
+        * We use this annotation to specify the mapping of a many-to-many relationship
+        * On the owning side of the relationship, we specify the name of the link table and the two foreign key columns that point to each entity
+            ```java
+                // Recipe.java (Owning Side)
+                    @ManyToMany
+                    @JoinTable(
+                            name = "recipe_category",
+                            joinColumns = @JoinColumn(name = "recipe_id"),
+                            inverseJoinColumns = @JoinColumn(name = "category_id"))
+                    private Set<Category> categories;
+
+                // Category.java
+                    @ManyToMany(mappedBy = "categories")
+                    private Set<Recipe> recipes;
+            ```
+    * One-to-Many:
+        * `@JoinTable` is also used for one-to-many associations (that are usually unidirectional), when you don't want to add a foreign key in the table of the 'many' side and thus keep it independent of the 'one' side
+    * Good Stack Overflow [Post](https://stackoverflow.com/questions/5478328/in-which-case-do-you-use-the-jpa-jointable-annotation)
 
 <br>
 
