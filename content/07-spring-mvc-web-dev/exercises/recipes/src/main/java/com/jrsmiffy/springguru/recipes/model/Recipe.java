@@ -16,12 +16,17 @@ public class Recipe {
     private Long id;
 
     private String description;
+
+    @Enumerated(value = EnumType.STRING)
+    // Note: the value of an enum field defaults to ORDINAL (0, 1, 2, ...) but STRING will persist the exact value (EASY)
+    // Note: this is useful, if we choose to add new values that would disturb the ORDINAL sequence (ex: EASY, MED, KINDA_HARD, HARD)
+    private Difficulty difficulty;
+
     private Integer prepMins;
     private Integer cookMins;
     private Integer servings;
     private String source;
     private String url;
-    private Difficulty difficulty;
 
     @Lob // Note: Defines a BLOB (Binary Large Object)
     private Byte[] image;

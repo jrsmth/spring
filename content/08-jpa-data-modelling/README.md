@@ -96,6 +96,12 @@
     * It is considered good practise to use create and update timestamps on your entities, for audit purposes
     * JPA supports `@PrePersist` & `@PreUpdate`, which are used to support audit timestamps via JPA lifecycle callbacks
     * Hibernate provides `@CreationTimestamp` and `@UpdateTimestamp`
+* `@Enumerated`:
+    * Used to denote an `Enum` object that is to be mapped to a table in the database
+    * It offers two options for storing the values in the table:
+        * `ORDINAL`: (default) values are stored based on their numerical order in the enum (ex: `0`, `1`, `2`, ...)
+        * `STRING`: values are stored as they are in Java-land (ex: `EASY`, `MEDIUM`, `HARD`)
+    * Good [article](https://www.baeldung.com/jpa-persisting-enums-in-jpa)
 
 <br>
 
