@@ -139,9 +139,33 @@
 <br>
 <br>
 
-## Repositories
-* In our [Recipe](../07-spring-mvc-web-dev/exercises/recipes) example application, we have only created repositories for the `Category`, `Recipe` and `Unit` entities
-    * We chose not to create repositories for all entities (i.e `Ingredient`, `Notes`), as we do not need to directly manage them
-        * Rather, we will interact with them via the other entities (`Recipe`, etc)
-
-^^ Something seems off here, do some recce into this - Baeldung, Stack...
+## Database Initialisation
+* DDL & DML:
+    * DDL: Data Definition Language
+        * The kind of SQL statements that are used to define tables, indexes, foreign key relationships, etc
+    * DML: Data Manipulation Language
+        * The kind of SQL statements that are used to modify data (CRUD operations)
+    * Note:
+        * One basic security measure for production systems is to limit the DDL-capabilities to service accounts
+            * This is done to disallow our app from making accidental breaking changes to a schema
+* Database Initialisation using Spring:
+    * `spring.jpa.hibernate.ddl-auto`:
+        * A Hibernate-specific property for specifying how we should create database tables from our Java-based entity relationships
+        * Options:
+            * `none`: No changes to the database on start-up
+            * `validate`: Verifies that tables match the Java-based entity relationships on start-up (will fail if mismatch exists, good option for production env)
+            * `update`: Modifies the existing database to match the Java-based entity relationships on start-up
+            * `create`: Creates the database from scratch each time the application starts-up (destroying previous data)
+            * `create-drop`: Creates the database from scratch each time the application starts but also destroys the database when the applications stops
+        * Spring Boot:
+            * For embedded databases, like H2, the default `ddl-auto` value is set to `create-drop`
+                * For non-embedded (standard) databases, it defaults to `none`
+* Database Initialisation using Hibernate:
+    * We can provide an `import.sql` to initialise our database using Hibernate
+    * The `import.sql` file must exist at the root of the application's class path
+    * A combination of DDL and DML statements can be used
+        * Note, the SQL will only run if the `ddl-auto` value is set to `create` or `create-drop`
+* Database Initialisation with Spring Boot:
+    * By default, Spring Boot will look to import `schema.sql` and `data.sql` files from `/src/main/resources`
+    * Note: loading data via Spring Boot can cause unexpected conflicts with Hibernate
+        * Therefore, it is standard practise to set the `ddl-auto` value to `none` or `validate` 
