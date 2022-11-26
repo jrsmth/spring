@@ -138,3 +138,10 @@
 
 <br>
 <br>
+
+## Repositories
+* In our [Recipe](../07-spring-mvc-web-dev/exercises/recipes) example application, we have only created repositories for the `Category`, `Recipe` and `Unit` entities
+    * We chose not to create repositories for all entities (i.e `Ingredient`, `Notes`), as we do not need to directly manage them
+        * Rather, we will interact with them via the other entities (`Recipe`, etc)
+
+^^ Something seems off here, do some recce into this - Baeldung, Stack...
