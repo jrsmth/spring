@@ -117,3 +117,18 @@
 * Generally speaking, Spring Beans should be immutable and stateless
     * As a result, we can rely on Singleton for the majority of cases
 * Bean Scope [example](../03-dependency-injection/exercises/dependency-injection/src/main/java/com/jrsmiffy/springguru/dependencyinjection/config/PrototypeBean.java)
+
+<br>
+
+## `@Bean` vs `@Component`
+* Reminder:
+    * `@Component` is a class-level annotation that marks our class as as Bean to be loaded into the Spring Context
+	    * With `@Component`, Beans are auto-detected and auto-configured using classpath scanning; control of wiring is quite limited since its purely declarative
+    * `@Bean` is a method-level annotation that explicitly creates a Bean from the return object that is configured in the method
+	    * With `@Bean`, the declaration of the Bean is decoupled from the class definition and allows you to configure Beans with more control
+* We should default to using `@Component`, as this adds less noise and complexity to our codebase
+	* We would typically use `@Bean` when working with 3rd party dependencies, where we don’t have access to the source
+        * Or where we need exceptional control over the Bean's configuration
+* Sources:
+    * [Good Stack Overflow 1](https://stackoverflow.com/questions/10604298/spring-component-versus-bean)
+    * [Good Stack Overflow 2](https://stackoverflow.com/questions/27091553/are-bean-and-component-annotations-the-same-but-for-different-targets-in-sprin?noredirect=1&lq=1)
