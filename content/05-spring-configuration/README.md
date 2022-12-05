@@ -123,7 +123,8 @@
 ## `@Bean` vs `@Component`
 * Reminder:
     * `@Component` is a class-level annotation that marks our class as as Bean to be loaded into the Spring Context
-	    * With `@Component`, Beans are auto-detected and auto-configured using classpath scanning; control of wiring is quite limited since its purely declarative
+	    * With `@Component`, Beans are auto-detected and auto-configured using classpath scanning
+            * Control of wiring is quite limited since its purely declarative
     * `@Bean` is a method-level annotation that explicitly creates a Bean from the return object that is configured in the method
 	    * With `@Bean`, the declaration of the Bean is decoupled from the class definition and allows you to configure Beans with more control
 * We should default to using `@Component`, as this adds less noise and complexity to our codebase
