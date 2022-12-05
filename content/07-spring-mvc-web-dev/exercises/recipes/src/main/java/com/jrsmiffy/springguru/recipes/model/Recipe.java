@@ -1,15 +1,14 @@
 package com.jrsmiffy.springguru.recipes.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
 
-//@Data // Note: Equivalent to @Getter @Setter @ToString @EqualsAndHashCode @RequiredArgsConstructor
+// Note: @Data is equivalent to @Getter @Setter @ToString @EqualsAndHashCode @RequiredArgsConstructor
 // Note: @Data is designed to generate all of the boilerplate code for a POJO, not strictly nec. here (getters & setters would do)
 // Note: Actually @Data is not recommended for JPA entities due to performance issues
-@Entity @Getter @Setter
+@Entity @Getter @Setter @Builder @AllArgsConstructor @NoArgsConstructor
 public class Recipe {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) // Note: Relies on Hibernate to generate an Id for us
