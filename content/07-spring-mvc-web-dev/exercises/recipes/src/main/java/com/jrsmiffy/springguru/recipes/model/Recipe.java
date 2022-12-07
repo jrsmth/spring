@@ -23,6 +23,9 @@ public class Recipe {
 
     private String description;
 
+    @Lob
+    private String directions;
+
     @Enumerated(value = EnumType.STRING)
     // Note: the value of an enum field defaults to ORDINAL (0, 1, 2, ...) but STRING will persist the exact value (EASY)
     // Note: this is useful, if we choose to add new values that would disturb the ORDINAL sequence (ex: EASY, MED, KINDA_HARD, HARD)
@@ -42,5 +45,13 @@ public class Recipe {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe") // Note: mappedBy establishes a bidirectional mapping with Ingredient
     private Set<Ingredient> ingredients;
+
+    /** Helper method to add ingredients */
+    public Recipe addIngredient(Ingredient ingredient){
+        ingredient.setRecipe(this);
+        this.ingredients.add(ingredient);
+
+        return this;
+    }
 
 }
