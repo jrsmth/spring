@@ -1,6 +1,11 @@
 package com.jrsmiffy.springguru.recipes.bootstrap;
 
-import com.jrsmiffy.springguru.recipes.model.*; // TODO: remove *
+import com.jrsmiffy.springguru.recipes.model.Category;
+import com.jrsmiffy.springguru.recipes.model.Difficulty;
+import com.jrsmiffy.springguru.recipes.model.Ingredient;
+import com.jrsmiffy.springguru.recipes.model.Notes;
+import com.jrsmiffy.springguru.recipes.model.Recipe;
+import com.jrsmiffy.springguru.recipes.model.Unit;
 import com.jrsmiffy.springguru.recipes.repository.CategoryRepository;
 import com.jrsmiffy.springguru.recipes.repository.RecipeRepository;
 import com.jrsmiffy.springguru.recipes.repository.UnitRepository;
@@ -12,12 +17,16 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 
 @Component @Slf4j
-public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
+public class RecipesBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
-    public RecipeBootstrap(
+    public RecipesBootstrap(
             @Qualifier("guacamoleDirections") String guacamoleDirections,
             @Qualifier("tacoDirections") String tacoDirections, // Note: Lombok does not copy @Qualifier into the constructor
             CategoryRepository categoryRepository,
@@ -41,7 +50,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     @Override @Transactional
     public void onApplicationEvent(ContextRefreshedEvent event) {
         recipeRepository.saveAll(getRecipes());
-        log.debug("Bootstrapping Recipe Data");
+        log.info("Bootstrapping Recipes Data");
     }
 
     private List<Recipe> getRecipes() {
@@ -122,7 +131,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                     units.put(name, unitOptional.get());
 
                 } else {
-                    throw new RuntimeException("Expected unit not found!");
+                    throw new RuntimeException(String.format("Expected unit '%s' can not be found!", name));
 
                 }
             } catch (Exception e) {

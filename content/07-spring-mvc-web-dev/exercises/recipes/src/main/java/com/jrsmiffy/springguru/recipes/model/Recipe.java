@@ -3,6 +3,7 @@ package com.jrsmiffy.springguru.recipes.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 // Note: @Data is equivalent to @Getter @Setter @ToString @EqualsAndHashCode @RequiredArgsConstructor
@@ -44,10 +45,14 @@ public class Recipe {
     private Notes note;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe") // Note: mappedBy establishes a bidirectional mapping with Ingredient
-    private Set<Ingredient> ingredients;
+    private Set<Ingredient> ingredients; // = new HashSet<>(); // Note: without the helper method, I would have to initialise the Set() here
 
     /** Helper method to add ingredients */
     public Recipe addIngredient(Ingredient ingredient){
+        if (this.ingredients == null) {
+            this.ingredients = new HashSet<>();
+        }
+
         ingredient.setRecipe(this);
         this.ingredients.add(ingredient);
 
