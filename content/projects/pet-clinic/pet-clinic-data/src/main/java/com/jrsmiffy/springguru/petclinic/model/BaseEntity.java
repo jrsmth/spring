@@ -2,10 +2,13 @@ package com.jrsmiffy.springguru.petclinic.model;
 
 import lombok.Getter;
 import lombok.Setter;
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
-@Getter @Setter
+@MappedSuperclass @Getter @Setter
 public class BaseEntity implements Serializable {
     // note: Serializable interface allows the state of an object to be converted into a byte stream
     // note: https://www.geeksforgeeks.org/serializable-interface-in-java/
@@ -18,6 +21,8 @@ public class BaseEntity implements Serializable {
      * TLDR: Implementing Serialization may be req. for legacy code; not needed nowadays...
      */
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     // note: Hibernate recommends that we use Wrapper classes instead of primitives
     // note: This is because the 'Boxed' types can be 'null', whereas primitives cannot
