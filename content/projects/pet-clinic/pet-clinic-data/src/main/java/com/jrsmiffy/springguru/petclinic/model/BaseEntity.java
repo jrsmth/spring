@@ -17,7 +17,7 @@ import java.io.Serializable;
          A mapped superclass has no separate table defined for it.
   */
 @MappedSuperclass @Getter @Setter
-public class BaseEntity implements Serializable { // Question: Should @MappedSuperclass-annotated classes be abstract?
+public abstract class BaseEntity implements Serializable { // Question: Should @MappedSuperclass-annotated classes be abstract?
     // note: Serializable interface allows the state of an object to be converted into a byte stream
     // note: https://www.geeksforgeeks.org/serializable-interface-in-java/
     // note: https://stackoverflow.com/questions/4548816/when-should-we-implement-serializable-interface

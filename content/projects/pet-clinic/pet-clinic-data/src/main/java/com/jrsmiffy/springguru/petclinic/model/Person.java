@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass @Getter @Setter
-public class Person extends BaseEntity {
+public abstract class Person extends BaseEntity {
 
     private String firstName;
     private String lastName;
