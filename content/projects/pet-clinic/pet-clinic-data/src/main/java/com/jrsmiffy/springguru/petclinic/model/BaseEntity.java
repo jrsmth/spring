@@ -21,8 +21,7 @@ public class BaseEntity implements Serializable {
      * TLDR: Implementing Serialization may be req. for legacy code; not needed nowadays...
      */
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     // note: Hibernate recommends that we use Wrapper classes instead of primitives
     // note: This is because the 'Boxed' types can be 'null', whereas primitives cannot
