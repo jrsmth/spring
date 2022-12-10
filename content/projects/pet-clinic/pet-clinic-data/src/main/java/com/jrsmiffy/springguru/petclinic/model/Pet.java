@@ -3,11 +3,14 @@ package com.jrsmiffy.springguru.petclinic.model;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity @Getter @Setter
 public class Pet extends BaseEntity {
@@ -23,6 +26,9 @@ public class Pet extends BaseEntity {
 
     private String name;
 
-    private Vet vet;
+//    private Vet vet; // Question: how are we linking Vets and Pets?
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    private Set<Visit> visits = new HashSet<>();
 
 }
