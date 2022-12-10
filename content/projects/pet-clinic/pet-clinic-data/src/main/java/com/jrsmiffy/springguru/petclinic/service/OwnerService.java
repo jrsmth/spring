@@ -1,6 +1,6 @@
 package com.jrsmiffy.springguru.petclinic.service;
 
-import com.jrsmiffy.springguru.petclinic.model.person.Owner;
+import com.jrsmiffy.springguru.petclinic.model.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long> {
 

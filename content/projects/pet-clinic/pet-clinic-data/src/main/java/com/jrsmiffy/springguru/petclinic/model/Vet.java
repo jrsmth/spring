@@ -1,8 +1,7 @@
-package com.jrsmiffy.springguru.petclinic.model.person;
+package com.jrsmiffy.springguru.petclinic.model;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.HashSet;
 import java.util.Set;
 

@@ -1,10 +1,10 @@
 package com.jrsmiffy.springguru.petclinic.bootstrap;
 
-import com.jrsmiffy.springguru.petclinic.model.person.Owner;
-import com.jrsmiffy.springguru.petclinic.model.person.Specialty;
-import com.jrsmiffy.springguru.petclinic.model.person.Vet;
-import com.jrsmiffy.springguru.petclinic.model.pet.Pet;
-import com.jrsmiffy.springguru.petclinic.model.pet.PetType;
+import com.jrsmiffy.springguru.petclinic.model.Owner;
+import com.jrsmiffy.springguru.petclinic.model.Specialty;
+import com.jrsmiffy.springguru.petclinic.model.Vet;
+import com.jrsmiffy.springguru.petclinic.model.Pet;
+import com.jrsmiffy.springguru.petclinic.model.PetType;
 import com.jrsmiffy.springguru.petclinic.service.OwnerService;
 import com.jrsmiffy.springguru.petclinic.service.PetTypeService;
 import com.jrsmiffy.springguru.petclinic.service.SpecialtyService;

@@ -1,7 +1,5 @@
-package com.jrsmiffy.springguru.petclinic.model.pet;
+package com.jrsmiffy.springguru.petclinic.model;
 
-import com.jrsmiffy.springguru.petclinic.model.BaseEntity;
-import com.jrsmiffy.springguru.petclinic.model.pet.Pet;
 import lombok.Getter;
 import lombok.Setter;
 

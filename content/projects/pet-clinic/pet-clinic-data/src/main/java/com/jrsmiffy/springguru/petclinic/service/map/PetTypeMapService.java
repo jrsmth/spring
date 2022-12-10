@@ -1,6 +1,6 @@
 package com.jrsmiffy.springguru.petclinic.service.map;
 
-import com.jrsmiffy.springguru.petclinic.model.pet.PetType;
+import com.jrsmiffy.springguru.petclinic.model.PetType;
 import com.jrsmiffy.springguru.petclinic.service.PetTypeService;
 import org.springframework.stereotype.Service;
 import java.util.Set;

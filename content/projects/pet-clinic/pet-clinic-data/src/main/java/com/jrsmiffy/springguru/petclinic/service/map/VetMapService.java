@@ -1,7 +1,7 @@
 package com.jrsmiffy.springguru.petclinic.service.map;
 
-import com.jrsmiffy.springguru.petclinic.model.person.Specialty;
-import com.jrsmiffy.springguru.petclinic.model.person.Vet;
+import com.jrsmiffy.springguru.petclinic.model.Specialty;
+import com.jrsmiffy.springguru.petclinic.model.Vet;
 import com.jrsmiffy.springguru.petclinic.service.SpecialtyService;
 import com.jrsmiffy.springguru.petclinic.service.VetService;
 import lombok.RequiredArgsConstructor;

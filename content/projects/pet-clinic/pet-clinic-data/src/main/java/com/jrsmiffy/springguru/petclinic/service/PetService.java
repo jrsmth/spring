@@ -1,8 +1,6 @@
 package com.jrsmiffy.springguru.petclinic.service;
 
-import com.jrsmiffy.springguru.petclinic.model.pet.Pet;
-
-import java.util.Set;
+import com.jrsmiffy.springguru.petclinic.model.Pet;
 
 public interface PetService extends CrudService<Pet, Long> {
 

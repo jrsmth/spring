@@ -1,7 +1,7 @@
 package com.jrsmiffy.springguru.petclinic.service.map;
 
-import com.jrsmiffy.springguru.petclinic.model.person.Owner;
-import com.jrsmiffy.springguru.petclinic.model.pet.Pet;
+import com.jrsmiffy.springguru.petclinic.model.Owner;
+import com.jrsmiffy.springguru.petclinic.model.Pet;
 import com.jrsmiffy.springguru.petclinic.service.OwnerService;
 import com.jrsmiffy.springguru.petclinic.service.PetService;
 import com.jrsmiffy.springguru.petclinic.service.PetTypeService;
