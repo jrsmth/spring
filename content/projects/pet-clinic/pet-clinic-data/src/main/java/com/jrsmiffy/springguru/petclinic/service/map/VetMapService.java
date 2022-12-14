@@ -5,11 +5,12 @@ import com.jrsmiffy.springguru.petclinic.model.Vet;
 import com.jrsmiffy.springguru.petclinic.service.SpecialtyService;
 import com.jrsmiffy.springguru.petclinic.service.VetService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service @RequiredArgsConstructor
+@Service @RequiredArgsConstructor @Profile("map")
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialtyService specialtyService;
@@ -46,11 +47,6 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
-    }
-
-    @Override
-    public Vet findByLastName(String lastName) {
-        return null;
     }
 
 }

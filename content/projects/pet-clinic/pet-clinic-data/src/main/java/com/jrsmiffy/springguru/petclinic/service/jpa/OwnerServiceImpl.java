@@ -1,7 +1,8 @@
-package com.jrsmiffy.springguru.petclinic.service;
+package com.jrsmiffy.springguru.petclinic.service.jpa;
 
 import com.jrsmiffy.springguru.petclinic.model.Owner;
 import com.jrsmiffy.springguru.petclinic.repository.OwnerRepository;
+import com.jrsmiffy.springguru.petclinic.service.OwnerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.HashSet;
