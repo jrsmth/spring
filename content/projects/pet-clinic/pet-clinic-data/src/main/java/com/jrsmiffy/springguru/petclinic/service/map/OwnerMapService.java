@@ -6,11 +6,13 @@ import com.jrsmiffy.springguru.petclinic.service.OwnerService;
 import com.jrsmiffy.springguru.petclinic.service.PetService;
 import com.jrsmiffy.springguru.petclinic.service.PetTypeService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
-@Service @RequiredArgsConstructor
+@Service @RequiredArgsConstructor @Profile("map")
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
@@ -64,7 +66,19 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner findByLastName(String lastName) {
+        return this.findAll()
+                .stream()
+                .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
+                .findFirst()
+                .orElse(null);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        // TODO: Implement
         return null;
     }
+
+
 
 }
