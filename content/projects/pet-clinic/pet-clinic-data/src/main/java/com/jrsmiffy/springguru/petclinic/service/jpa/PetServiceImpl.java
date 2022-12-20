@@ -22,23 +22,23 @@ public class PetServiceImpl implements PetService {
     }
 
     @Override
-    public Pet findById(Long aLong) {
-        return petRepository.findById(aLong).orElse(null);
+    public Pet findById(Long id) {
+        return petRepository.findById(id).orElse(null);
     }
 
     @Override
-    public Pet save(Pet object) {
-        return petRepository.save(object);
+    public Pet save(Pet pet) {
+        return petRepository.save(pet);
     }
 
     @Override
-    public void delete(Pet object) {
-        petRepository.delete(object);
+    public void delete(Pet pet) {
+        petRepository.delete(pet);
     }
 
     @Override
-    public void deleteById(Long aLong) {
-        petRepository.deleteById(aLong);
+    public void deleteById(Long id) {
+        petRepository.deleteById(id);
     }
 
 }
