@@ -4,12 +4,13 @@ import com.jrsmiffy.springguru.petclinic.model.Pet;
 import com.jrsmiffy.springguru.petclinic.repository.PetRepository;
 import com.jrsmiffy.springguru.petclinic.service.PetService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
-@Service @RequiredArgsConstructor
+@Service @RequiredArgsConstructor @Profile("jpa")
 public class PetServiceImpl implements PetService {
 
     private final PetRepository petRepository;

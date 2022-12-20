@@ -4,12 +4,13 @@ import com.jrsmiffy.springguru.petclinic.model.Specialty;
 import com.jrsmiffy.springguru.petclinic.repository.SpecialtyRepository;
 import com.jrsmiffy.springguru.petclinic.service.SpecialtyService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
-@Service @RequiredArgsConstructor
+@Service @RequiredArgsConstructor @Profile("jpa")
 public class SpecialtyServiceImpl implements SpecialtyService {
 
     private final SpecialtyRepository specialtyRepository;

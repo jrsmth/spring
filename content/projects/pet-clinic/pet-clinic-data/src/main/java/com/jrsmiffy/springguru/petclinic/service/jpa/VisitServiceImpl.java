@@ -4,11 +4,12 @@ import com.jrsmiffy.springguru.petclinic.model.Visit;
 import com.jrsmiffy.springguru.petclinic.repository.VisitRepository;
 import com.jrsmiffy.springguru.petclinic.service.VisitService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
 
-@Service @RequiredArgsConstructor
+@Service @RequiredArgsConstructor @Profile("jpa")
 public class VisitServiceImpl implements VisitService {
 
     private final VisitRepository visitRepository;
