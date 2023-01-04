@@ -17,6 +17,7 @@
 * [Section 6: Externalising Properties](./content/06-externalising-properties)
 * [Section 7: Spring MVC Web Development](./content/07-spring-mvc-web-dev)
 * [Section 8: JPA Data Modelling](./content/08-jpa-data-modelling)
+* [Section 9: Project Lombok](./content/09-project-lombok)
 
 <br>
 
