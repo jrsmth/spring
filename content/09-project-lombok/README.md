@@ -28,7 +28,7 @@
     * `@Cleanup`: Will call `close()` on a resource in a finally block
 * Getters and Setters:
     * `@Getter`: Creates 'getters' for all properties of the class
-        * `@Getter(lazy=true)`: Used for expensive 'get' operations, Lombok caches the result so we don't have to repeat on subsequent calls
+        * `@Getter(lazy=true)`: Used for expensive 'get' operations, Lombok caches the result so we don't have to repeat them on subsequent calls
     * `@Setter`: Creates 'setters' for all non-`final` properties of the class
 * To String, Equals & Hash Code:
     * `@ToString`: Generates a string of the class name and comma-separated field names; optional parameters to configure output
