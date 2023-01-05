@@ -65,12 +65,14 @@ public class RecipesBootstrap implements ApplicationListener<ContextRefreshedEve
                 .directions(guacamoleDirections)
                 .prepMins(10)
                 .cookMins(0)
-                .notes(new Notes("To extend a limited supply of avocados, add either sour cream or cottage cheese to your guacamole dip."))
                 .source("Simply Recipes")
                 .servings(4)
                 .categories(Set.of(categories.get("American"), categories.get("Mexican")))
                 .url("https://www.simplyrecipes.com/recipes/perfect_guacamole/")
                 .build();
+
+        // Note: setting 'Notes' outside of @Builder pattern to make use of custom setter
+        guacamole.setNotes(new Notes("To extend a limited supply of avocados, add either sour cream or cottage cheese to your guacamole dip."));
 
         guacamole.addIngredient(new Ingredient("Ripe avocados", new BigDecimal(2), units.get("Each")));
         guacamole.addIngredient(new Ingredient("Kosher salt", new BigDecimal(".5"), units.get("Teaspoon")));
@@ -88,12 +90,14 @@ public class RecipesBootstrap implements ApplicationListener<ContextRefreshedEve
                 .directions(tacoDirections)
                 .prepMins(20)
                 .cookMins(10)
-                .notes(new Notes("We have a family motto and it is this: Everything goes better in a tortilla. Any and every kind of leftover can go inside a warm tortilla"))
                 .source("Simply Recipes")
                 .servings(6)
                 .categories(Set.of(categories.get("American"), categories.get("Mexican")))
                 .url("https://www.simplyrecipes.com/recipes/spicy_grilled_chicken_tacos/")
                 .build();
+
+        // Note: setting 'Notes' outside of @Builder pattern to make use of custom setter
+        tacos.setNotes(new Notes("We have a family motto and it is this: Everything goes better in a tortilla. Any and every kind of leftover can go inside a warm tortilla"));
 
         tacos.addIngredient(new Ingredient("Chilli Powder", new BigDecimal(2), units.get("Tablespoon")));
         tacos.addIngredient(new Ingredient("Dried Oregano", new BigDecimal(1), units.get("Teaspoon")));

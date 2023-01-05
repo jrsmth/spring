@@ -1,6 +1,7 @@
 package com.jrsmiffy.springguru.recipes.model;
 
 import lombok.*;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -9,7 +10,7 @@ import java.util.Set;
 // Note: @Data is equivalent to @Getter @Setter @ToString @EqualsAndHashCode @RequiredArgsConstructor
 // Note: @Data is designed to generate all of the boilerplate code for a POJO, not strictly nec. here (getters & setters would do)
 // Note: Actually @Data is not recommended for JPA entities due to performance issues
-@Entity @Getter @Setter @Builder @AllArgsConstructor @NoArgsConstructor
+@Entity @Getter @Setter @Builder @AllArgsConstructor @NoArgsConstructor @Slf4j
 public class Recipe {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) // Note: Relies on Hibernate to generate an Id for us
@@ -46,6 +47,13 @@ public class Recipe {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe") // Note: mappedBy establishes a bidirectional mapping with Ingredient
     private Set<Ingredient> ingredients; // = new HashSet<>(); // Note: without the helper method, I would have to initialise the Set() here
+
+    public void setNotes(Notes notes) {
+        this.notes = notes;
+        notes.setRecipe(this);
+        log.info("Using explicit custom setter");
+        // Note: explicit setter required here, as we're also setting the reverse relationship on the notes
+    }
 
     /** Helper method to add ingredients */
     public Recipe addIngredient(Ingredient ingredient){
