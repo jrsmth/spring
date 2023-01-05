@@ -17,7 +17,7 @@
 
 <br>
 
-## Features
+## Useful Features
 * Variables:
     * `val`: Allows us to declare a final local variable without specifying the type
     * `var`: Allows us to declare a mutable local variable without specifying the type
@@ -54,3 +54,5 @@
     * `@Slf4j`: Creates an SLF4J logger
         * Simple Logging Facade for Java (SLF4J) is an abstraction for various logging frameworks (e.g. java.util.logging, logback, etc)
             * Spring Boot uses 'logback' by default
+* Experimental:
+    * Lombok does ship with features in an 'experimental' package, which are not recommended for production-use
