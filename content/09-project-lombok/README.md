@@ -19,14 +19,16 @@
 
 ## Features
 * Variables:
-    * `val`: allows us to declare a final local variable without specifying the type
-    * `var`: allows us to declare a mutable local variable without specifying the type
-* Null Checking:
-    * `@NonNull`: Null-checks a parameter and will throw a NPE if it is `null`
+    * `val`: Allows us to declare a final local variable without specifying the type
+    * `var`: Allows us to declare a mutable local variable without specifying the type
+* Exceptions:
+    * `@NonNull`: Null-checks a method parameter and will throw a NPE if it is `null`
+    * `@SneakyThrows`: Allows us to throw checked exceptions without actually declaring them in your method's throws clause
 * Clean Up:
     * `@Cleanup`: Will call `close()` on a resource in a finally block
 * Getters and Setters:
     * `@Getter`: Creates 'getters' for all properties of the class
+        * `@Getter(lazy=true)`: Used for expensive 'get' operations, Lombok caches the result so we don't have to repeat on subsequent calls
     * `@Setter`: Creates 'setters' for all non-`final` properties of the class
 * To String, Equals & Hash Code:
     * `@ToString`: Generates a string of the class name and comma-separated field names; optional parameters to configure output
@@ -39,3 +41,16 @@
     * `@Data`: Generates the typical boilerplate code for a POJO
         * Combines: `@RequiredArgsConstructor`, `@Getter`, `@Setter`, `@ToString`, `@EqualsAndHashCode`
         * Note, no constructor is generated if one or more constructors have already been explicitly declared
+    * `@Value`: The immutable variant of `@Data`; all fields are made `private` and `final`, setters are not generated and the class itself is made `final`
+* Builder:
+    * `@Builder`: Implements the builder pattern on your class
+        * Allowing you to instantiate an object in the form: `YourClass.builder().field1(value1).field2(value2)...build();`
+* Synchronized:
+    * `@Synchronized`: A safer implementation of Java's `synchronized()` method
+        * In a multi-threaded environment, a race condition occurs when two or more threads attempt to update mutable shared data at the same time
+            * Java offers a mechanism to avoid race conditions by synchronizing thread access to shared data
+* Logging:
+    * `@Log`: Creates a Java util logger
+    * `@Slf4j`: Creates an SLF4J logger
+        * Simple Logging Facade for Java (SLF4J) is an abstraction for various logging frameworks (e.g. java.util.logging, logback, etc)
+            * Spring Boot uses 'logback' by default
