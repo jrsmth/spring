@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.Entity;
 
-@Entity @Getter @Setter
+@Entity @Getter @Setter // Note: @Builder doesn't seem worth it here
 public class Specialty extends BaseEntity {
     // Question: Specialty or Speciality? TLDR: both are acceptable
         // https://writingexplained.org/specialty-vs-speciality

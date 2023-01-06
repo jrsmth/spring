@@ -45,6 +45,7 @@
 * Builder:
     * `@Builder`: Implements the builder pattern on your class
         * Allowing you to instantiate an object in the form: `YourClass.builder().field1(value1).field2(value2)...build();`
+        * `@Builder` requires a 'proper' (non-default?) constructor; typically this means using it in conjunction with `@AllArgsConstructor`
 * Synchronized:
     * `@Synchronized`: A safer implementation of Java's `synchronized()` method
         * In a multi-threaded environment, a race condition occurs when two or more threads attempt to update mutable shared data at the same time

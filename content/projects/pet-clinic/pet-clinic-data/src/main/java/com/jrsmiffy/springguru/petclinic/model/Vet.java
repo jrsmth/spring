@@ -1,6 +1,8 @@
 package com.jrsmiffy.springguru.petclinic.model;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -8,14 +10,19 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity @Getter @Setter
+@Entity @Getter @Setter @NoArgsConstructor
 // Note: SF Guru uses @Table(name = "vets") but I don't regard that as good practise
     // Note: Hibernate will automatically create a table named "vet" - singular table names are conventional
 public class Vet extends Person {
+
+    @Builder // Note: Constructor-level annotation will also include the properties to be supplied to the parent
+    public Vet(Long id, String firstName, String lastName, Set<Specialty> specialties) {
+        super(id, firstName, lastName);
+        this.specialties = specialties;
+    }
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(

@@ -1,6 +1,9 @@
 package com.jrsmiffy.springguru.petclinic.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +19,7 @@ import java.io.Serializable;
          Notice that this class has no @Entity annotation, as it won't be persisted in the database by itself
          A mapped superclass has no separate table defined for it.
   */
-@MappedSuperclass @Getter @Setter
+@MappedSuperclass @Getter @Setter @AllArgsConstructor @NoArgsConstructor
 public abstract class BaseEntity implements Serializable { // Question: Should @MappedSuperclass-annotated classes be abstract?
     // note: Serializable interface allows the state of an object to be converted into a byte stream
     // note: https://www.geeksforgeeks.org/serializable-interface-in-java/

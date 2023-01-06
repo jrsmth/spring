@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
-@Entity @Getter @Setter
+@Entity @Getter @Setter // Note: @Builder doesn't seem worth it here
 public class Visit extends BaseEntity {
 
     private LocalDate date; // question: would a unix timestamp be better?

@@ -1,6 +1,9 @@
 package com.jrsmiffy.springguru.petclinic.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.CascadeType;
@@ -12,7 +15,7 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity @Getter @Setter
+@Entity @Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor
 public class Pet extends BaseEntity {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")

@@ -15,7 +15,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.time.LocalDate;
+import java.util.Set;
 
 @Component @Slf4j @RequiredArgsConstructor
 public class BootstrapData implements CommandLineRunner {
@@ -51,40 +54,45 @@ public class BootstrapData implements CommandLineRunner {
         petTypeService.save(catType);
 
         log.info("--- Data Loaded :: Pet Type  ---");
-
     }
 
-    private void loadOwner() { // NOTE: loadOwner() also creates Pet and Visit objects - Question: Extract them out?
-        Owner ownerOne = new Owner();
-        ownerOne.setId(1L);
-        ownerOne.setFirstName("Michael");
-        ownerOne.setLastName("Weston");
-        ownerOne.setAddress("35 Your Mama's House");
-        ownerOne.setCity("Miami");
-        ownerOne.setTelephone("0123456789");
+    private void loadOwner() { // Note: loadOwner() also creates Pet and Visit objects - Question: Extract them out?
+        Owner ownerOne = Owner.builder()
+                .id(1L)
+                .firstName("Michael")
+                .lastName("Weston")
+                .address("35 Your Mama's House")
+                .city("Miami")
+                .telephone("0123456789")
+                .build();
 
-        Pet mikesPet = new Pet();
-        mikesPet.setType(petTypeService.findById(1L)); // note: this is a dog type
-        mikesPet.setOwner(ownerOne);
-        mikesPet.setBirthDate(LocalDate.now());
-        mikesPet.setName("Rosco");
-        ownerOne.getPets().add(mikesPet);
+        Pet mikesPet = Pet.builder()
+                .type(petTypeService.findById(1L)) // Note: This is a dog type
+                .owner(ownerOne)
+                .birthDate(LocalDate.now())
+                .name("Rosco")
+                .build();
+
+        ownerOne.setPets(Set.of(mikesPet));
         ownerService.save(ownerOne);
 
-        Owner ownerTwo = new Owner();
-        ownerTwo.setId(2L);
-        ownerTwo.setFirstName("Fiona");
-        ownerTwo.setLastName("Glennane");
-        ownerOne.setAddress("35 Noneofyour Business");
-        ownerOne.setCity("Las Vegas");
-        ownerOne.setTelephone("9876543210");
+        Owner ownerTwo = Owner.builder()
+                .id(2L)
+                .firstName("Fiona")
+                .lastName("Glennane")
+                .address("123 Noneofyour Business")
+                .city("Las Vegas")
+                .telephone("9876543210")
+                .build();
 
-        Pet fionasPet = new Pet();
-        fionasPet.setType(petTypeService.findById(2L)); // note: this is a cat type
-        fionasPet.setOwner(ownerTwo);
-        fionasPet.setBirthDate(LocalDate.now());
-        fionasPet.setName("Jessicat");
-        ownerTwo.getPets().add(fionasPet);
+        Pet fionasPet = Pet.builder()
+                .type(petTypeService.findById(2L)) // Note: This is a cat type
+                .owner(ownerTwo)
+                .birthDate(LocalDate.now())
+                .name("Jessicat")
+                .build();
+
+        ownerTwo.setPets(Set.of(fionasPet));
         ownerService.save(ownerTwo);
 
         log.info("--- Data Loaded :: Owner     ---");
@@ -96,7 +104,6 @@ public class BootstrapData implements CommandLineRunner {
         visitService.save(visitOne);
 
         log.info("--- Data Loaded :: Visit     ---");
-
     }
 
     private void loadSpecialty() {
@@ -113,26 +120,28 @@ public class BootstrapData implements CommandLineRunner {
         specialtyService.save(dentistry);
 
         log.info("--- Data Loaded :: Specialty ---");
-
     }
 
     private void loadVet() {
-        Vet vetOne = new Vet();
-        vetOne.setId(1L);
-        vetOne.setFirstName("Sam");
-        vetOne.setLastName("Axe");
-        vetOne.getSpecialties().add(specialtyService.findById(1L)); // note: this is the radiology specialty
+        Vet vetOne = Vet.builder()
+                .id(1L)
+                .firstName("Sam")
+                .lastName("Axe")
+                .specialties(Set.of(specialtyService.findById(1L))) // Note: This is the radiology specialty
+                .build();
+
         vetService.save(vetOne);
 
-        Vet vetTwo = new Vet();
-        vetTwo.setId(2L);
-        vetTwo.setFirstName("Jessie");
-        vetTwo.setLastName("Porter");
-        vetTwo.getSpecialties().add(specialtyService.findById(2L)); // note: this is the surgery specialty
+        Vet vetTwo = Vet.builder()
+                .id(2L)
+                .firstName("Jessie")
+                .lastName("Porter")
+                .specialties(Set.of(specialtyService.findById(2L))) // Note: This is the surgery specialty
+                .build();
+
         vetService.save(vetTwo);
 
         log.info("--- Data Loaded :: Vet       ---");
-
     }
 
 }
