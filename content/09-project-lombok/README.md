@@ -69,5 +69,5 @@
 * `@Data`:
     * If you apply `@Data` to your Hibernate `@Entity`'s, IntelliJ will give you a warning along the lines of:
         * `Using @Data for JPA entities is not recommended. It can cause severe performance and memory consumption issues.`
-            * This is related to issue caused by Lombok's implementation of `@EqualsAndHashCode` (discussed above)
+            * This is related to issues caused by Lombok's implementation of `@EqualsAndHashCode` (discussed above)
             * Good [post](https://thorben-janssen.com/lombok-hibernate-how-to-avoid-common-pitfalls/) that recommends avoiding `@ToString` and `@EqualsAndHashCode` with Hibernate entities
