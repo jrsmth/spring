@@ -10,14 +10,15 @@
 <br>
 
 ## Content
-* [Section 2: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
-* [Section 3: Dependency Injection with Spring](./content/03-dependency-injection)
-* [Section 4: Building a Jokes App](./content/04-build-jokes-app)
-* [Section 5: Spring Configuration](./content/05-spring-configuration)
-* [Section 6: Externalising Properties](./content/06-externalising-properties)
-* [Section 7: Spring MVC Web Development](./content/07-spring-mvc-web-dev)
-* [Section 8: JPA Data Modelling](./content/08-jpa-data-modelling)
-* [Section 9: Project Lombok](./content/09-project-lombok)
+* [Section 02: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
+* [Section 03: Dependency Injection with Spring](./content/03-dependency-injection)
+* [Section 04: Building a Jokes App](./content/04-build-jokes-app)
+* [Section 05: Spring Configuration](./content/05-spring-configuration)
+* [Section 06: Externalising Properties](./content/06-externalising-properties)
+* [Section 07: Spring MVC Web Development](./content/07-spring-mvc-web-dev)
+* [Section 08: JPA Data Modelling](./content/08-jpa-data-modelling)
+* [Section 09: Project Lombok](./content/09-project-lombok)
+* [Section 10: Testing Spring Applications](./content/10-testing-spring-apps)
 
 <br>
 
