@@ -4,7 +4,7 @@
 <br>
 
 ## Exercises
-* This one
+* [Recipes [Section 7]](../07-spring-mvc-web-dev/exercises/recipes)
 
 <br>
 
