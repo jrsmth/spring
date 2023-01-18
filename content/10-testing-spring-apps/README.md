@@ -128,3 +128,8 @@
         * Indicates test is enabled for a specific testing environment
     * `@ProfileValueSourceConfiguration`:
         * Specify a profile value source
+
+<br>
+
+## Mockito
+* Example: [`RecipeServiceImplTest.java`](../07-spring-mvc-web-dev/exercises/recipes/src/test/java/com/jrsmiffy/springguru/recipes/service/RecipeServiceImplTest.java)
