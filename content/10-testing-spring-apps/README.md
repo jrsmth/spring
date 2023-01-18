@@ -132,4 +132,14 @@
 <br>
 
 ## Mockito
+* Common Features:
+    * `@Mock`: 
+        * Creates and injects a mocked object into the annotated field
+    * `MockitoAnnotations.openMocks(this)`:
+        * Enables Mockito annotations programmatically; typically called in the `@Before setUp()` method
+            * Alternatively, you can annotate the JUnit test class with `@RunWith(MockitoJUnitRunner.class)`
+    * `when(mockedObject.doSomething()).thenReturn(returnValue)`:
+        * Allows you to supply a return value for a method call on your mocked object
+    * `verify(mockedObject, times(numberOfInvocations)).doSomething()`:
+        * Verifies the number of invocations of a particular method on your mocked object
 * Example: [`RecipeServiceImplTest.java`](../07-spring-mvc-web-dev/exercises/recipes/src/test/java/com/jrsmiffy/springguru/recipes/service/RecipeServiceImplTest.java)
