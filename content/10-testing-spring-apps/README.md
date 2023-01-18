@@ -62,7 +62,7 @@
 
 <br>
 
-## Spring
+## Spring Boot
 * Spring Boot Test Annotations:
     * `@RunWith(SpringRunner.class)`:
         * Runs a test with the Spring Context
@@ -112,3 +112,19 @@
         * Actiont to run after finishing a transaction
     * `@Commit`:
         * Specifies the transaction should be committed after the test
+    * `@Rollback`:
+        * Specifies that the transaction should be rolled back after the test; which is the default action
+    * `@Sql`:
+        * Specify SQL scripts to run before the test
+    * `@SqlConfig`:
+        * Define meta-data for SQL scripts that are run before the test
+    * `@SqlGroup`:
+        * Groups together related `@Sql` annotations
+    * `@Repeat`:
+        * Repeats a test a specified number of times
+    * `@Timed`:
+        * Similar to JUnit's `@Timeout` but will wait for the test to complete (unlike with JUnit)
+    * `@IfProfileValue`:
+        * Indicates test is enabled for a specific testing environment
+    * `@ProfileValueSourceConfiguration`:
+        * Specify a profile value source
