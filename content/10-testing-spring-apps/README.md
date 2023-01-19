@@ -164,4 +164,4 @@
                 Type argument = argumentCaptor.getValue();
                 assertEquals(expected, argument);
             ```
-* Further Example: [`IndexControllerTest.java`](../07-spring-mvc-web-dev/exercises/recipes/src/test/java/com/jrsmiffy/springguru/recipes/controller/IndexControllerTest.java)
+* Example: [`IndexControllerTest.java`](../07-spring-mvc-web-dev/exercises/recipes/src/test/java/com/jrsmiffy/springguru/recipes/controller/IndexControllerTest.java)
