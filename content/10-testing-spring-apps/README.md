@@ -164,4 +164,5 @@
                 Type argument = argumentCaptor.getValue();
                 assertEquals(expected, argument);
             ```
+        * Argument Captor Example: [`IndexControllerTest.java`](../07-spring-mvc-web-dev/exercises/recipes/src/test/java/com/jrsmiffy/springguru/recipes/controller/IndexControllerTest.java)
 * Example: [`RecipeServiceImplTest.java`](../07-spring-mvc-web-dev/exercises/recipes/src/test/java/com/jrsmiffy/springguru/recipes/service/RecipeServiceImplTest.java)
