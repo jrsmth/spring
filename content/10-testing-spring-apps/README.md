@@ -142,4 +142,26 @@
         * Allows you to supply a return value for a method call on your mocked object
     * `verify(mockedObject, times(numberOfInvocations)).doSomething()`:
         * Verifies the number of invocations of a particular method on your mocked object
+    * Argument Captor:
+        * Allows you to intercept an argument that is passed to a method on your mocked object, so you can inspect it
+            * Good [Article](https://www.baeldung.com/mockito-argumentcaptor)
+        * Steps:
+            ```java
+                // Test set-up
+                ...
+
+                when(mockObject.doSomething()).thenReturn(value);
+                ArgumentCaptor<Type> argumentCaptor = ArgumentCaptor.forClass(Type.class);
+
+                // Exercise behaviour under test
+                ...
+
+                // Make assertions
+                ...
+                
+                verify(mockObject, times(numberOfInvocations)).doSomething(argumentCaptor.capture());
+
+                Type argument = argumentCaptor.getValue();
+                assertEquals(expected, argument);
+            ```
 * Example: [`RecipeServiceImplTest.java`](../07-spring-mvc-web-dev/exercises/recipes/src/test/java/com/jrsmiffy/springguru/recipes/service/RecipeServiceImplTest.java)
