@@ -1,16 +1,21 @@
 package com.jrsmiffy.springguru.recipes.controller;
 
 import com.jrsmiffy.springguru.recipes.service.RecipeService;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller @RequiredArgsConstructor @Slf4j
+@Controller @Slf4j // @RequiredArgsConstructor
+// NOTE: I implemented a constructor instead bc JUnit was giving me jip:
+        // NOTE: Java 'constructor in class cannot be applied to given types' 'required: no arguments found...'
 public class IndexController {
 
     private final RecipeService recipeService;
+
+    public IndexController (RecipeService recipeService) {
+        this.recipeService = recipeService;
+    }
 
     @RequestMapping({"", "/", "/index"})
     public String getIndexPage(Model model) {

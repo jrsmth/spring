@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.ui.Model;
 
 import java.util.Set;
@@ -16,6 +18,9 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 /** Unit Test for {@link IndexController} */
 public class IndexControllerTest {
@@ -24,6 +29,8 @@ public class IndexControllerTest {
 
     @Mock private RecipeService mockService;
     @Mock private Model model;
+
+    private static final String TEMPLATE = "index";
 
     @Before
     public void setUp() {
@@ -35,7 +42,6 @@ public class IndexControllerTest {
     @Test
     public void getIndexPage() {
         // given
-        final String template = "index";
         final Set<Recipe> recipes = Set.of(new Recipe(), new Recipe());
 
         // when
@@ -45,7 +51,7 @@ public class IndexControllerTest {
         String result = underTest.getIndexPage(model);
 
         // then
-        assertEquals(template,result);
+        assertEquals(TEMPLATE, result);
 
         verify(mockService, times(1)).getRecipes();
         verify(model, times(1)).addAttribute(eq("recipes"), argumentCaptor.capture());
@@ -53,6 +59,15 @@ public class IndexControllerTest {
         Set<Recipe> recipesArgument = argumentCaptor.getValue();
         assertEquals(2, recipesArgument.size());
 
+    }
+
+    @Test
+    public void testMockMVC() throws Exception {
+        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(underTest).build();
+
+        mockMvc.perform(get("/"))
+                .andExpect(status().isOk())
+                .andExpect(view().name(TEMPLATE));
     }
 
 }
