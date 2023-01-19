@@ -171,11 +171,11 @@
 
 ## Spring MockMVC
 * `MockMVC` is a feature of Spring Test that allows us to write tests for controllers without explicitly starting a Servlet container
-    * It allows us to write unit tests for controllers, by mocking up the servlet context
+    * It allows us to write unit tests for controllers, by mocking up the Servlet Context
 * `MockMVC` offers us two modes (use standalone where possible):
     * Standalone: Unit Test - runs without a proper web context
-    * Web Context: Integration Test - runs with a web context
-* Typically, we would use `MockMVC` to test media types, response codes, request mappings, etc, without bringing up the whole Spring Context (expensive)
+    * Web Context: Integration Test - runs with a web context (expensive)
+* Typically, we would use `MockMVC` to test media types, response codes, request mappings, etc, without bringing up the whole Spring Context
 * Example:
     ```java
         @Test

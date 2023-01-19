@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller @Slf4j // @RequiredArgsConstructor
 // NOTE: I implemented a constructor instead bc JUnit was giving me jip:
         // NOTE: Java 'constructor in class cannot be applied to given types' 'required: no arguments found...'
+            // NOTE: IntelliJ JUnit Lombok issues can be resolved by re-syncing the project and doing `mvn clean install`
+                // NOTE: Also ensure the annotation processors are enabled (Preferences > Build, Execution... > Compiler)
 public class IndexController {
 
     private final RecipeService recipeService;
