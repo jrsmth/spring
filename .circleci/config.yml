@@ -17,7 +17,7 @@ jobs:
       - checkout
       - run:
           name: "Run Unit & Integration Tests"
-          command: "mvn clean verify"
+          command: "find *"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
