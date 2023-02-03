@@ -187,3 +187,15 @@
                     .andExpect(view().name(TEMPLATE));
         }
     ```
+
+<br>
+
+## Maven Plugins
+* `maven-surefire-plugin`:
+    * Runs unit tests and if any of the tests fail then it will fail the build immediately
+    * `mvn test`
+* `maven-failsafe-plugin`:
+    * Runs integration tests, and decouples failing the build if there are test failures from actually running the tests
+    * `mvn verify`
+* Example: [`pom.xml`](../07-spring-mvc-web-dev/exercises/recipes/pom.xml)
+* [Docs](https://maven.apache.org/surefire/maven-failsafe-plugin/faq.html#:~:text=maven%2Dsurefire%2Dplugin%20is%20designed,from%20actually%20running%20the%20tests.)
