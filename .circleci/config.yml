@@ -26,3 +26,10 @@ workflows:
   07-recipes-workflow:
     jobs:
       - verify
+
+
+# https://app.circleci.com/pipelines/github/JRSmiffy
+# Sources: 
+# https://circleci.com/developer/images/image/cimg/openjdk
+# https://github.com/eddiewebb/circleci-challenge/blob/master/.circleci/config.yml
+# https://stackoverflow.com/questions/50570221/circleci-2-0-working-with-project-inside-the-subdirectory
