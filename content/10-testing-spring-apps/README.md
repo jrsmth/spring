@@ -70,6 +70,7 @@
         * `@AfterClass` -> `@AfterAll`
         * `@Ignore` -> `@Disabled`
         * `@Category` -> `@Tag`
+        * `@RunWith()` -> `@ExtendWith()`
 
 <br>
 
