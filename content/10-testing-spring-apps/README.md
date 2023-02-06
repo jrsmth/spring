@@ -42,23 +42,34 @@
 <br>
 
 ## JUnit
-* JUnit 4 Annotations:
-    * `@Test`:
-        * Identifies a method as a test method
-    * `@Before`:
-        * Executed before each test; used to prepare the test environment
-    * `@After`:
-        * Executed after each test; used to clean-up the test environment
-    * `@BeforeClass`:
-        * Executed once, before the start of all tests in the class; annotated method needs to be `static`
-    * `@AfterClass`:
-        * Executed once, after the end of all tests in the class; annotated method needs to be `static`
-    * `@Ignore`:
-        * Marks a test as disabled
-    * `@Test(expected = Exception.class)`:
-        * Sets the expectation that given exception should be thrown within the test
-    * `@Test(timeout = 10)`:
-        * Sets a timeout expectation for the test; will fail if exceeded
+* JUnit 4:
+    * Annotations:
+        * `@Test`:
+            * Identifies a method as a test method
+        * `@Before`:
+            * Executed before each test; used to prepare the test environment
+        * `@After`:
+            * Executed after each test; used to clean-up the test environment
+        * `@BeforeClass`:
+            * Executed once, before the start of all tests in the class; annotated method needs to be `static`
+        * `@AfterClass`:
+            * Executed once, after the end of all tests in the class; annotated method needs to be `static`
+        * `@Ignore`:
+            * Marks a test as disabled
+        * `@Test(expected = Exception.class)`:
+            * Sets the expectation that given exception should be thrown within the test
+        * `@Test(timeout = 10)`:
+            * Sets a timeout expectation for the test; will fail if exceeded
+* JUnit 5:
+    * Backwards Compatibility:
+        * JUnit 5's `vintage` library allows the JUnit 5 test runner to run JUnit 4 tests
+    * Updated Annotations:
+        * `@Before` -> `@BeforeEach`
+        * `@After` -> `@AfterEach`
+        * `@BeforeClass` -> `@BeforeAll`
+        * `@AfterClass` -> `@AfterAll`
+        * `@Ignore` -> `@Disabled`
+        * `@Category` -> `@Tag`
 
 <br>
 

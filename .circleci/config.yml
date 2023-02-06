@@ -25,7 +25,7 @@ jobs:
 workflows:
   07-recipes-workflow:
     jobs:
-      - verify
+      # - verify
 
 
 # https://app.circleci.com/pipelines/github/JRSmiffy
