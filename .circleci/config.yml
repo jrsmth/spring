@@ -22,7 +22,7 @@ jobs:
   verify-pet-clinic:
     docker:
       - image: cimg/openjdk:17.0.2
-    working_directory: ~/spring/projects/pet-clinic
+    working_directory: ~/spring/content/projects/pet-clinic
     steps:
       - checkout:
           path: ~/spring
