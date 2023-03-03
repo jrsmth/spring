@@ -1,3 +1,5 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/JRSmiffy/spring/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/JRSmiffy/spring/tree/main)
+
 # Spring
 *Spring Training*
 
