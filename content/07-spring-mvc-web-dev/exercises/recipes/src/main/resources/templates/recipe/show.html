@@ -9,6 +9,8 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
           th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}">
 
+    <link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap-overrides.css" th:href="@{/css/bootstrap-overrides.css}" />
+
     <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
 
     <!-- Latest compiled and minified JavaScript -->
@@ -17,12 +19,13 @@
             crossorigin="anonymous" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
 </head>
 <body>
-<div class="container-fluid" style="margin-top: 20px">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <div class="pannel-group">
+            <div class="panel-group">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
+                        <!--/*@thymesVar id="recipe" type="com.jrsmiffy.springguru.recipes.model.Recipe"*/-->
                         <h1 class="panel-title" th:text="${recipe.description}">Recipe Description Here!</h1>
                     </div>
                     <div class="panel-body">
@@ -32,9 +35,8 @@
                             </div>
                             <div class="col-md-9">
                                 <ul>
-                                    <li>cat one</li>
-                                    <li>cat two</li>
-                                    <li>cat three</li>
+                                    <!--/*@thymesVar id="category" type="com.jrsmiffy.springguru.recipes.model.Category"*/-->
+                                    <li th:each="category : ${recipe.categories}" th:text="${category.name}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -43,13 +45,13 @@
                                 <h5>Prep Time:</h5>
                             </div>
                             <div class="col-md-3">
-                                <p>30 min</p>
+                                <p th:text="${recipe.prepMins}"></p>
                             </div>
                             <div class="col-md-3">
                                 <h5>Difficulty:</h5>
                             </div>
                             <div class="col-md-3">
-                                <p>Easy</p>
+                                <p th:text="${recipe.difficulty}"></p>
                             </div>
                         </div>
                         <div class="row">
@@ -57,13 +59,13 @@
                                 <h5>Cooktime:</h5>
                             </div>
                             <div class="col-md-3">
-                                <p>30 min</p>
+                                <p th:text="${recipe.cookMins}"></p>
                             </div>
                             <div class="col-md-3">
                                 <h5>Servings:</h5>
                             </div>
                             <div class="col-md-3">
-                                <p>4</p>
+                                <p th:text="${recipe.servings}"></p>
                             </div>
                         </div>
                         <div class="row">
@@ -71,13 +73,13 @@
                                 <h5>Source:</h5>
                             </div>
                             <div class="col-md-3">
-                                <p>30 min</p>
+                                <p th:text="${recipe.source}"></p>
                             </div>
                             <div class="col-md-3">
                                 <h5>URL:</h5>
                             </div>
                             <div class="col-md-3">
-                                <p>http://www.example.com</p>
+                                <p th:text="${recipe.url}"></p>
                             </div>
                         </div>
                     </div>
@@ -90,9 +92,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <ul>
-                                    <li>1 Cup of milk</li>
-                                    <li>1 Teaspoon of chocolate</li>
-                                    <li>1 Teaspoon of Sugar</li>
+                                    <li th:each="ingredient : ${recipe.ingredients}" th:text="${ingredient.quantity} + ' x ' + ${ingredient.description}"></li>
                                 </ul>
                             </div>
                         </div>
@@ -105,19 +105,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                    nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                                    quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-                                    nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-                                    justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
-                                    Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                                    viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-                                    Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-                                    ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus
-                                    eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed
-                                    ipsum.</p>
+                                <p th:text="${recipe.directions}"></p>
                             </div>
                         </div>
                     </div>
@@ -129,19 +117,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                    nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                                    quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-                                    nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-                                    justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
-                                    Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-                                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                                    viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-                                    Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-                                    ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus
-                                    eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed
-                                    ipsum.</p>
+                                <p th:text="${recipe.notes}"></p>
                             </div>
                         </div>
                     </div>

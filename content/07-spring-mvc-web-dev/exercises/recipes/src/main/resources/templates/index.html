@@ -10,6 +10,8 @@
               crossorigin="anonymous"
               th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}">
 
+        <link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap-overrides.css" th:href="@{/css/bootstrap-overrides.css}" />
+
         <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
 
         <!-- Latest compiled and minified JavaScript -->
@@ -21,7 +23,7 @@
 
     </head>
     <body>
-        <div class="container-fluid" style="margin-top: 20px">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                 <!-- NOTE: Bootstrap CSS offers us a 12-col grid, therefore 3 + 6 + 3 will center the <div> -->
