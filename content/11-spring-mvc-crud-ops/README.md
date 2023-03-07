@@ -32,3 +32,13 @@
     * Similar to [Maven Cental](https://mvnrepository.com/repos/central) for getting the dependenency reference for your `pom.xml`
     * In this course, we've used the 'bootstrap' and 'jquery' webjars in our thymeleaf-driven `index.html`
         * Example: [index.html](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/templates/index.html)
+
+<br>
+
+## Form Posts
+* Form Posts with regards to Spring MVC refers to using a 'Command Object' to bind the fields of that object to form inputs in the template
+    * When data is posted to the backend, Spring MVC will automatically deserialise the form data into the desired Java object
+        * A note of Serialisation: to 'serialise' to go from object to string; to 'deserialise' is to go from string to object
+* Command Objects / Backing Beans:
+    * Used to transfer data between a web form and the controller
+* Spring MVC will automatically bind data of form posts to the fields of our Command Object
