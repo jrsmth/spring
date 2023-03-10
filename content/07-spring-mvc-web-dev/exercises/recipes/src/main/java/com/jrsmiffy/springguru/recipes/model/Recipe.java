@@ -21,7 +21,7 @@ public class Recipe {
             name = "recipe_category",
             joinColumns = @JoinColumn(name = "recipe_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id"))
-    private Set<Category> categories;
+    private Set<Category> categories = new HashSet<>();
 
     private String description;
 
@@ -46,7 +46,8 @@ public class Recipe {
     private Notes notes;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe") // Note: mappedBy establishes a bidirectional mapping with Ingredient
-    private Set<Ingredient> ingredients; // = new HashSet<>(); // Note: without the helper method, I would have to initialise the Set() here
+//    private Set<Ingredient> ingredients; // = new HashSet<>(); // Note: without the helper method, I would have to initialise the Set() here
+    private Set<Ingredient> ingredients = new HashSet<>(); // FixMe :: fixes NPE in testSaveOfDescription()
 
     public void setNotes(Notes notes) {
         this.notes = notes;

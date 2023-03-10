@@ -22,14 +22,13 @@ public class RecipeServiceImplTest {
 
     private RecipeServiceImpl underTest;
 
-    @Mock
-    private RecipeRepository mockRepository;
+    @Mock private RecipeRepository mockRepository;
 
     @Before
     public void setUp() {
         MockitoAnnotations.openMocks(this);
 
-        underTest = new RecipeServiceImpl(mockRepository);
+        underTest = new RecipeServiceImpl(mockRepository, null, null);
     }
 
     @Test
