@@ -42,3 +42,11 @@
 * Command Objects / Backing Beans:
     * Used to transfer data between a web form and the controller
 * Spring MVC will automatically bind data of form posts to the fields of our Command Object
+* As software projects mature, it is prudent to avoid exposing your domain objects directly to the web tier
+    * I do not understand the exact reason for this at present but I believe this is what we see in TradEd:
+        * With the domain model object in `traded-data-model`, representing the table entity
+        * Plus, the inputs POJO version in `traded-common-utils`, used when interacting with the frontend
+    * Example: 
+        * [`CategoryCommand`](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/command/CategoryCommand.java)
+        * [`CategoryCommandToCategory](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/converter/CategoryCommandToCategory.java)
+            * Note, Spring does not guarantee thread-safety and this is why Lombok's `@Synchronized` is used in the converter classes
