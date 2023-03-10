@@ -47,6 +47,6 @@
         * With the domain model object in `traded-data-model`, representing the table entity
         * Plus, the inputs POJO version in `traded-common-utils`, used when interacting with the frontend
     * Example: 
-        * [`CategoryCommand`](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/command/CategoryCommand.java)
-        * [`CategoryCommandToCategory](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/converter/CategoryCommandToCategory.java)
+        * [`CategoryCommand.java`](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/command/CategoryCommand.java)
+        * [`CategoryCommandToCategory.java`](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/converter/CategoryCommandToCategory.java)
             * Note, Spring does not guarantee thread-safety and this is why Lombok's `@Synchronized` is used in the converter classes
