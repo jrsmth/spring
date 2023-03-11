@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 @Getter @Setter @NoArgsConstructor
 public class IngredientCommand {
     private Long id;
+    private Long recipeId; // Note :: used in the template as hidden <input> value in the form
     private String description;
     private BigDecimal quantity;
     private UnitCommand unit;
