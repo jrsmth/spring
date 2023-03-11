@@ -26,7 +26,14 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h1 class="panel-title">Ingredients</h1>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h1 class="panel-title">Ingredients</h1>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="btn btn-default right" href="#" th:href="@{'/recipe/' + ${recipe.id} + '/ingredient/new'}" role="button">New</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive" th:if="${not #lists.isEmpty(recipe.ingredients)}">

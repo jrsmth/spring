@@ -1,6 +1,8 @@
 package com.jrsmiffy.springguru.recipes.controller;
 
 import com.jrsmiffy.springguru.recipes.command.IngredientCommand;
+import com.jrsmiffy.springguru.recipes.command.RecipeCommand;
+import com.jrsmiffy.springguru.recipes.command.UnitCommand;
 import com.jrsmiffy.springguru.recipes.service.IngredientService;
 import com.jrsmiffy.springguru.recipes.service.RecipeService;
 import com.jrsmiffy.springguru.recipes.service.UnitService;
@@ -35,6 +37,26 @@ public class IngredientController {
                                        @PathVariable String id, Model model){
         model.addAttribute("ingredient", ingredientService.findByRecipeIdAndIngredientId(Long.valueOf(recipeId), Long.valueOf(id)));
         return "recipe/ingredient/show";
+    }
+
+    @GetMapping("recipe/{recipeId}/ingredient/new")
+    public String newIngredient(@PathVariable String recipeId, Model model){
+
+        // Make sure we have a good id value
+        RecipeCommand recipeCommand = recipeService.findCommandById(Long.valueOf(recipeId));
+        // TODO :: raise exception if null
+
+        // Need to return parent id for hidden form property
+        IngredientCommand ingredientCommand = new IngredientCommand();
+        ingredientCommand.setRecipeId(Long.valueOf(recipeId));
+        model.addAttribute("ingredient", ingredientCommand);
+
+        // Init unit
+        ingredientCommand.setUnit(new UnitCommand());
+
+        model.addAttribute("unitList",  unitService.listAllUnits());
+
+        return "recipe/ingredient/ingredient-form";
     }
 
     @GetMapping("recipe/{recipeId}/ingredient/{id}/update")

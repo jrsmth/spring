@@ -72,17 +72,28 @@ public class IngredientServiceImpl implements IngredientService {
                         .findById(command.getUnit().getId())
                         .orElseThrow(() -> new RuntimeException("UNIT NOT FOUND"))); // TODO :: address this
             } else {
-                // Add the new ingredient
-                recipe.addIngredient(ingredientCommandToIngredient.convert(command));
+                Ingredient ingredient = ingredientCommandToIngredient.convert(command);
+                ingredient.setRecipe(recipe); // TODO :: err handle?
+                recipe.addIngredient(ingredient);
             }
 
             Recipe savedRecipe = recipeRepository.save(recipe);
 
-            // TODO :: impl error handling
-            return ingredientToIngredientCommand.convert(savedRecipe.getIngredients().stream()
+            Optional<Ingredient> savedIngredientOptional = savedRecipe.getIngredients().stream()
                     .filter(recipeIngredients -> recipeIngredients.getId().equals(command.getId()))
-                    .findFirst()
-                    .get());
+                    .findFirst();
+
+            // Check by description
+            if (savedIngredientOptional.isEmpty()){
+                savedIngredientOptional = savedRecipe.getIngredients().stream()
+                        .filter(recipeIngredients -> recipeIngredients.getDescription().equals(command.getDescription()))
+                        .filter(recipeIngredients -> recipeIngredients.getQuantity().equals(command.getQuantity()))
+                        .filter(recipeIngredients -> recipeIngredients.getUnit().getId().equals(command.getUnit().getId()))
+                        .findFirst();
+            }
+
+            // TODO :: err handle?
+            return ingredientToIngredientCommand.convert(savedIngredientOptional.get());
         }
 
     }
