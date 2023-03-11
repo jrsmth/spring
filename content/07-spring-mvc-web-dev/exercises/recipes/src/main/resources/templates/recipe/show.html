@@ -31,7 +31,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <h5>Categories:</h5>
+                                    <h5>Categories</h5>
                                 </div>
                                 <div class="col-md-9">
                                     <ul>
@@ -44,13 +44,13 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <h5>Prep Time:</h5>
+                                    <h5>Prep Time</h5>
                                 </div>
                                 <div class="col-md-3">
                                     <p th:text="${(recipe.prepMins) +  '  min'}">30 min</p>
                                 </div>
                                 <div class="col-md-3">
-                                    <h5>Difficulty:</h5>
+                                    <h5>Difficulty</h5>
                                 </div>
                                 <div class="col-md-3">
                                     <p th:text="${recipe.difficulty}">Easy</p>
@@ -58,13 +58,13 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <h5>Cook Time:</h5>
+                                    <h5>Cook Time</h5>
                                 </div>
                                 <div class="col-md-3">
                                     <p th:text="${(recipe.cookMins  +  '  min')}">30 min</p>
                                 </div>
                                 <div class="col-md-3">
-                                    <h5>Servings:</h5>
+                                    <h5>Servings</h5>
                                 </div>
                                 <div class="col-md-3">
                                     <p th:text="${recipe.servings}">4</p>
@@ -72,13 +72,13 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <h5>Source:</h5>
+                                    <h5>Source</h5>
                                 </div>
                                 <div class="col-md-3">
                                     <p th:text="${recipe.source}">Name of Source</p>
                                 </div>
                                 <div class="col-md-3">
-                                    <h5>URL:</h5>
+                                    <h5>URL</h5>
                                 </div>
                                 <div class="col-md-3">
                                     <p><a href="#" th:href="${recipe.url}" >View Original</a></p>
@@ -88,7 +88,14 @@
                     </div>
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <h1 class="panel-title" >Ingredients:</h1>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h1 class="panel-title">Ingredients</h1>
+                                </div>
+                                <div class="col-md-2">
+                                    <a class="btn btn-default right" href="#" th:href="@{'/recipe/' + ${recipe.id} + '/ingredients'}" role="button">View</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -109,7 +116,7 @@
                     </div>
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <h1 class="panel-title" >Directions</h1>
+                            <h1 class="panel-title">Directions</h1>
                         </div>
                         <div class="panel-body">
                             <div class="row">
