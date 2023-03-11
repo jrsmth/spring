@@ -40,6 +40,7 @@ public class RecipeServiceIT {
         RecipeCommand testRecipeCommand = recipeToRecipeCommand.convert(testRecipe);
 
         // When
+        assert testRecipeCommand != null;
         testRecipeCommand.setDescription(NEW_DESCRIPTION);
         RecipeCommand savedRecipeCommand = recipeService.saveRecipeCommand(testRecipeCommand);
 

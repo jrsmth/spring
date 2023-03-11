@@ -6,3 +6,24 @@
 .panel {
     margin: 1rem 0 !important;
 }
+
+.margin-v {
+    margin: 1rem 0 !important;
+}
+
+.margin-h {
+    margin: 0 1rem !important;
+}
+
+.right {
+    float: right;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.no-indent {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}

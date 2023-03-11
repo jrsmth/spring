@@ -33,3 +33,5 @@
 ## Notes
 * Spring Guru Udemy Course: 
     * [Spring Framework 5 - Beginner to Guru](https://www.udemy.com/course/spring-framework-5-beginner-to-guru/)
+* Postman:
+    * [Spring.postman_collection.json](./resources/postman/Spring.postman_collection.json)

@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "b285efa7-9843-45d8-893f-b9f90705b51f",
+		"name": "Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recipes",
+			"item": [
+				{
+					"name": "Create Recipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Porridge",
+									"type": "text"
+								},
+								{
+									"key": "prepMins",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "cookMins",
+									"value": "3",
+									"description": "Cannot take decimal",
+									"type": "text"
+								},
+								{
+									"key": "servings",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "source",
+									"value": "Tradition",
+									"type": "text"
+								},
+								{
+									"key": "url",
+									"value": "http%3A%2F%2Ftradition.org",
+									"type": "text"
+								},
+								{
+									"key": "directions",
+									"value": "Shuv+it+in+t%27microwave",
+									"type": "text"
+								},
+								{
+									"key": "notes.content",
+									"value": "Goes+well+with+a+healthy+spoonful+of+jam",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/recipe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipe"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
