@@ -59,7 +59,7 @@ public class RecipeControllerIT {
                 .andDo(print())
 //                .andExpect(status().isCreated())
                 .andExpect(status().is3xxRedirection())
-                .andExpect(view().name("redirect:/recipe/show/" + id));
+                .andExpect(view().name(String.format("redirect:/recipe/%s/show", id)));
 
         // Then
         Recipe savedRecipe = recipeService.findById(id);
