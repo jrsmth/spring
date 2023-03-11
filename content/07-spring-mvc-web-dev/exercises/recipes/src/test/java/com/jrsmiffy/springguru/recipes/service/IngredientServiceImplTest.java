@@ -1,11 +1,14 @@
 package com.jrsmiffy.springguru.recipes.service;
 
 import com.jrsmiffy.springguru.recipes.command.IngredientCommand;
+import com.jrsmiffy.springguru.recipes.converter.IngredientCommandToIngredient;
 import com.jrsmiffy.springguru.recipes.converter.IngredientToIngredientCommand;
+import com.jrsmiffy.springguru.recipes.converter.UnitCommandToUnit;
 import com.jrsmiffy.springguru.recipes.converter.UnitToUnitCommand;
 import com.jrsmiffy.springguru.recipes.model.Ingredient;
 import com.jrsmiffy.springguru.recipes.model.Recipe;
 import com.jrsmiffy.springguru.recipes.repository.RecipeRepository;
+import com.jrsmiffy.springguru.recipes.repository.UnitRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -21,22 +24,25 @@ import static org.mockito.Mockito.when;
 
 public class IngredientServiceImplTest {
 
-    private final IngredientToIngredientCommand ingredientToIngredientCommand;
+    private final IngredientToIngredientCommand toCommand;
+    private final IngredientCommandToIngredient fromCommand;
 
     @Mock RecipeRepository recipeRepository;
+    @Mock UnitRepository unitRepository;
 
     IngredientService ingredientService;
 
     // Init converters
     public IngredientServiceImplTest() {
-        this.ingredientToIngredientCommand = new IngredientToIngredientCommand(new UnitToUnitCommand());
+        this.toCommand = new IngredientToIngredientCommand(new UnitToUnitCommand());
+        this.fromCommand = new IngredientCommandToIngredient(new UnitCommandToUnit());
     }
 
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.openMocks(this);
 
-        ingredientService = new IngredientServiceImpl(ingredientToIngredientCommand, recipeRepository);
+        ingredientService = new IngredientServiceImpl(toCommand, fromCommand, recipeRepository, unitRepository);
     }
 
     @Test

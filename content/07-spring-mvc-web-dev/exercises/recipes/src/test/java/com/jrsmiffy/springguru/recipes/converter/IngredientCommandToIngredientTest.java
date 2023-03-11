@@ -62,7 +62,7 @@ public class IngredientCommandToIngredientTest {
     }
 
     @Test
-    public void convertWithNullUOM() throws Exception {
+    public void convertWithNullUnit() throws Exception {
         //given
         IngredientCommand command = new IngredientCommand();
         command.setId(ID_VALUE);
