@@ -1,5 +1,8 @@
 package com.jrsmiffy.springguru.recipes.service;
 
+import com.jrsmiffy.springguru.recipes.command.RecipeCommand;
+import com.jrsmiffy.springguru.recipes.converter.RecipeCommandToRecipe;
+import com.jrsmiffy.springguru.recipes.converter.RecipeToRecipeCommand;
 import com.jrsmiffy.springguru.recipes.model.Recipe;
 import com.jrsmiffy.springguru.recipes.repository.RecipeRepository;
 import org.junit.Before;
@@ -11,6 +14,7 @@ import java.util.Optional;
 import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
@@ -23,12 +27,14 @@ public class RecipeServiceImplTest {
     private RecipeServiceImpl underTest;
 
     @Mock private RecipeRepository mockRepository;
+    @Mock RecipeToRecipeCommand toCommand;
+    @Mock RecipeCommandToRecipe fromCommand;
 
     @Before
     public void setUp() {
         MockitoAnnotations.openMocks(this);
 
-        underTest = new RecipeServiceImpl(mockRepository, null, null);
+        underTest = new RecipeServiceImpl(mockRepository, fromCommand, toCommand);
     }
 
     @Test
@@ -61,6 +67,40 @@ public class RecipeServiceImplTest {
         assertNotNull("Null recipe returned", recipeReturned);
         verify(mockRepository, times(1)).findById(anyLong());
         verify(mockRepository, never()).findAll();
+    }
+
+    @Test
+    public void getRecipeCommandByIdTest() throws Exception {
+        Recipe recipe = new Recipe();
+        recipe.setId(1L);
+        Optional<Recipe> recipeOptional = Optional.of(recipe);
+
+        when(mockRepository.findById(anyLong())).thenReturn(recipeOptional);
+
+        RecipeCommand recipeCommand = new RecipeCommand();
+        recipeCommand.setId(1L);
+
+        when(toCommand.convert(any())).thenReturn(recipeCommand);
+
+        RecipeCommand commandById = underTest.findCommandById(1L);
+
+        assertNotNull("Null recipe returned", commandById);
+        verify(mockRepository, times(1)).findById(anyLong());
+        verify(mockRepository, never()).findAll();
+    }
+
+    @Test
+    public void testDeleteById() throws Exception {
+        // Given
+        Long idToDelete = 2L;
+
+        // When
+        underTest.deleteById(idToDelete);
+
+        //no 'when', since method has void return type
+
+        // Then
+        verify(mockRepository, times(1)).deleteById(anyLong());
     }
 
 }
