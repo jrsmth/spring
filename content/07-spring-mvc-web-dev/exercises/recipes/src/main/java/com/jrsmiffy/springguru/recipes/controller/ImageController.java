@@ -54,6 +54,7 @@ public class ImageController {
             response.setContentType("image/jpeg");
             InputStream is = new ByteArrayInputStream(byteArray);
             IOUtils.copy(is, response.getOutputStream());
+
         } else {
             log.debug("[renderImageFromDB] Image is empty for recipe with id [{}]", id);
         }
