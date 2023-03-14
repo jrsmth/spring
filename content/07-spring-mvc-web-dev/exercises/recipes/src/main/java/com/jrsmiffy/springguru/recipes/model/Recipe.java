@@ -41,6 +41,8 @@ public class Recipe {
 
     @Lob // Note: Defines a BLOB (Binary Large Object)
     private Byte[] image;
+    // Note :: we use the Wrapper classes for our primitive types in order to allow them to have `null` values
+        // Its also the best-practise that is recommended by the Hibernate team
 
     @OneToOne(cascade = CascadeType.ALL) // Note: We want delete operations on Recipes to cascade to the related Notes (but not the other way round!)
     private Notes notes;
