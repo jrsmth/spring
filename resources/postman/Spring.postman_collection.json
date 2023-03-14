@@ -98,6 +98,27 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get Image for a Recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/recipe/1/recipe-image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipe",
+								"1",
+								"recipe-image"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
