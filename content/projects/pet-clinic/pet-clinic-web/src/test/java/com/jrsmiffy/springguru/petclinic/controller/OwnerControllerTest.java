@@ -101,15 +101,17 @@ class OwnerControllerTest {
                 .andExpect(model().attribute("selections", hasSize(2)));;
     }
 
-    @Disabled @Test
+    @Test
     void displayOwner() throws Exception {
         when(ownerService.findById(anyLong())).thenReturn(Owner.builder().id(firstOwnerId).build());
 
-        mockMvc.perform(get("/owners/123"))
+        mockMvc.perform(get("/owner/" + firstOwnerId)) // Note :: note any {id} can be used b.c we mock the service call
                 .andExpect(status().isOk())
-                .andExpect(view().name("owners/ownerDetails"))
+                .andExpect(view().name("owner/ownerDetails"))
                 .andExpect(model().attribute("owner", hasProperty("id", is(firstOwnerId))));
     }
+    // Note :: IntelliJ running old version of test (not taking up changes) - soln: invalidate cache, then delete .idea if nec
+    // Note :: https://stackoverflow.com/questions/73735539/intellij-runs-old-version-of-tests-and-will-not-compile
 
     @Disabled @Test
     void initCreationForm() throws Exception {

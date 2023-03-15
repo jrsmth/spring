@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller @RequiredArgsConstructor
-@RequestMapping("/vets")
+@RequestMapping("/vet")
 public class VetController {
 
     private final VetService vetService;
