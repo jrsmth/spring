@@ -50,3 +50,14 @@
         * [`CategoryCommand.java`](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/command/CategoryCommand.java)
         * [`CategoryCommandToCategory.java`](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/converter/CategoryCommandToCategory.java)
             * Note, Spring does not guarantee thread-safety and this is why Lombok's `@Synchronized` is used in the converter classes
+
+<br>
+
+## Web Data Binder
+* Web Data Binder is a feature of Spring that 'magically' binds the values in our form to the fields of a Java object
+    * It is configurable so that certain fields in our model can be hidden from the outside
+    * This is important for security:
+        * In so far as we usually don't want to allow the `id` of our model to be manipulated via the controller
+            * To addresss this we can use `(WebDataBinder) dataBinder.setDisallowedFields("id");`
+                * This prevents `id` values in the form from being bound to `id` values in our model
+            * Example: [`PetClinic - OwnerController`](../projects/pet-clinic/pet-clinic-web/src/main/java/com/jrsmiffy/springguru/petclinic/controller/OwnerController.java)
