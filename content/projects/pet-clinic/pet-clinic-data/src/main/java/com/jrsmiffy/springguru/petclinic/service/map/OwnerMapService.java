@@ -79,6 +79,4 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
         return null;
     }
 
-
-
 }
