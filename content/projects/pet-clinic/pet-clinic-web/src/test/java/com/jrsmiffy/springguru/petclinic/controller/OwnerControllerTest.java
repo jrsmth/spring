@@ -113,7 +113,7 @@ class OwnerControllerTest {
     // Note :: IntelliJ running old version of test (not taking up changes) - soln: invalidate cache, then delete .idea if nec
     // Note :: https://stackoverflow.com/questions/73735539/intellij-runs-old-version-of-tests-and-will-not-compile
 
-    @Disabled @Test
+    @Test
     void initCreationForm() throws Exception {
         mockMvc.perform(get("/owner/new"))
                 .andExpect(status().isOk())
@@ -123,7 +123,7 @@ class OwnerControllerTest {
         verifyNoInteractions(ownerService);
     }
 
-    @Disabled @Test
+    @Test
     void processCreationForm() throws Exception {
         when(ownerService.save(any())).thenReturn(Owner.builder().id(firstOwnerId).build());
 
@@ -139,15 +139,16 @@ class OwnerControllerTest {
     void initUpdateOwnerForm() throws Exception {
         when(ownerService.findById(anyLong())).thenReturn(Owner.builder().id(firstOwnerId).build());
 
-        mockMvc.perform(get("/owner/1/edit"))
+        mockMvc.perform(get("/owner/" + firstOwnerId + "/edit"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("owner/createOrUpdateOwnerForm"))
                 .andExpect(model().attributeExists("owner"));
 
-        verifyNoInteractions(ownerService);
+        //verifyNoInteractions(ownerService);
+        // Note :: Either I'm going crazy or Spring Guru has this wrong, of course there's going to be an interaction (we've mocked it!)
     }
 
-    @Disabled @Test
+    @Test
     void processUpdateOwnerForm() throws Exception {
         when(ownerService.save(any())).thenReturn(Owner.builder().id(firstOwnerId).build());
 

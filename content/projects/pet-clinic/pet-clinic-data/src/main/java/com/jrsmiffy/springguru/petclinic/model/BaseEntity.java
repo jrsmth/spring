@@ -37,4 +37,8 @@ public abstract class BaseEntity implements Serializable { // Question: Should @
     // note: Hibernate recommends that we use Wrapper classes instead of primitives
     // note: This is because the 'Boxed' types can be 'null', whereas primitives cannot
 
+     public boolean isNew() {
+         return this.id == null;
+     }
+
 }
