@@ -29,7 +29,7 @@
             * Can be used to return a specific view
             * Can be used to take total control and work with the Model and View
                 * Note: 'Model' cannot be a parameter of an ExceptionHandler method
-    * `HandlerExceptionResolver`
+    * `HandlerExceptionResolver`:
         * An interface with Spring MVC that you can implement for custom exception handling
             * However, custom implementations are uncommon because of Spring's robust exception handling
             * If a custom implementation is used, its typically done in conjuction with Spring's `Ordered` interface

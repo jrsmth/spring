@@ -19,7 +19,7 @@
 
 <br>
 
-### `418 I'M A TEAPOT`
+### `418 I'M A TEAPOT` Response
 * An April Fool's joke from the IETF (Internet Engineering Task Force) in 1998
 * Good Stack Overflow [article](https://stackoverflow.com/questions/52340027/is-418-im-a-teapot-really-an-http-response-code)
 * See also: https://www.google.com/teapot
