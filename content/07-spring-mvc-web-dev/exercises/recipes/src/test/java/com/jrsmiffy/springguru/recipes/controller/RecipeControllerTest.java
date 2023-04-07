@@ -63,7 +63,16 @@ public class RecipeControllerTest {
 
         mockMvc.perform(get("/recipe/1/show"))
                 .andExpect(status().isNotFound())
-                .andExpect(view().name("not-found-error"));
+                .andExpect(view().name("error/not-found"));
+    }
+
+    @Test
+    public void testGetRecipeNumberFormatException() throws Exception {
+        String notNumber = "notNumber";
+
+        mockMvc.perform(get("/recipe/"+ notNumber + "/show"))
+                .andExpect(status().isBadRequest())
+                .andExpect(view().name("error/bad-request"));
     }
 
     @Test

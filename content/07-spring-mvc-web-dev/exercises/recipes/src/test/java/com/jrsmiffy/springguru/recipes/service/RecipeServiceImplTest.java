@@ -113,9 +113,14 @@ public class RecipeServiceImplTest {
         when(mockRepository.findById(anyLong())).thenReturn(emptyRecipe);
 
         // Then
-        Recipe result = underTest.findById(1L);
+        underTest.findById(1L);
         // Note :: NotFoundException expected
+    }
 
+    @Test(expected = NumberFormatException.class)
+    public void getRecipeByIdTestNumberFormatException() {
+        underTest.findById(Long.valueOf("notNumber"));
+        // Note :: NumberFormatException expected
     }
 
 }
