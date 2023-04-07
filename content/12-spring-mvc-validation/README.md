@@ -4,7 +4,7 @@
 <br>
 
 ## Exercises
-<!-- * [Recipes [Section 7]](../07-spring-mvc-web-dev/exercises/recipes) -->
+* [Recipes [Section 7]](../07-spring-mvc-web-dev/exercises/recipes)
 
 <br>
 

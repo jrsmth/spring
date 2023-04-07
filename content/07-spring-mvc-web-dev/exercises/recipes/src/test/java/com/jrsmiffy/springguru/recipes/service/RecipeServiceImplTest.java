@@ -3,6 +3,7 @@ package com.jrsmiffy.springguru.recipes.service;
 import com.jrsmiffy.springguru.recipes.command.RecipeCommand;
 import com.jrsmiffy.springguru.recipes.converter.RecipeCommandToRecipe;
 import com.jrsmiffy.springguru.recipes.converter.RecipeToRecipeCommand;
+import com.jrsmiffy.springguru.recipes.exception.NotFoundException;
 import com.jrsmiffy.springguru.recipes.model.Recipe;
 import com.jrsmiffy.springguru.recipes.repository.RecipeRepository;
 import org.junit.Before;
@@ -101,6 +102,20 @@ public class RecipeServiceImplTest {
 
         // Then
         verify(mockRepository, times(1)).deleteById(anyLong());
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void getRecipeByIdTestNotFound() {
+        // Given
+        Optional<Recipe> emptyRecipe = Optional.empty();
+
+        // When
+        when(mockRepository.findById(anyLong())).thenReturn(emptyRecipe);
+
+        // Then
+        Recipe result = underTest.findById(1L);
+        // Note :: NotFoundException expected
+
     }
 
 }

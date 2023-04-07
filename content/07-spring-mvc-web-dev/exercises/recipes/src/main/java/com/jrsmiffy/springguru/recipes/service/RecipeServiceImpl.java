@@ -3,6 +3,7 @@ package com.jrsmiffy.springguru.recipes.service;
 import com.jrsmiffy.springguru.recipes.command.RecipeCommand;
 import com.jrsmiffy.springguru.recipes.converter.RecipeCommandToRecipe;
 import com.jrsmiffy.springguru.recipes.converter.RecipeToRecipeCommand;
+import com.jrsmiffy.springguru.recipes.exception.NotFoundException;
 import com.jrsmiffy.springguru.recipes.model.Recipe;
 import com.jrsmiffy.springguru.recipes.repository.RecipeRepository;
 import lombok.RequiredArgsConstructor;
@@ -34,7 +35,8 @@ public class RecipeServiceImpl implements RecipeService {
         Optional<Recipe> recipeOptional = recipeRepository.findById(id);
 
         if (recipeOptional.isEmpty()) {
-            throw new RuntimeException(String.format("Recipe not found with id [%s]!", id)); // Question: Do we really need String.format()?
+            throw new NotFoundException(String.format("Recipe not found with id [%s]!", id));
+            // Note :: invokes our custom NotFoundException()
         }
 
         return recipeOptional.get();
