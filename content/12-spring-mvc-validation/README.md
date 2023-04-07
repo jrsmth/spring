@@ -57,4 +57,4 @@
     * The exception has a `@ResponseStatus` that triggers a `404 NOT FOUND` response when it is thrown
 * In the [RecipeServiceImpl](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/service/RecipeServiceImpl.java), the `NotFoundException()` is thrown when a call to the repository is made on an id that doesn't exist
 * This is caught by an `@ExceptionHandler` method in the [RecipeControler](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/controller/RecipeController.java):
-    * It returns a [view]() with error data pertaining to the invalid ID
+    * It returns a [view](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/templates/not-found-error.html) with error data pertaining to the invalid ID
