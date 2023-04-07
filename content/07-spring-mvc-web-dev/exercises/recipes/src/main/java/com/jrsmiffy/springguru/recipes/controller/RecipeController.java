@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Map;
+
 @Controller @Slf4j
 public class RecipeController {
 
@@ -59,10 +61,10 @@ public class RecipeController {
     }
 
     @ResponseStatus(HttpStatus.NOT_FOUND) @ExceptionHandler(NotFoundException.class)
-    public ModelAndView handleNotFound() {
+    public ModelAndView handleNotFound(Exception exception) {
         log.error("Handling NotFoundException!");
 
-        return new ModelAndView("not-found-error");
+        return new ModelAndView("not-found-error", Map.of("exception", exception));
     }
 
 }

@@ -49,3 +49,12 @@
     * If redirecting to a view, use `SimpleMappingExceptionResolver`
     * If doing both of the above, use `@ExceptionHandler` on the controller
         * `@ExceptionHandler` offers the most granular control 
+
+<br>
+
+write up the example flow from recipes
+
+
+service throws the exception
+    which is defined in exceptions package with a @responseStatus
+ExceptionHandler in the controller accepts this exception and directs to an error template
