@@ -67,11 +67,12 @@ public class RecipeController {
         return new ModelAndView("error/not-found", Map.of("exception", exception));
     }
 
-    @ExceptionHandler(NumberFormatException.class) @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ModelAndView handleNumberFormatException(Exception exception) {
-        log.error("Handling NumberFormatException!");
-
-        return new ModelAndView("error/bad-request", Map.of("exception", exception));
-    }
+    // Note :: This has been moved into ControllerExceptionHandler, as part of the @ControllerAdvice refactor
+//    @ExceptionHandler(NumberFormatException.class) @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    public ModelAndView handleNumberFormatException(Exception exception) {
+//        log.error("Handling NumberFormatException!");
+//
+//        return new ModelAndView("error/bad-request", Map.of("exception", exception));
+//    }
 
 }

@@ -37,7 +37,8 @@ public class RecipeControllerTest {
         MockitoAnnotations.openMocks(this);
 
         underTest = new RecipeController(recipeService);
-        mockMvc = MockMvcBuilders.standaloneSetup(underTest).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(underTest)
+                .setControllerAdvice(new ControllerExceptionHandler()).build();
     }
 
     @Test
@@ -74,6 +75,8 @@ public class RecipeControllerTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(view().name("error/bad-request"));
     }
+    // Note :: here we invoke the @ExceptionHandler within our @ControllerAdvice-annotated-class
+    // Note :: MockMVC needs to be set up with the @ControllerAdvice-annotated-class
 
     @Test
     public void testGetNewRecipeForm() throws Exception {

@@ -23,6 +23,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 public class ImageControllerTest {
 
@@ -40,7 +41,8 @@ public class ImageControllerTest {
         MockitoAnnotations.openMocks(this);
 
         controller = new ImageController(imageService, recipeService);
-        mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(controller)
+                    .setControllerAdvice(new ControllerExceptionHandler()).build();
     }
 
     @Test
@@ -103,5 +105,16 @@ public class ImageControllerTest {
         byte[] responseBytes = response.getContentAsByteArray();
         assertEquals(dummyText.getBytes().length, responseBytes.length);
     }
+
+    @Test
+    public void testGetImageNumberFormatException() throws Exception {
+        String notNumber = "notNumber";
+
+        mockMvc.perform(get("/recipe/"+ notNumber + "/image"))
+                .andExpect(status().isBadRequest())
+                .andExpect(view().name("error/bad-request"));
+    }
+    // Note :: here we invoke the @ExceptionHandler within our @ControllerAdvice-annotated-class
+    // Note :: MockMVC needs to be set up with the @ControllerAdvice-annotated-class
 
 }
