@@ -16,6 +16,7 @@ public class ControllerExceptionHandler {
     @ExceptionHandler(NumberFormatException.class) @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ModelAndView handleNumberFormatException(Exception exception) {
         log.error("Handling NumberFormatException!");
+        // Note :: is shared by (Image + Recipe)Controller, as can be seen in their respective tests
 
         return new ModelAndView("error/bad-request", Map.of("exception", exception));
     }
