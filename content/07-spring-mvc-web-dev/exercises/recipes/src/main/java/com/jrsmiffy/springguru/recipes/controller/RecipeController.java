@@ -60,7 +60,7 @@ public class RecipeController {
         return "redirect:/";
     }
 
-    @ResponseStatus(HttpStatus.NOT_FOUND) @ExceptionHandler(NotFoundException.class)
+    @ExceptionHandler(NotFoundException.class) @ResponseStatus(HttpStatus.NOT_FOUND)
     public ModelAndView handleNotFound(Exception exception) {
         log.error("Handling NotFoundException!");
 
