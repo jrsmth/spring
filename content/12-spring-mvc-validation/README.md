@@ -132,6 +132,6 @@
     * Validation Example (Recipes):
         * First, we annotate our 'command' [object](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/command/RecipeCommand.java) (DTO / backing object that is passed around, in favour of the model itself)
         * Next, in the controller [method](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/controller/RecipeController.java), we annotate the command object parameter with `@Valid`
-            * Before proceeding to check the `BindingResult` argument (the actual value passed in) for errors
+            * Then we proceed to check the `BindingResult` argument (the actual value passed in) for errors
                 * If errors are present, we send the user back to the form with an error message displayed... TBC
                 * Else, they are directed to the newly created/edited recipe
