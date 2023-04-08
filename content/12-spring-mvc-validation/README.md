@@ -134,4 +134,4 @@
         * Next, in the controller [method](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/controller/RecipeController.java), we annotate the command object parameter with `@Valid`
             * Before proceeding to check the `BindingResult` argument (the actual value passed in) for errors
                 * If errors are present, we send the user back to the form with an error message displayed... TBC
-                * Else, the are directed to the newly created/edited recipe
+                * Else, they are directed to the newly created/edited recipe
