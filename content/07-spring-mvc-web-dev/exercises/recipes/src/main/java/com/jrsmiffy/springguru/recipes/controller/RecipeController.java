@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,12 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.Map;
 
 @Controller @Slf4j
 public class RecipeController {
 
     private final RecipeService recipeService;
+    private static final String RECIPE_FORM_URL = "recipe/recipe-form";
 
     public RecipeController(RecipeService recipeService) {
         this.recipeService = recipeService;
@@ -37,12 +40,18 @@ public class RecipeController {
         model.addAttribute("recipe", new RecipeCommand());
         // Note :: we use the Command objects to interact with the frontend to avoid directly exposing our model
 
-        return "recipe/recipe-form";
+        return RECIPE_FORM_URL;
     }
 
     @PostMapping("recipe") @ResponseStatus(HttpStatus.PERMANENT_REDIRECT)
     // @ResponseStatus(HttpStatus.CREATED) // Note :: This was preventing the redirect (302 instead)
-    public String saveOrUpdate(@ModelAttribute RecipeCommand command) {
+    public String saveOrUpdate(@Valid @ModelAttribute("recipe") RecipeCommand command, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            bindingResult.getAllErrors().forEach(objectError -> log.debug(objectError.toString()));
+
+            return RECIPE_FORM_URL;
+        }
+
         RecipeCommand savedCommand = recipeService.saveRecipeCommand(command);
 
         return String.format("redirect:/recipe/%s/show", savedCommand.getId());
@@ -51,7 +60,7 @@ public class RecipeController {
     @RequestMapping("recipe/{id}/update") // Question :: could be @PutMapping?
     public String updateRecipe(@PathVariable String id, Model model){
         model.addAttribute("recipe", recipeService.findCommandById(Long.valueOf(id)));
-        return  "recipe/recipe-form";
+        return RECIPE_FORM_URL;
     }
 
     @RequestMapping("recipe/{id}/delete")

@@ -70,24 +70,26 @@
 
 ## Data Validation
 * JSR-303:
-    * JSR-303 is a 'Java Specification Request' that standardises validation constraint declaration for Java Beans
-        * To make use of this API, we annotate our domain model properties with declarative validation constraints
-            * We can extend the set of annotations with our own custom ones
-        * Example:
-            ```java
-                public class Person {
-                    @NotNull @Max(64) // 'name' must be not-null and at-most 64 characters
-                    private String name;
-                    
-                    @Min(0) // 'age' must be at-least 0
-                    private int age;
-                }
-            ```
-        * Note, there have been extensions to Java bean validation in JSR-349 (2013) and JSR-380 (2017)
+    * JSR-303 is a 'Java Specification Request'
+    * It standardises validation constraint declaration for Java Beans through the use of field-level annotations
+        * We are able to create custom validation annotations
+    * Example:
+        ```java
+            public class Person {
+                @NotNull @Max(64) // 'name' must be not-null and at-most 64 characters
+                private String name;
+                
+                @Min(0) // 'age' must be at-least 0
+                private int age;
+            }
+        ```
+    * Note, there have been extensions to Java bean validation in JSR-349 (2013) and JSR-380 (2017)
         * Docs:
             * [Java Documentation](https://beanvalidation.org/1.0/spec/#d0e32)
             * [Spring Documentation](https://docs.spring.io/spring-framework/docs/3.0.0.RC1/reference/html/ch05s07.html)
-        * Existing Bean Specification constraints:
+* Data Validation with Spring:
+    * Annotations (valid at time of recording, 2017)
+        * Existing Bean Specification constraints: `javax.validation.constraints.*`
             * `@Null`
             * `@NotNull`
             * `@AssertTrue`
@@ -110,7 +112,7 @@
             * `@NotEmpty`
             * `@NonBlank`
             * `@Email`
-        * Existing Hibernate Validator constraints:
+        * Existing Hibernate Validator constraints: `org.hibernate.validator.constraints.*`
             * `@ScriptAssert`
             * `@CreditCardNumber`
             * `@Currency`
@@ -127,3 +129,9 @@
             * `@SafeHtml`
             * `@UniqueElements`
             * `@Url`
+    * Validation Example (Recipes):
+        * First, we annotate our 'command' [object](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/command/RecipeCommand.java) (DTO / backing object that is passed around, in favour of the model itself)
+        * Next, in the controller [method](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/controller/RecipeController.java), we annotate the expected command object parameter with `@Valid`
+            * Before proceeding to check the `BindingResult` parameter for errors
+                * If errors are present, we send the user back to the form with an error message displayed... TBC
+                * Else, the are directed to the newly created/edited recipe

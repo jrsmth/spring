@@ -53,7 +53,7 @@ public class RecipeControllerIT {
                         .param("cookMins", "3") // Note :: Integer field, will throw a wobbler if you send '3.5' [org.springframework.validation.BindException]
                         .param("servings", "1")
                         .param("source", source)
-                        .param("url", "http%3A%2F%2Ftradition.org") // http://tradition.org
+                        .param("url", "http://tradition.org") // http%3A%2F%2Ftradition.org
                         .param("directions", "Shuv+it+in+t%27microwave") // Shuv it in t'microwave
                         .param("notes.content", "Goes+well+with+a+healthy+spoonful+of+jam"))
                 .andDo(print())

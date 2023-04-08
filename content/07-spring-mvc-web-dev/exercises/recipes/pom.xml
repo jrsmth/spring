@@ -67,7 +67,12 @@
 			<!-- Note: necessary to run JUnit 4 tests with latest Spring Boot versions -->
 			<!-- https://stackoverflow.com/questions/31681855/maven-not-running-spring-boot-tests -->
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.1.7.Final</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
