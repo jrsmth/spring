@@ -65,3 +65,65 @@
 * `@ControllerAdvice` is a class-level annotation that allows us to define instances of `@ExceptionHandler` with a global scope
     * This allows exception handling to be shared across controllers; thereby reducing duplicated logic
 * Example: [ControllerExceptionHandler](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/controller/ControllerExceptionHandler.java)
+
+<br>
+
+## Data Validation
+* JSR-303:
+    * JSR-303 is a 'Java Specification Request' that standardises validation constraint declaration for Java Beans
+        * To make use of this API, we annotate our domain model properties with declarative validation constraints
+            * We can extend the set of annotations with our own custom ones
+        * Example:
+            ```java
+                public class Person {
+                    @NotNull @Max(64) // 'name' must be not-null and at-most 64 characters
+                    private String name;
+                    
+                    @Min(0) // 'age' must be at-least 0
+                    private int age;
+                }
+            ```
+        * Note, there have been extensions to Java bean validation in JSR-349 (2013) and JSR-380 (2017)
+        * Docs:
+            * [Java Documentation](https://beanvalidation.org/1.0/spec/#d0e32)
+            * [Spring Documentation](https://docs.spring.io/spring-framework/docs/3.0.0.RC1/reference/html/ch05s07.html)
+        * Existing Bean Specification constraints:
+            * `@Null`
+            * `@NotNull`
+            * `@AssertTrue`
+            * `@AssertFalse`
+            * `@Min`
+            * `@Max`
+            * `@DecimalMin`
+            * `@DecimalMax`
+            * `@Negative`
+            * `@NegativeOrZero`
+            * `@Positive`
+            * `@PositiveOrZero`
+            * `@Size`
+            * `@Digits`
+            * `@Past`
+            * `@PastOrPresent`
+            * `@Future`
+            * `@FutuerOrPresent`
+            * `@Pattern`
+            * `@NotEmpty`
+            * `@NonBlank`
+            * `@Email`
+        * Existing Hibernate Validator constraints:
+            * `@ScriptAssert`
+            * `@CreditCardNumber`
+            * `@Currency`
+            * `@DurationMax`
+            * `@DurationMin`
+            * `@EAN`
+            * `@ISBN`
+            * `@Length`
+            * `@CodePointLength`
+            * `@LuhnCheck`
+            * `@Mod10Check`
+            * `@Mod11Check`
+            * `@Range`
+            * `@SafeHtml`
+            * `@UniqueElements`
+            * `@Url`
