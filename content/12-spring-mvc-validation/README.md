@@ -133,5 +133,6 @@
         * First, we annotate our 'command' [object](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/command/RecipeCommand.java) (DTO / backing object that is passed around, in favour of the model itself)
         * Next, in the controller [method](../07-spring-mvc-web-dev/exercises/recipes/src/main/java/com/jrsmiffy/springguru/recipes/controller/RecipeController.java), we annotate the command object parameter with `@Valid`
             * Then we proceed to check the `BindingResult` argument (the actual value passed in) for errors
-                * If errors are present, we send the user back to the form with an error message displayed... TBC
+                * If errors are present, we send the user back to the form [view](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/templates/recipe/recipe-form.html) with error messages that explain the validation offenses
+                    * The `#fields` object is available in our Thymeleaf template, through the `BindingResult` that we accept in our controller method
                 * Else, they are directed to the newly created/edited recipe
