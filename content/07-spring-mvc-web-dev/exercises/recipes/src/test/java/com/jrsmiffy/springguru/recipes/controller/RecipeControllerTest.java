@@ -111,7 +111,8 @@ public class RecipeControllerTest {
         // When
         var result = mockMvc.perform(post("/recipe")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                .param("id", ""));
+                .param("id", "")
+                .param("cookMins", "3000"));
 
         // Then
         result.andExpect(status().is3xxRedirection())
