@@ -136,3 +136,28 @@
                 * If errors are present, we send the user back to the form [view](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/templates/recipe/recipe-form.html) with error messages that explain the validation offenses
                     * The `#fields` object is available in our Thymeleaf template, through the `BindingResult` that we accept in our controller method
                 * Else, they are directed to the newly created/edited recipe
+
+<br>
+
+## Internationalisation
+* Often abbreviated as `i18n`, it concerns variances dependent on the location of the end user
+    * A broad topic that encompasses language, currency, layout and more
+* Localisation: `l10n`
+* With regards to Spring MVC, i18n is primarily focused on language support
+    * Locale Detection:
+        * By default, locale detection is driven by the `accept-language` header in the HTTP request:
+            * This is usually of the form `<LANGUAGE>-<REGION>`
+                * ex: `en-GB` denotes the English language, for Great Britain
+            * `AcceptHeaderLocaleResolver` is the Spring Boot default for resolving l10n
+        * Locale detection can also be configured to use:
+            * System Property (from JVM)
+            * Cookie
+            * Custom parameter (useful when getting the user to a select a language) 
+    * Resource Bundles:
+        * Resource bundles (`messages.properties`) are selected based on highest match order
+        * First selected would be on `<LANGUAGE>-<REGION>`:
+            * `en-GB` would match to `messages_en_GB.properties`
+        * Next selected would be on `<LANGUAGE>`:
+            * `en-GB` would match to `messages_en.properties`
+        * Finanlly, if not 'language'- or 'language-region'-specifc resource bundle was found:
+            * `en-GB` would default to `messages.properties`
