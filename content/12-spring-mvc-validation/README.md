@@ -154,10 +154,10 @@
             * Cookie
             * Custom parameter (useful when getting the user to a select a language) 
     * Resource Bundles:
-            * Resource bundles (`messages.properties`) are selected based on highest match order:
-            * First selected would be on `<LANGUAGE>-<REGION>`:
-                * `en-GB` would match to `messages_en_GB.properties`
-            * Next selected would be on `<LANGUAGE>`:
-                * `en-GB` would match to `messages_en.properties`
-            * Finanlly, if no 'language'- or 'language-region'-specifc resource bundle was found:
-                * `en-GB` would default to `messages.properties`
+        * Resource bundles (`messages.properties`) are selected based on highest match order:
+        * First selected would be on `<LANGUAGE>-<REGION>`:
+            * `en-GB` would match to `messages_en_GB.properties`
+        * Next selected would be on `<LANGUAGE>`:
+            * `en-GB` would match to `messages_en.properties`
+        * Finanlly, if no 'language'- or 'language-region'-specifc resource bundle was found:
+            * `en-GB` would default to `messages.properties`
