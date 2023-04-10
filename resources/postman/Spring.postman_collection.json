@@ -119,6 +119,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Recipe Form (en-US)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en-US",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/recipe/1/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipe",
+								"1",
+								"update"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
