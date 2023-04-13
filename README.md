@@ -23,7 +23,7 @@
 * [Section 10: Testing Spring Applications](./content/10-testing-spring-apps)
 * [Section 11: CRUD Operations with Spring MVC](./content/11-spring-mvc-crud-ops)
 * [Section 12: Validation & Constraints with Spring MVC](./content/12-spring-mvc-validation)
-* [Section 13: Introduction to Docker](./content/13-docker-introduction)
+* [Section 13: Introduction to Docker](./content/13-docker-intro)
 
 <br>
 
