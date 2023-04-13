@@ -149,6 +149,32 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pet Clinic",
+			"item": [
+				{
+					"name": "Get Vets JSON",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/vets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vets"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}
