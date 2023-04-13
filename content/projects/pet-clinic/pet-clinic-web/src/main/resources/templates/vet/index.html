@@ -13,15 +13,18 @@
             <thead>
             <tr>
                 <th style="width: 150px;">Id</th>
-                <th style="width: 150px;">First Name</th>
-                <th style="width: 150px;">Last Name</th>
+                <th style="width: 150px;">Full Name</th>
+                <th style="width: 150px;">Specialties</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="vet : ${vets}">
                 <td th:text="${vet.id}"></td>
-                <td th:text="${vet.firstName}"></td>
-                <td th:text="${vet.lastName}"></td>
+                <td th:text="${vet.firstName + ' ' + vet.lastName}"></td>
+                <td>
+                    <span th:each="specialty : ${vet.specialties}" th:text="${specialty.description + ' '}" />
+                    <span th:if="${vet?.specialties?.size() == 0}">none</span>
+                </td>
             </tr>
             </tbody>
         </table>
