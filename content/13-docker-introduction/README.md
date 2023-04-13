@@ -1,5 +1,5 @@
 # Introduction to Docker
-*A tool for running applications in containers*
+*A tool for running software in containers*
 
 <br>
 
