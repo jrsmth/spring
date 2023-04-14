@@ -19,6 +19,7 @@
     <img src="./res/containers.png" width="500" alt="containers">
 
     <br>
+    <br>
 
     * Comparison with Virtual Machines (VM):
         * A Virtual Machine, the predessor of Containers, is a segegrated virtual environment that is created on physical hardware and behaves as its own compueter system
@@ -30,9 +31,7 @@
 
     <br>
 
-    <img src="./res/containers-vs-vm.png" width="500" alt="containers">
-
-    <br>
+    <img src="./res/containers-vs-vm.png" width="500" alt="containers vs vm">
 
 * What is Kubernetes?
     * Container Orchestration Platform, which is what in a nutshell?
