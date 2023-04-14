@@ -14,7 +14,11 @@
             * An image is a snapshot of a live container, which is used by the Docker Engine to create the container at runtime
                 * In this sense, the image is a blueprint for a container - akin to the relationship between a OOP object (container) and its class (image)
 
+    <br>
+
     <img src="./res/containers.png" width="500" alt="containers">
+
+    <br>
 
     * Comparison with Virtual Machines (VM):
         * A Virtual Machine, the predessor of Containers, is a segegrated virtual environment that is created on physical hardware and behaves as its own compueter system
@@ -24,7 +28,11 @@
         * Containers differ from VM's in that they do not contain their own OS, and do away with the Hypervisor layer
             * Instead they use the OS of the host machine but abstract the containerised software from this
 
+    <br>
+
     <img src="./res/containers-vs-vm.png" width="500" alt="containers">
+
+    <br>
 
 * What is Kubernetes?
     * Container Orchestration Platform, which is what in a nutshell?
