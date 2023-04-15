@@ -8,17 +8,24 @@
     * Docker is a platform that allows you to manage the life cycle of containers
     * Using Docker you can run applications on any operating system, in their own segragated environment (a container)
     * Docker was introduced in 2013:
-        * Providing a good use for containers, which had been around (but relatively unused) for some time
+        * Providing a good use for containers, which had been around for some time (but relatively unused)
         * This ushered in the era of the cloud computing model:
             * With highly scalable applications based on a microservices architecture - guided by the 12 factors
 * What is a Container?
+    * Good [article](https://www.veritas.com/en/uk/information-center/containerization)
     * A Container is an isolated runtime inside of a host machine (be it physical or virtual)
         * It incorporates the runtime and resources necessary for the software unit running inside of it
         * The containerised software comes in the form on an image:
             * An image is a snapshot of a live container, which is used by the Docker Engine to create the container at runtime
                 * In this sense, the image is a blueprint for a container - akin to the relationship between an OOP object (container) and its class (image)
-* Benefits of Containerisation:
-    * 
+    * Benefits of Containerisation:
+        * Portability:
+            * Containers run consistently and uniformly across any platform or cloud
+                * This avoids the problem of 'it works on my machine'
+        * Speed & Efficiency:
+            * Containers have a fast start-up times, as there is no OS to boot; this increases server efficiency and reduces costs
+        * Scalability:
+            * Service-oriented app design allows for workloads (containers) to be scaled horizontally, to match varying increases in traffic
 
     <br>
 
