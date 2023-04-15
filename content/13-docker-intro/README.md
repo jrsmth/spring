@@ -7,7 +7,8 @@
 * What is Docker?
     * Docker is a platform that allows you to manage the life cycle of containers
     * Using Docker you can run applications on any operating system, in their own segragated environment (a container)
-    * Containers have been around for a long while but no one knew what to do with them until Docker came along in 2013
+    * Docker was introduced in 2013:
+        * Providing a good use for containers, which had been around (but relatively unused) for some time
         * This ushered in the era of the cloud computing model:
             * With highly scalable applications based on a microservices architecture - guided by the 12 factors
 * What is a Container?
