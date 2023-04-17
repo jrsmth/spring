@@ -24,3 +24,10 @@
 * An April Fool's joke from the IETF (Internet Engineering Task Force) in 1998
 * Good Stack Overflow [article](https://stackoverflow.com/questions/52340027/is-418-im-a-teapot-really-an-http-response-code)
 * See also: https://www.google.com/teapot
+
+<br>
+
+### Docker GUI
+* The original local Docker GUI was [KiteMatic](https://github.com/docker/kitematic)
+* This was deprecated in favour of [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+    * After having a quick play, the free edition didn't seem to be all that useful...
