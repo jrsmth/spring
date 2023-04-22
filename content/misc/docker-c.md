@@ -10,7 +10,7 @@
 * Run a container:
     * `docker run --name=<OPTIONAL_CONTAINER_NAME> <IMAGE_NAME>`
     * `docker run -d <IMAGE_NAME>` :: runs the container in the background (detached / non-interactive)
-    * `docker run -p <CONTAINER_PORT>:<HOST_PORT>` :: maps a container port to a port on your local machine
+    * `docker run -p <HOST_PORT>:<CONTAINER_PORT>` :: maps a port on your local machine to a container port
     * note: if the image doesn't exist locally, `docker pull` will be executed first
 
 <br>
