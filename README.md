@@ -24,6 +24,7 @@
 * [Section 11: CRUD Operations with Spring MVC](./content/11-spring-mvc-crud-ops)
 * [Section 12: Validation & Constraints with Spring MVC](./content/12-spring-mvc-validation)
 * [Section 13: Introduction to Docker](./content/13-docker-intro)
+* [Section 14: Working with Containers & Images](./content/14-work-with-containers)
 
 <br>
 
@@ -38,4 +39,4 @@
 * Postman:
     * [Spring.postman_collection.json](./resources/postman/Spring.postman_collection.json)
 * Useful Docker Commands:
-    * [docker-cmd.md](./content/misc/docker-cmd.md)
+    * [docker-c.md](./content/misc/docker-c.md)
