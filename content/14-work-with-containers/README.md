@@ -21,5 +21,9 @@
 
 <br>
 
-## Running MongoDB as a docker container
+## Running containerised MongoDB
 * `docker run -d -p 27017:27017 mongo`
+    * Verifying that the container is running:
+        1. Check the status in Docker Desktop
+        2. Run `docker ps | grep <CONTAINER_NAME>`
+        3. Hit `localhost:27017` in the browser
