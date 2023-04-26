@@ -29,13 +29,17 @@
 * List all local images:
     * `docker images`
 
+<br>
 
+* View container logs printed to standard out (STDOUT):
+    * `docker logs`
+    * `docker logs -f` :: follows (tails) the logs
 
+<br>
 
 delete an image...
 
-
-
+<br>
 
 
 https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/
