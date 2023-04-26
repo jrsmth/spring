@@ -28,6 +28,7 @@
 
 * List all local images:
     * `docker images`
+    * `docker images -q --no-trunc` :: view the full SHA-256 image ID's
 
 <br>
 
