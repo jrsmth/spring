@@ -30,4 +30,3 @@
 ### Docker GUI
 * The original local Docker GUI was [KiteMatic](https://github.com/docker/kitematic)
 * This was deprecated in favour of [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-    * After having a quick play, the free edition didn't seem to be all that useful...
