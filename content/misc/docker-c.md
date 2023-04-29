@@ -66,3 +66,8 @@ https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/)
 
 * Delete all dangling volumes:
     * `docker volume rm $(docker volume ls -f dangling=true -q)`
+
+<br>
+
+* Open a terminal shell for live docker container:
+    * `docker exec -it <CONTAINER_NAME> bash`
