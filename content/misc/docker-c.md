@@ -9,6 +9,7 @@ https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/)
 
 <br>
 
+### Commands
 * Pull image to local machine:
     * `docker pull <IMAGE_NAME>`
 
