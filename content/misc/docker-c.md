@@ -46,6 +46,23 @@ https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/)
 
 <br>
 
-* Delete a docker image:
+* Delete docker images:
     * `docker image rm <IMAGE_NAME>:<TAG_NAME>`
-    * `docker rmi <IMAGE_NAME>:<TAG_NAME>` :: shorthand
+        * `docker rmi <IMAGE_NAME>:<TAG_NAME>` :: shorthand
+    * `docker rmi $(docker images -q -f dangling=true)` :: delete untagged (dangling) images
+    * `docker rmi $(docker images -q)` :: delete all images
+
+<br>
+
+* Stop all running docker containers:
+    * `docker kill $(docker ps -q)` :: `-q` for 'quiet'
+
+<br>
+
+* Delete all non-running docker containers:
+    * `docker rm $(docker ps -a -q)`
+
+<br>
+
+* Delete all dangling volumes:
+    * `docker volume rm $(docker volume ls -f dangling=true -q)`
