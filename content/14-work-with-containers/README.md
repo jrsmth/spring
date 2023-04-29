@@ -19,6 +19,8 @@
         * Outputs the version number of the Docker CLI you are using
 * Running commands in the terminal vs using Docker Desktop:
     * Both have their merits and so it is probably worth using each from time to time
+* The Docker 'Big Three' Container Mappings:
+    * Ports, Storage & Environment Variables
 
 <br>
 
@@ -62,3 +64,9 @@
 ## Running containerised RabbitMQ
 * `docker run -d --hostname jrsmiffy-rabbit --name some-rabbit -p 8080:15672 -p 5671:5671 -p 5672:5672 rabbitmq:3-management`
 * RabbitMQ Docker [docs](https://hub.docker.com/_/rabbitmq)
+
+<br>
+
+## Running containerised MySQL
+* `docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -v ~/tmp:/var/lib/mysql -p 3306:3306 -d mysql`
+* MySQL Docker [docs](https://hub.docker.com/_/mysql)

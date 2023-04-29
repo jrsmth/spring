@@ -2,6 +2,13 @@
 
 <br>
 
+### Docs
+* Official [Docs](https://docs.docker.com/)
+* Spring Guru Docker (Cheatsheet](
+https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/)
+
+<br>
+
 * Pull image to local machine:
     * `docker pull <IMAGE_NAME>`
 
@@ -38,11 +45,6 @@
 
 <br>
 
-delete an image...
-
-<br>
-
-
-https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/
-Go through^ this at the end of the docker sections to glean any last useful bits...
-
+* Delete a docker image:
+    * `docker image rm <IMAGE_NAME>:<TAG_NAME>`
+    * `docker rmi <IMAGE_NAME>:<TAG_NAME>` :: shorthand
