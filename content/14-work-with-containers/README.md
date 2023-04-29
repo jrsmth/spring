@@ -56,3 +56,9 @@
 * To persist data across container instances, we need to map a persist volume from the container's filesystem to the host machine
 * Mongo Example:
     * `docker run -p 27017:27017 -v ~/dockerdata/mongo:/data/db -d mongo`
+
+<br>
+
+## Running containerised RabbitMQ
+* `docker run -d --hostname jrsmiffy-rabbit --name some-rabbit -p 8080:15672 -p 5671:5671 -p 5672:5672 rabbitmq:3-management`
+* RabbitMQ Docker [docs](https://hub.docker.com/_/rabbitmq)
