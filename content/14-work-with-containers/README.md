@@ -11,6 +11,7 @@
     * It is a good idea to restart your machine after updates:
         * Else, you might see: 
             * `docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.`
+                * Ensure that the Docker Engine is running by opening the Docker Desktop app
 * Docker Version:
     * `docker version`:
         * Outputs the version numbers of Docker components
@@ -46,3 +47,12 @@
             * `<TAG>`: defaults to 'latest'
         * Therefore, we conventionally refer to the image as: `<USERNAME>/<IMAGE_NAME>`
             * e.g: jrsmiffy/jara3
+
+<br>
+
+## Container Storage
+* By default, a standalone Docker container's storage is emphemeral:
+    * That is, at the end of the container lifecyle, the data is lost
+* To persist data across container instances, we need to map a persist volume from the container's filesystem to the host machine
+* Mongo Example:
+    * `docker run -p 27017:27017 -v ~/dockerdata/mongo:/data/db -d mongo`
