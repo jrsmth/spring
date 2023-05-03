@@ -26,6 +26,7 @@
 * [Section 13: Introduction to Docker](./content/13-docker-intro)
 * [Section 14: Working with Containers & Images](./content/14-work-with-containers)
 * [Section 15: Running Spring Boot in a Centos Image](./content/15-spring-boot-with-centos)
+* [Section 16: Introduction & Installation of MySQL](./content/16-mysql-introduction)
 
 <br>
 
