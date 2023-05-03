@@ -71,3 +71,9 @@ https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/)
 
 * Open a terminal shell for live docker container:
     * `docker exec -it <CONTAINER_NAME> bash`
+
+<br>
+
+* Build an image from a Dockerfile:
+    * `docker build -t <TAG_NAME> .`
+    * `docker build -t <TAG_NAME> -f <PATH>/<DOCKER_FILE_NAME> .` :: -f to specify filename and path
