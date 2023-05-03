@@ -17,7 +17,7 @@
 <br>
 
 ## Dockerfile Example
-* To build an image from the [Dockerfile](./res/Dockerfile), run the following command from the `./res`:
+* To build an image from the [Dockerfile](./res/Dockerfile), run the following command from `./res`:
     * `docker build -t spring-boot-docker .`
         * Note: there is a `spring-boot-web-0.0.1-SNAPSHOT.jar` in the same directory, which hasn't been commited to git
 ```Dockerfile
