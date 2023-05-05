@@ -4,4 +4,4 @@
 <br>
 
 ## Overview
-* MySQL Data Types [PDF]](./res/MySQLDataTypes_spring.pdf)
+* MySQL Data Types [PDF](./res/MySQLDataTypes_spring.pdf)
