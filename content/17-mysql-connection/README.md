@@ -16,7 +16,9 @@
     * Remote / Client Connection:
         * ~Client :: Connecting to MySQL through some variety of client software on the same machine running the database
             * Such as IntelliJ, MySQL Workbench, SQLPro
-        * ~Remote :: Connecting to the MySQL server from a different machine over the network 
+        * ~Remote :: Connecting to the MySQL server from a different machine over the network
+* MySQL Terminology:
+    * The terms 'schema' and 'database' are interchangeable
 
 <br>
 
