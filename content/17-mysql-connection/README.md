@@ -37,17 +37,36 @@
 
 <br>
 
-## MySQL Basics via CLI
+## MySQL via CLI
 * Bring up the terminal:
     * `mysql`
         * Obstacle:
             * Error: `ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)`
             * Open up a separate terminal and run `mysqld`
 * Commands:
-    * `SHOW DATABASES;` :: Show databases on the server
+    * `SHOW DATABASES;` :: List databases on the server
     * `USE <DATABASE_NAME>;` :: Select a database for use
-    * `SHOW TABLES;` :: Show available tables for the selected database
+    * `SHOW TABLES;` :: List available tables for the selected database
     * `SELECT * FROM <TABLE_NAME>;` :: Query all rows for a given table
+    * `help` :: List popular MySQL commands
 * Exit the CLI tool:
     * `exit`
     * `quit`
+
+<br>
+
+## MySQL via Docker
+* `docker run --name jrs-mysql -e MYSQL_ROOT_PASSWORD=secret -d mysql`
+    * Obstacle:
+        * Error: `docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`
+        * Open up Docker Desktop to boot the Docker Engine
+* Open up terminal access on the mysql container:
+    * `docker ps | grep jrs-mysql`
+    * `docker exec -it jrs-mysql bash`
+    * `whoami`
+    * `mysql --user=root -p` (password set above using `MYSQL_ROOT_PASSWORD` environment variable)
+* Clean up:
+    * Exit `mysql` CLI utility :: `exit` / `quit`
+    * Exit bash shell on container :: `exit`
+    * Stop & remove the container :: `docker kill jrs-mysql`
+        * Verify: `docker ps`
