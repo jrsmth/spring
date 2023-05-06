@@ -1,5 +1,5 @@
 # Connecting to MySQL
-*Discussing Local, Client & Remote Connections to a MySQL Server*
+*Local, Client & Remote Connections to a MySQL Server*
 
 <br>
 
