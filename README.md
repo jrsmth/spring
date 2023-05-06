@@ -27,6 +27,7 @@
 * [Section 14: Working with Containers & Images](./content/14-work-with-containers)
 * [Section 15: Running Spring Boot in a Centos Image](./content/15-spring-boot-with-centos)
 * [Section 16: Introduction & Installation of MySQL](./content/16-mysql-introduction)
+* [Section 17: Connecting to MySQL](./content/17-mysql-connection)
 
 <br>
 
