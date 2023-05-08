@@ -3,6 +3,11 @@
 
 <br>
 
+## Exercises
+* [Recipes [Section 7]](../07-spring-mvc-web-dev/exercises/recipes)
+
+<br>
+
 ## Overview
 * [MySQL Introduction](./res/IntroductionToMySQL.pdf)
 * [Useful SQL Commands](../misc/sql-c.md)
