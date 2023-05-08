@@ -1,6 +1,24 @@
+# Noteworthy SQL Commands
+
+<br>
+
+### Docs
+* Official [Docs](https://docs.docker.com/)
+* Spring Guru Docker [Cheatsheet](
+https://springframework.guru/docker-cheat-sheet-for-spring-devlopers/)
+
+<br>
+
+### Commands
+* Pull image to local machine:
+    * `docker pull <IMAGE_NAME>`
+
+<br>
 
 
 
+
+....
 
 ## Useful SQL Commands
 * Access MySQL via CLI:

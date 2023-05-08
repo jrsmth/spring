@@ -42,5 +42,6 @@
     * [Spring Framework 5 - Beginner to Guru](https://www.udemy.com/course/spring-framework-5-beginner-to-guru/)
 * Postman:
     * [Spring.postman_collection.json](./resources/postman/Spring.postman_collection.json)
-* Useful Docker Commands:
-    * [docker-c.md](./content/misc/docker-c.md)
+* Useful Commands:
+    * [docker](./content/misc/docker-c.md)
+    * [sql](./content/misc/sql-c.md)

@@ -5,6 +5,7 @@
 
 ## Overview
 * [MySQL Introduction](./res/IntroductionToMySQL.pdf)
+* [Useful SQL Commands](../misc/sql-c.md)
 
 <br>
 
