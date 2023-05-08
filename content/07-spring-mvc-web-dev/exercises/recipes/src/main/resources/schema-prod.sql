@@ -1,6 +1,6 @@
--- ---------------- --
--- Create Databases --
--- ---------------- --
+-- ----------------------- --
+-- Create Databases ------ --
+-- ----------------------- --
 # CREATE DATABASE spring_recipe_prod; -- create first, connect via IntelliJ and then run the script below
 
 -- ----------------------- --
@@ -10,9 +10,9 @@ CREATE USER 'spring_recipe_prod_user'@'localhost' IDENTIFIED BY 'secret-prod';
 CREATE USER 'spring_recipe_prod_user'@'%' IDENTIFIED BY 'secret-prod';
 # Question :: Why do we use both @'localhost' and @'%', rather than just the latter?
 
--- --------------- --
--- Database Grants --
--- --------------- --
+-- ---------------------- --
+-- Database Grants ------ --
+-- ---------------------- --
 GRANT SELECT ON spring_recipe_prod.* to 'spring_recipe_prod_user'@'localhost';
 GRANT INSERT ON spring_recipe_prod.* to 'spring_recipe_prod_user'@'localhost';
 GRANT DELETE ON spring_recipe_prod.* to 'spring_recipe_prod_user'@'localhost';
