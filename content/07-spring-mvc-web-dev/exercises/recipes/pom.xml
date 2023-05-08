@@ -72,6 +72,10 @@
             <artifactId>hibernate-validator</artifactId>
             <version>6.1.7.Final</version>
         </dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
     </dependencies>
 
 	<build>
