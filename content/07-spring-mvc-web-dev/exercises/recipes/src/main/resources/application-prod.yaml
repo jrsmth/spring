@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_recipe_prod
+    username: spring_recipe_prod_user
+    password: secret-prod
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    show-sql: false
+    # Note :: ^^this is the difference between the app-dev.yml; it prevents our prod logs from being cluttered w/ SQL statements
