@@ -4,4 +4,4 @@
 <br>
 
 ## Overview
-* [MySQL Introduction](IntroductionToMySQL.pdf)
+* [MySQL Introduction](./res/IntroductionToMySQL.pdf)
