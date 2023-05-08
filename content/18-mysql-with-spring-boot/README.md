@@ -14,5 +14,5 @@
 * Service Accounts:
     * For security purposes, you should avoid connecting to the MySQL instance via the `root` user
     * Instead, service accounts should be created that follow the [principle of least privilege](https://csrc.nist.gov/glossary/term/least_privilege#:~:text=Definition(s)%3A,needs%20to%20perform%20its%20function.)
-        * As such, service accounts created to allow your spring boot app to connect to MySQL should have DML-access but not DDL-access
-            * That is, they should be able to manipulate the data (Data Manipulation Language) but not modify the database structure (Data Definition Language)
+        * Service accounts created to allow your spring boot app to connect to MySQL should have DML-access but not DDL-access
+            * They should be able to manipulate the data (Data Manipulation Language) but not modify the database structure (Data Definition Language)
