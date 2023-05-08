@@ -23,5 +23,9 @@
         * Service accounts created to allow your spring boot app to connect to MySQL should have DML-access but not DDL-access
             * They should be able to manipulate the data (Data Manipulation Language) but not modify the database structure (Data Definition Language)
 * Example:
-    * [`schema-dev.sql`](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/application-dev.yaml)
-    * [`schema-prod.sql`](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/application-prod.yaml)
+    * DEV:
+        * [`schema-dev.sql`](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/schema-dev.sql)
+        * [`application-dev.yaml`](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/application-dev.yaml)
+    * PROD:
+        * [`schema-prod.sql`](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/schema-prod.sql)
+        * [`application-prod.yaml`](../07-spring-mvc-web-dev/exercises/recipes/src/main/resources/application-prod.yaml)
