@@ -43,5 +43,5 @@
 * Postman:
     * [Spring.postman_collection.json](./resources/postman/Spring.postman_collection.json)
 * Useful Commands:
-    * [Docker](./content/misc/docker-c.md)
-    * [SQL](./content/misc/sql-c.md)
+    * [docker-c.md](./content/misc/docker-c.md)
+    * [sql-c.md](./content/misc/sql-c.md)
