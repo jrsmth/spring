@@ -11,4 +11,5 @@ INSERT INTO unit (name) VALUES ('Pint');
 INSERT INTO unit (name) VALUES ('Tablespoon');
 INSERT INTO unit (name) VALUES ('Teaspoon');
 
--- Note: Sort lines alphabetically by using 'Edit | Sort Lines' (very useful)
+-- Note :: Sort lines alphabetically by using 'Edit | Sort Lines' (very useful)
+-- Note :: the file name `data-<PLATFORM>.sql` is driven by the 'spring.sql.init.platform' property (see app-local.yaml)

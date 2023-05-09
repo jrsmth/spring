@@ -3,6 +3,9 @@ spring:
     url: jdbc:mysql://localhost:3306/spring_recipe_dev
     username: spring_recipe_dev_user
     password: secret-dev
+  sql:
+    init:
+      platform: mysql
   jpa:
     hibernate:
       ddl-auto: validate

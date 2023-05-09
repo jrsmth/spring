@@ -12,6 +12,7 @@ import com.jrsmiffy.springguru.recipes.repository.UnitRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,7 +24,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-@Component @Slf4j
+@Component
+@Slf4j @Profile("local")
 public class RecipesBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
     public RecipesBootstrap(
