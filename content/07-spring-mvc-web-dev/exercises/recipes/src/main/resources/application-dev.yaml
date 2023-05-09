@@ -9,3 +9,14 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: mysql
     show-sql: true
+
+# Note :: This only needs to be run the once and will generate a schema.sql for us at the project root
+# Note :: Take the generated script, open query consoles against the dev + prod databases and run on each
+#    properties:
+#      javax:
+#        persistence:
+#          schema-generation:
+#            create-source: metadata
+#            scripts:
+#              action: create
+#              create-target: schema.sql
