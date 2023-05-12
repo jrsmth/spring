@@ -1,4 +1,4 @@
-# Note :: technically, we should not be using schema.sql to set up the actual db structure; instead, we should be defining tables here
+# Note :: technically, we should not be using schema-autogen.sql to set up the actual db structure; instead, we should be defining tables here
 
 -- ----------------------- --
 -- Create Databases ------ --
