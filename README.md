@@ -1,5 +1,5 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/JRSmiffy/spring/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/JRSmiffy/spring/tree/main)
-[![HitCount](https://img.shields.io/endpoint?color=Green&style=plastic&url=https%3A%2F%2Fhits.dwyl.com%2FJRSmiffy%2Fspring.json)](http://hits.dwyl.com/JRSmiffy/spring)
+[![codecov](https://codecov.io/gh/JRSmiffy/spring/branch/main/graph/badge.svg?token=AK2GQ281NA)](https://codecov.io/gh/JRSmiffy/spring)
 
 # Spring
 *Spring Training*
