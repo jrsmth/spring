@@ -3,6 +3,13 @@
 
 <br>
 
+## Exercises
+* [Recipes :: Mongo](./exercises/recipes-mongo)
+    * Note: I have cloned the repo from SFG; to preserve the MySQL example in [recipes](../07-spring-mvc-web-dev/exercises/recipes) and for brevity (avoid a massive re-type of 'recipes' for mongo)
+        * I've started with the 'barebones' `master` version and where possible will add my own extensions and refactor for cleanliness
+
+<br>
+
 ## Overview
 * [Introduction to MongoDB](./res/IntroductionToMongoDB.pdf)
 * MongoDB is a document-oriented database, whose name derives from the word 'Humongous'
