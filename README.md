@@ -1,4 +1,5 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/JRSmiffy/spring/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/JRSmiffy/spring/tree/main)
+[![HitCount](https://hits.dwyl.com/JRSmiffy/spring.svg?style=flat-square&show=unique)](http://hits.dwyl.com/JRSmiffy/spring)
 
 # Spring
 *Spring Training*
