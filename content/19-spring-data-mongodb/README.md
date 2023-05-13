@@ -21,4 +21,4 @@
 <br>
 
 ## Mongo Terminology
-<img src="./res/mongo-terminology.png" width="500">
+<img src="./res/mongo-terminology.png" width="400">
