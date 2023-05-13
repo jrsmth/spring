@@ -29,6 +29,7 @@
 * [Section 16: Introduction & Installation of MySQL](./content/16-mysql-introduction)
 * [Section 17: Connecting to MySQL](./content/17-mysql-connection)
 * [Section 18: Using MySQL with Spring Boot](./content/18-mysql-with-spring-boot)
+* [Section 19: Spring Data MongoDB](./content/19-spring-data-mongodb)
 
 <br>
 
