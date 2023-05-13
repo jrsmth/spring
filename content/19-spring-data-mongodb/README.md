@@ -17,8 +17,8 @@
     * Industry jokes about lost data
     * No concepts of transactions and not good for concurrent updates
         * This is the trade off for the speed that Mongo offers
-* Terminology:
-    
-    <br>
-    
-    <img src="./res/mongo-terminology.png" width="500">
+
+<br>
+
+## Mongo Terminology
+<img src="./res/mongo-terminology.png" width="500">
