@@ -4,9 +4,10 @@
 <br>
 
 ## Exercises
-* [Recipes :: Mongo](./exercises/recipes-mongo)
-    * Note: I have cloned the repo from SFG; to preserve the MySQL example in [recipes](../07-spring-mvc-web-dev/exercises/recipes) and for brevity (avoid a massive re-type of 'recipes' for mongo)
-        * I've started with the 'barebones' `master` version and where possible will add my own extensions and refactor for cleanliness
+* [Recipes Mongo](./exercises/recipes-mongo)
+    * Note: I have cloned this repo from SFG
+        * This is to preserve the MySQL example in [recipes](../07-spring-mvc-web-dev/exercises/recipes) and for brevity (avoid a massive re-type of 'recipes' for mongo)
+        * I've started with the 'barebones' `master` version and will add my own extensions and refactor for cleanliness
 
 <br>
 
