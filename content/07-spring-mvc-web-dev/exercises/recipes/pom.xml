@@ -97,6 +97,7 @@
 					</execution>
 					<execution>
 						<id>report</id>
+						<!-- <phase>test</phase> Note :: with 'test' CodeCov picks up the unit tests only -->
 						<phase>verify</phase>
 						<goals>
 							<goal>report</goal>
