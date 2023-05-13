@@ -19,4 +19,6 @@
         * This is the trade off for the speed that Mongo offers
 * Terminology:
     
+    <br>
+    
     <img src="./res/mongo-terminology.png" width="500">
