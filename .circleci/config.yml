@@ -30,12 +30,12 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
       - run: mvn integration-test cobertura:cobertura
-          name: Run tests & generate code coverage
+          name: "Run tests & generate code coverage"
           command: integration-test cobertura:cobertura
       - store_test_results:
           path: target/surefire-reports
       - run:
-          name: Send to CodeCov
+          name: "Send to CodeCov"
           command: bash <(curl -s https://codecov.io/bash)
   verify-pet-clinic:
     docker:
