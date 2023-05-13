@@ -1,8 +1,6 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/JRSmiffy/spring/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/JRSmiffy/spring/tree/main)
 [![codecov](https://codecov.io/gh/JRSmiffy/spring/branch/main/graph/badge.svg?token=AK2GQ281NA)](https://codecov.io/gh/JRSmiffy/spring)
 
-https://codecov.io/gh/JRSmiffy/spring/branch/main/graphs/sunburst.svg?token=AK2GQ281NA
-
 # Spring
 *Spring Training*
 
