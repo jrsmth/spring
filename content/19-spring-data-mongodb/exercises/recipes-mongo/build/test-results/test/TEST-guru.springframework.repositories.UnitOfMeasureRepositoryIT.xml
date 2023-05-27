@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="guru.springframework.repositories.UnitOfMeasureRepositoryIT" tests="1" skipped="1" failures="0" errors="0" timestamp="2023-05-27T17:58:47" hostname="Jamess-MacBook-Pro-3.local" time="0.0">
+  <properties/>
+  <testcase name="initializationError" classname="guru.springframework.repositories.UnitOfMeasureRepositoryIT" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

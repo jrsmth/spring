@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="guru.springframework.converters.NotesToNotesCommandTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-05-27T17:58:47" hostname="Jamess-MacBook-Pro-3.local" time="0.003">
+  <properties/>
+  <testcase name="testNull" classname="guru.springframework.converters.NotesToNotesCommandTest" time="0.001"/>
+  <testcase name="testEmptyObject" classname="guru.springframework.converters.NotesToNotesCommandTest" time="0.002"/>
+  <testcase name="convert" classname="guru.springframework.converters.NotesToNotesCommandTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

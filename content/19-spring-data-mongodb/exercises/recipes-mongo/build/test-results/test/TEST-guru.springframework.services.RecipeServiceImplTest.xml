@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="guru.springframework.services.RecipeServiceImplTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-05-27T17:58:50" hostname="Jamess-MacBook-Pro-3.local" time="0.035">
+  <properties/>
+  <testcase name="getRecipeByIdTestNotFound" classname="guru.springframework.services.RecipeServiceImplTest" time="0.031"/>
+  <testcase name="testDeleteById" classname="guru.springframework.services.RecipeServiceImplTest" time="0.0"/>
+  <testcase name="getRecipesTest" classname="guru.springframework.services.RecipeServiceImplTest" time="0.001"/>
+  <testcase name="getRecipeByIdTest" classname="guru.springframework.services.RecipeServiceImplTest" time="0.001"/>
+  <testcase name="getRecipeCommandByIdTest" classname="guru.springframework.services.RecipeServiceImplTest" time="0.002"/>
+  <system-out><![CDATA[18:58:50.626 [Test worker] DEBUG guru.springframework.services.RecipeServiceImpl - I'm in the service
+18:58:50.626 [Test worker] DEBUG guru.springframework.services.RecipeServiceImpl - I'm in the service
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
