@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="guru.springframework.services.ImageServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-27T17:58:50" hostname="Jamess-MacBook-Pro-3.local" time="0.03">
-  <properties/>
-  <testcase name="saveImageFile" classname="guru.springframework.services.ImageServiceImplTest" time="0.03"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
