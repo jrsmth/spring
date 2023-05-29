@@ -8,6 +8,7 @@
     * Note: I have cloned this repo from SFG
         * This is to preserve the MySQL example in [recipes](../07-spring-mvc-web-dev/exercises/recipes) and for brevity (avoid a massive re-type of 'recipes' for mongo)
         * I've started with the 'barebones' `master` version and will add my own extensions and refactor for cleanliness
+            * Note: I chose not to make code changes as part of [19-321: Mongo defects] and [19-322: Mongo Int Test] due to time challenges
 
 <br>
 
