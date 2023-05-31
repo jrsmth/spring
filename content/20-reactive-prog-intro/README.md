@@ -11,7 +11,7 @@
     <br>
 
 
-    <img src="./res/reactive-traits.png" width="500">
+    <img src="./res/reactive-traits.png" width="600">
 
     <br>
     <br>
