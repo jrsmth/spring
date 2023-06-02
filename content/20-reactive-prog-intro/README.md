@@ -36,3 +36,39 @@
                 * Thus leading to lower system overhead
     * Principles of Reactive Programming (Microservice-level):
         * Reactive Programming focuses on non-blocking asynchronous execution
+            * In other words, it is an asynchronous programming paradigm focused on streams of data
+        * Reactive Programs maintain continuous interaction with their environment
+            * At a speed which is determined by the environment, rather than the program itself
+        * Reactive Programs contrast Interactive Programs, which work at their own pace, dealing mainly with communication
+            * Instead, Reactive Programs work only in response to external demands from the environment
+
+<br>
+
+## Reactive Programming
+* Features:
+    * Data Streams:
+        * A 'Stream' is a sequence of events, ordered in time
+        * An 'Event' is data that we want to receive for processing
+        * Here the 'Data' can be just about anyhing
+            * ex: Mouse slicks, JMS messages, REST calls, Stock trades, Twitter feed, list of rows from a database, etc
+    * Asynchronous:
+        * Events are captured asynchronously:
+            * That is, the sender does not wait for the recipient to reply; unlike synchronous comms, where futher communication is dependent on a response
+        * Separate functions are defined for handling when events, errors or completion are each emitted
+    * Non-blocking:
+        * Typical 'blocking' code will stop and wait for more data (i.e reading from a disk, network, etc)
+        * In constrast, 'non-blocking' code will process the available data, ask to be notified when more is available and the continue
+    * Back-pressure:
+        * Backpressure in software systems is the capability to overload the traffic communication:
+            * In other words, emitters of information can overwhelm consumers with data they are not able to process
+        * The term also applies to the mechanism of handling this:
+            * It is the protective actions taken by systems to control downstream forces
+        * Good articles:
+            * [Medium](https://medium.com/@jayphelps/backpressure-explained-the-flow-of-data-through-software-2350b3e77ce7)
+            * [Baeldung](https://www.baeldung.com/spring-webflux-backpressure#:~:text=Backpressure%20in%20Reactive%20Streams,receive%20and%20process%20the%20events.)
+    * Failures-as-messages / Failures-as-first-class-citizens:
+        * Exceptions are not thrown in the traditional sense, as this would disrupt the processing of the data stream
+            * Instead, exceptions are processed gracefully by a handler function
+* Notes:
+    * Traditional CRUD application are still alive and kicking in the industry
+        * Reactive Programming is to be used for certain cases; where there is a heavy focus on processing streams of data
