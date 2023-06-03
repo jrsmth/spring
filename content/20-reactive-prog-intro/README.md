@@ -72,3 +72,28 @@
 * Notes:
     * Traditional CRUD application are still alive and kicking in the industry
         * Reactive Programming is to be used for certain cases; where there is a heavy focus on processing streams of data
+
+<br>
+
+## Reactive Streams
+* The goal of the Reactive Streams API is to define a standard for async stream procressing with non-blocking back pressure
+* Created in 2013, Reactive Streams is a set of 4 interfaces which define the API:
+    * `Publisher`
+    * `Subscriber`
+    * `Subscription`
+    * `Processor <T, R> extends Subscriber<T>, Publisher<R>`
+
+<br>
+
+<img src="./res/reactive-stream-backpressure.png" width="500">
+
+<br>
+
+* Spring Reactive Types:
+    * Types introduced in Spring 5:
+        * Mono:
+            * A publisher with zero or one elements in the data stream
+        * Flux:
+            * A publisher with zero or more elements in the data stream
+    * Note:
+        * Both types implement the Reactive Streams `Publisher` interface
