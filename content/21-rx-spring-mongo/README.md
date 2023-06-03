@@ -1,4 +1,4 @@
-# Reactive Programming with Spring & Mongo
+# Rx with Spring & Mongo
 *Hands-on Reactive Programming using Spring*
 
 <br>

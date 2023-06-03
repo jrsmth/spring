@@ -32,7 +32,7 @@
 * [Section 18: Using MySQL with Spring Boot](./content/18-mysql-with-spring-boot)
 * [Section 19: Spring Data MongoDB](./content/19-spring-data-mongodb)
 * [Section 20: Introduction to Reactive Programming](./content/20-reactive-prog-intro)
-* [Section 21: Reactive Programming with Spring & Mongo](./content/21-rx-spring-mongo)
+* [Section 21: Rx with Spring & Mongo](./content/21-rx-spring-mongo)
 
 <br>
 
