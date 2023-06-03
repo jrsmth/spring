@@ -4,7 +4,7 @@
 <br>
 
 ## Exercises
-* [This](./exercises/that) `@SfgClone`
+* [This](./exercises/spring5-reactive-mongo-recipe-app) `@SfgClone(branch="master")` `@Extended`
 
 <br>
 
