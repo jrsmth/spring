@@ -81,7 +81,7 @@
     * `Publisher`
     * `Subscriber`
     * `Subscription`
-    * `Processor <T, R> extends Subscriber<T>, Publisher<R>`
+    * `Processor<T, R> extends Subscriber<T>, Publisher<R>`
 
 <br>
 
