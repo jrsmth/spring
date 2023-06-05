@@ -55,14 +55,14 @@ public class IngredientController {
         RecipeCommand recipeCommand = recipeService.findCommandById(recipeId);
         //todo raise exception if null
 
-        //need to return back parent id for hidden form property
+        //need to return parent id for hidden form property
         IngredientCommand ingredientCommand = new IngredientCommand();
         model.addAttribute("ingredient", ingredientCommand);
 
         //init uom
         ingredientCommand.setUom(new UnitOfMeasureCommand());
 
-        model.addAttribute("uomList",  unitOfMeasureService.listAllUoms());
+        model.addAttribute("uomList",  unitOfMeasureService.listAllUoms().collectList().block());
 
         return "recipe/ingredient/ingredientform";
     }
@@ -72,7 +72,7 @@ public class IngredientController {
                                          @PathVariable String id, Model model){
         model.addAttribute("ingredient", ingredientService.findByRecipeIdAndIngredientId(recipeId, id));
 
-        model.addAttribute("uomList", unitOfMeasureService.listAllUoms());
+        model.addAttribute("uomList", unitOfMeasureService.listAllUoms().collectList().block());
         return "recipe/ingredient/ingredientform";
     }
 
