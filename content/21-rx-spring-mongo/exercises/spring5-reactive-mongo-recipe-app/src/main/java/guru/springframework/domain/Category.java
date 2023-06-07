@@ -19,6 +19,6 @@ public class Category {
     private String id;
     private String description;
 
-    @DBRef
+    // @DBRef // Note :: Use of @DBRef is not recommender
     private Set<Recipe> recipes;
 }
