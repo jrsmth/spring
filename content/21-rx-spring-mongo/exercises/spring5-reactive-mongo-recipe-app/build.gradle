@@ -27,7 +27,7 @@ repositories {
 	maven { url "https://repo.spring.io/milestone" }
 }
 
-
+// Note :: Changing to the WebFlux dependencies switches the app from running on Tomcat over to Netty
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
