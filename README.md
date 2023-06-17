@@ -12,7 +12,7 @@
 <br>
 <br>
 
-## VMWare Spring Certified Pro
+## VMware Spring Certified Pro
 * ...
 
 <br>
@@ -49,7 +49,7 @@
 
 ## Misc
 * Spring Certification: 
-    * [VMWare Spring Certified Professional Certification](https://www.vmware.com/learning/certification/spring-certified-pro.html)
+    * [VMware Spring Certified Professional](https://www.vmware.com/learning/certification/spring-certified-pro.html)
 * Spring Guru Udemy Course: 
     * [Spring Framework 5 - Beginner to Guru](https://www.udemy.com/course/spring-framework-5-beginner-to-guru/)
 * Postman:
