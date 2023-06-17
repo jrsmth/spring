@@ -12,15 +12,10 @@
 <br>
 <br>
 
-## Spring Certified Pro
-* ...
-
-<br>
-
 ## Content
 * Spring Certified Pro:
     * ...
-* SFG Udemy:
+* Spring Udemy:
     * [Section 02: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
     * [Section 03: Dependency Injection with Spring](./content/03-dependency-injection)
     * [Section 04: Building a Jokes App](./content/04-build-jokes-app)
