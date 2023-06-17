@@ -12,7 +12,12 @@
 <br>
 <br>
 
-## Content
+## VMWare Spring Certified Pro
+* ...
+
+<br>
+
+## SFG Content
 * [Section 02: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
 * [Section 03: Dependency Injection with Spring](./content/03-dependency-injection)
 * [Section 04: Building a Jokes App](./content/04-build-jokes-app)
@@ -42,7 +47,9 @@
 
 <br>
 
-## Notes
+## Misc
+* Spring Certification: 
+    * [VMWare Spring Certified Professional Certification](https://www.vmware.com/learning/certification/spring-certified-pro.html)
 * Spring Guru Udemy Course: 
     * [Spring Framework 5 - Beginner to Guru](https://www.udemy.com/course/spring-framework-5-beginner-to-guru/)
 * Postman:
