@@ -12,12 +12,12 @@
 <br>
 <br>
 
-## VMware Spring Certified Pro
+## Spring Certified Pro
 * ...
 
 <br>
 
-## SFG Content
+## SFG Udemy Content
 * [Section 02: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
 * [Section 03: Dependency Injection with Spring](./content/03-dependency-injection)
 * [Section 04: Building a Jokes App](./content/04-build-jokes-app)
