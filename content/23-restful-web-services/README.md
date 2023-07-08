@@ -46,3 +46,18 @@
     * Used to remove a record (delete an object)
     * Not a safe operationl state of a resource is changed
     * Idempotent
+
+<br>
+
+## Richardson Maturity Model
+* According to Martin Fowler, The Richardson Maturity Model is 'steps towards the glory of REST'
+* The Richardson Maturity Model (RMM) was established in 2008 and is used to describe the quality of so-called RESTful web services
+    * This is important because unlike with SOAP, there is no formal specification for RESTful
+* RMM Levels Summary:
+    * Level 1 - Breaks a large service into distinct URIs
+    * Level 2 - Introduces verbs to implement actions
+    * Level 3 - Provides discoverability, making the API more self-documenting
+
+<br>
+
+<img src="./res/rmm-levels.jpg" width="500">
