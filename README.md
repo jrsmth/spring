@@ -37,6 +37,7 @@
     * [Section 20: Introduction to Reactive Programming](./content/20-reactive-prog-intro)
     * [Section 21: Rx with Spring & Mongo](./content/21-rx-spring-mongo)
     * [Section 22: Introduction to Spring WebFlux](./content/22-spring-webflux)
+    * [Section 23: Introduction to RESTful Web Services](./content/23-restful-web-services)
 
 <br>
 
