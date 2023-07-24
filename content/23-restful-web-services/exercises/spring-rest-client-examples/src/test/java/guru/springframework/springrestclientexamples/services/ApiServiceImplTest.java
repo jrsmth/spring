@@ -19,16 +19,11 @@ public class ApiServiceImplTest {
     @Autowired
     ApiService apiService;
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
-
     @Test
     public void testGetUsers() throws Exception {
-
         List<User> users = apiService.getUsers(3);
 
         assertEquals(4, users.size());
     }
+
 }

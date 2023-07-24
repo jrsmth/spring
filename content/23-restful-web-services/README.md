@@ -4,7 +4,7 @@
 <br>
 
 ## Exercises
-* [spring-rest-client-examples](./spring-rest-client-examples) `@SfgClone(branch="~final")` `@Modified`
+* [spring-rest-client-examples](./exercises/spring-rest-client-examples) `@SfgClone(branch="~final")` `@Modified`
 
 <br>
 
@@ -71,3 +71,6 @@
 
 ## Spring
 * By default, Spring uses Jackson under the covers to bind JSON to Java POJOs
+* To call an API from our application (typically in the service layer), we can leverage Spring's `RestTemplate` class
+    * In order to autowire/inject instances of `RestTemplate` into an `@Service` class, we need to define it as a bean in our configuration
+        * Example: [RestTemplateConfig.java](./exercises/spring-rest-client-examples/src/main/java/guru/springframework/springrestclientexamples/config/RestTemplateConfig.java)

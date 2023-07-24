@@ -13,7 +13,7 @@ public class RestTemplateConfig {
 
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder){
-
         return builder.build();
     }
+
 }
