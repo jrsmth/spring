@@ -3,6 +3,11 @@
 
 <br>
 
+## Exercises
+* [spring-rest-client-examples](./spring-rest-client-examples) `@SfgClone(branch="~final")` `@Modified`
+
+<br>
+
 ## Overview
 * Due to its simplicity and versatility, RESTful has become that standard for inter-service web communication
 * Software communication is RESTful is adheres to the constraints of REST (REpresentational State Transfer)
@@ -61,3 +66,8 @@
 <br>
 
 <img src="./res/rmm-levels.jpg" width="500">
+
+<br>
+
+## Spring
+* By default, Spring uses Jackson under the covers to bind JSON to Java POJOs
