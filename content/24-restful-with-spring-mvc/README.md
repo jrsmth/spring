@@ -14,10 +14,10 @@
 * Advice from SFG:
     * For small projects, you can probably get away with exposing your domain objects directly through rest APIs
     * However, as projects grow, he has seen a tendency for the domain objects to develop in complexity and be unsuited for direct exposure to the outside world
-        * This is where you would introduce your data transfer layer (which itself does not have the best reputation)
+        * This is where you would introduce your data transfer layer (be warned: DTO's do not have the best reputation)
 * Performing type conversions manually is the most resource-efficient way but MapStruct is more convienient for the developers
     * Like with many areas of Software Engineering, it is a question of trade-offs
 * In the code base, we define an interface that MapStruct will use at build-time to create the objects we need
-    * MapStruct is used to replace manual conversion classes:
-        * All we have to define are the two different classes that represent the same object (model vs transfer) and the `@Mapper` interface linking the two
+    * MapStruct is used to replace manual conversion classes
+    * All we have to define are the two different classes that represent the same object (model vs transfer) and the `@Mapper` interface linking the two
 * Example: << FROM PROJ >>
