@@ -21,7 +21,7 @@
     * MapStruct is used to replace manual conversion classes
     * All we have to define are the two different classes that represent the same object (model vs transfer) and the `@Mapper` interface linking the two
 * Example: [`CustomerMapper.java`](./exercises/spring5-mvc-rest/src/main/java/guru/springfamework/api/v1/mapper/CustomerMapper.java)
-    * The generated code can be viewed in ...
+    * The generated code can be viewed in `/target/classes` folder - example: [`CustomerMapperImpl.class`](./exercises/spring5-mvc-rest/target/classes/guru/springfamework/api/v1/mapper/CustomerMapperImpl.class)
 * Note:
     * There is a handy IDE plugin for MapStruct ('MapStruct Support')
     * Take must be taken to ensure Lombok and MapStruct play nicely together (something about conflicting annotation processors)
