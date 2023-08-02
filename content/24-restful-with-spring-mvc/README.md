@@ -1,5 +1,5 @@
 # RESTful Web Services with Spring MVC
-*Exposing and consuming REST API's with Spring MVC*
+*Exposing and consuming REST APIs with Spring MVC*
 
 <br>
 
