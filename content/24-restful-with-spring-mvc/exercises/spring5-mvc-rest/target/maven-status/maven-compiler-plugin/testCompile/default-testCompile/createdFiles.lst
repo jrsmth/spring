@@ -1,0 +1,12 @@
+guru/springfamework/api/v1/mapper/CustomerMapperTest.class
+guru/springfamework/controllers/v1/VendorControllerTest.class
+guru/springfamework/spring5mvcrest/Spring5MvcRestApplicationTests.class
+guru/springfamework/controllers/v1/AbstractRestControllerTest.class
+guru/springfamework/services/VendorServiceImplTest.class
+guru/springfamework/services/CustomerServiceImplIT.class
+guru/springfamework/services/CustomerServiceImplTest.class
+guru/springfamework/api/v1/mapper/CategoryMapperTest.class
+guru/springfamework/api/v1/mapper/VendorMapperTest.class
+guru/springfamework/controllers/v1/CustomerControllerTest.class
+guru/springfamework/services/CategoryServiceTest.class
+guru/springfamework/controllers/v1/CategoryControllerTest.class
