@@ -25,44 +25,40 @@ public class CategoryServiceTest {
     @Mock
     CategoryRepository categoryRepository;
 
-
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-
         categoryService = new CategoryServiceImpl(CategoryMapper.INSTANCE, categoryRepository);
     }
 
     @Test
     public void getAllCategories() throws Exception {
-
-        //given
+        // Given
         List<Category> categories = Arrays.asList(new Category(), new Category(), new Category());
 
         when(categoryRepository.findAll()).thenReturn(categories);
 
-        //when
+        // When
         List<CategoryDTO> categoryDTOS = categoryService.getAllCategories();
 
-        //then
+        // Then
         assertEquals(3, categoryDTOS.size());
 
     }
 
     @Test
     public void getCategoryByName() throws Exception {
-
-        //given
+        // Given
         Category category = new Category();
         category.setId(ID);
         category.setName(NAME);
 
         when(categoryRepository.findByName(anyString())).thenReturn(category);
 
-        //when
+        // When
         CategoryDTO categoryDTO = categoryService.getCategoryByName(NAME);
 
-        //then
+        // Then
         assertEquals(ID, categoryDTO.getId());
         assertEquals(NAME, categoryDTO.getName());
 
