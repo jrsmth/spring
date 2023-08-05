@@ -100,6 +100,13 @@
                             <version>${mapstruct.version}</version>
                         </path>
                     </annotationProcessorPaths>
+                    <compilerArgs>
+                        <compilerArg>
+                            -Amapstruct.defaultComponentModel=spring
+                        </compilerArg>
+                        <!-- Note :: tells Spring to create an @Component for @Mapper-annotated classes -->
+                        <!-- https://stackoverflow.com/questions/47109827/mapstruct-mapper-annotation-dont-create-bean -->
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>

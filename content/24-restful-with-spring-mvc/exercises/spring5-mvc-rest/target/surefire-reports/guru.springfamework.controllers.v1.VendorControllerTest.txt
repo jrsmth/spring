@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: guru.springfamework.controllers.v1.VendorControllerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.024 s - in guru.springfamework.controllers.v1.VendorControllerTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.049 s - in guru.springfamework.controllers.v1.VendorControllerTest

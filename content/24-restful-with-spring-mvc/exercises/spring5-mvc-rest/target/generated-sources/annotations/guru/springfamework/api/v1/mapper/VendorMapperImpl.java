@@ -3,12 +3,14 @@ package guru.springfamework.api.v1.mapper;
 import guru.springfamework.api.v1.model.VendorDTO;
 import guru.springfamework.domain.Vendor;
 import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-02T18:15:56+0100",
+    date = "2023-08-05T09:10:53+0100",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0_202 (Oracle Corporation)"
 )
+@Component
 public class VendorMapperImpl implements VendorMapper {
 
     @Override
