@@ -24,5 +24,5 @@
         * The generated code can be viewed in the `/target/classes` folder - example: [`CustomerMapperImpl.class`](./exercises/spring5-mvc-rest/target/classes/guru/springfamework/api/v1/mapper/CustomerMapperImpl.class)
 * Note:
     * There is a handy IDE plugin for MapStruct ('MapStruct Support')
-    * Care must be taken to ensure Lombok and MapStruct play nicely together (something about conflicting annotation processors)
+    * Care must be taken to ensure Lombok and MapStruct play nicely together (beware conflicting annotation processors)
         * Example: [`pom.xml`](./exercises/spring5-mvc-rest/pom.xml)
