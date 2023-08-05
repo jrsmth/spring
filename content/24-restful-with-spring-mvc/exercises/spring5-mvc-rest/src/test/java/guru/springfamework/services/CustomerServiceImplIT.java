@@ -26,7 +26,7 @@ import static org.junit.Assert.assertThat;
  * Created by jt on 10/3/17.
  */
 @RunWith(SpringRunner.class)
-@DataJpaTest
+@DataJpaTest // Note :: this loads a slice of the Spring context: repositories only - not controllers, services, etc
 public class CustomerServiceImplIT {
 
     @Autowired
