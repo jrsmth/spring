@@ -24,6 +24,7 @@
         <java.version>1.8</java.version>
         <lombok.version>1.18.22</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <springfox-swagger.version>2.7.0</springfox-swagger.version>
     </properties>
     <!-- Useful article for getting Lombok and MapStruct to play together -->
     <!-- https://stephennimmo.com/using-lombok-and-mapstruct-in-a-maven-project/ -->
@@ -56,6 +57,16 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${mapstruct.version}</version>
+        </dependency>
+                <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
