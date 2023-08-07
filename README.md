@@ -39,6 +39,7 @@
     * [Section 22: Introduction to Spring WebFlux](./content/22-spring-webflux)
     * [Section 23: Introduction to RESTful Web Services](./content/23-restful-web-services)
     * [Section 24: RESTful Web Services with Spring MVC](./content/24-restful-with-spring-mvc)
+    * [Section 25: Using Swagger with Spring Boot](./content/25-swagger-with-spring-boot)
 
 <br>
 
