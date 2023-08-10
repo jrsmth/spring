@@ -24,4 +24,17 @@ public class SwaggerConfig {
 
     // Note :: Go to http://localhost:8080/v2/api-docs for JSON info about the APIs
 
+    /**
+    @Override
+    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("swagger-ui.html")
+                .addResourceLocations("classpath:/META-INF/resources/");
+
+        registry.addResourceHandler("/webjars/**")
+                .addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
+     // Note :: Spring Boot will configure the swagger ui for us
+     // Note :: w/o Spring Boot, you would need to add the resource handlers above
+    */
+
 }

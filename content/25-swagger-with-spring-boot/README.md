@@ -57,3 +57,4 @@
         }
     ```
 * Going to `http://localhost:8080/v2/api-docs` reveals JSON information from Swagger about the app's APIs
+    * Similarly, `http://localhost:8080/swagger-ui.html` provides a pretty UI to interact with
