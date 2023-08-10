@@ -50,7 +50,9 @@
                         .paths(PathSelectors.any())
                         .build()
                         .pathMapping("/");
-            }
+            } // Note :: The Docket API gives us control over what info we expose through Swagger
+
+            // Note :: Go to http://localhost:8080/v2/api-docs for JSON info about the APIs
 
         }
     ```
