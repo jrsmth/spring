@@ -36,3 +36,22 @@
             <version>${springfox-swagger.version}</version>
         </dependency>
     ```
+* Add a configuration class that enables Swagger (Example: [SwaggerConfig.java](../24-restful-with-spring-mvc/exercises/spring5-mvc-rest/src/main/java/guru/springfamework/config/SwaggerConfig.java))
+    ```java 
+        @EnableSwagger2
+        @Configuration
+        public class SwaggerConfig {
+
+            @Bean
+            public Docket api(){
+                return new Docket(DocumentationType.SWAGGER_2)
+                        .select()
+                        .apis(RequestHandlerSelectors.any())
+                        .paths(PathSelectors.any())
+                        .build()
+                        .pathMapping("/");
+            }
+
+        }
+    ```
+* Going to `http://localhost:8080/v2/api-docs` reveals JSON information from Swagger about the app's APIs
