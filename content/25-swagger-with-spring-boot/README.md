@@ -90,31 +90,36 @@
         }
     ```
 * Additionally, we can add descriptions for our controller endpoints and model objects:
-    * Controller:
-        ```java
-            //...
-            @Api("This is my Customer Controller")
-            public class CustomerController {
-
-                // ...
-
-                @ApiOperation(value = "This will get a list of customers.", notes = "These are some notes about the API.")
-                @GetMapping
-                @ResponseStatus(HttpStatus.OK)
-                public CustomerListDTO getListOfCustomers(){
-                    return new CustomerListDTO(customerService.getAllCustomers());
-                }
-
-                // ...
-        ```
-    * Model:
-        ```java
-            //...
-            public class CustomerDTO {
-
-                @ApiModelProperty(value = "This is the first name", required = true)
-                private String firstname;
-
+    * Annotations:
+        * `@Api`
+        * `@ApiOperation`
+        * `@ApiModelProperty`
+    * Example:
+        * Controller:
+            ```java
                 //...
-            }
-        ```
+                @Api("This is my Customer Controller")
+                public class CustomerController {
+
+                    // ...
+
+                    @ApiOperation(value = "This will get a list of customers.", notes = "These are some notes about the API.")
+                    @GetMapping
+                    @ResponseStatus(HttpStatus.OK)
+                    public CustomerListDTO getListOfCustomers(){
+                        return new CustomerListDTO(customerService.getAllCustomers());
+                    }
+
+                    // ...
+            ```
+        * Model:
+            ```java
+                //...
+                public class CustomerDTO {
+
+                    @ApiModelProperty(value = "This is the first name", required = true)
+                    private String firstname;
+
+                    //...
+                }
+            ```
