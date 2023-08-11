@@ -58,3 +58,63 @@
     ```
 * Going to `http://localhost:8080/v2/api-docs` reveals JSON information from Swagger about the app's APIs
     * Similarly, `http://localhost:8080/swagger-ui.html` provides a pretty UI to interact with
+
+<br>
+
+## Customisation Basics
+* We can add meta-data to our Swagger documentation by extending the configuration class:
+    ```java
+        @Bean
+        public Docket api(){
+            return new Docket(DocumentationType.SWAGGER_2)
+                    ...
+                    .apiInfo(metaData());
+        }
+
+        // Note :: here we are customising the meta-data of our Swagger API docs
+        private ApiInfo metaData(){
+            return new ApiInfo(
+                    "Spring Framework Guru",
+                    "Spring Framework 5: Beginner to Guru",
+                    "1.0",
+                    "Terms of Service: blah",
+                    new Contact(
+                        "John Thompson",
+                        "https://springframework.guru/about/",
+                        "john@springfrmework.guru"
+                    ),
+                    "Apache License Version 2.0",
+                    "https://www.apache.org/licenses/LICENSE-2.0",
+                    new ArrayList<>()
+            );
+        }
+    ```
+* Additionally, we can add descriptions for our controller endpoints and model objects:
+    * Controller:
+        ```java
+            //...
+            @Api("This is my Customer Controller")
+            public class CustomerController {
+
+                // ...
+
+                @ApiOperation(value = "This will get a list of customers.", notes = "These are some notes about the API.")
+                @GetMapping
+                @ResponseStatus(HttpStatus.OK)
+                public CustomerListDTO getListOfCustomers(){
+                    return new CustomerListDTO(customerService.getAllCustomers());
+                }
+
+                // ...
+        ```
+    * Model:
+        ```java
+            //...
+            public class CustomerDTO {
+
+                @ApiModelProperty(value = "This is the first name", required = true)
+                private String firstname;
+
+                //...
+            }
+        ```
