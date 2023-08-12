@@ -132,7 +132,7 @@
 * Swagger Editor: https://editor.swagger.io/
 * A useful exercise is to copy the JSON response from `http://localhost:8080/v2/api-docs` into the editor and then tweak it as you see fit
 * Code Generation:
-    * Swagger Editor is able to generate code based on the documentation that you create:
+    * The Swagger Editor is able to generate code based on the documentation that we create:
         * Servers: useful as a base to develop your APIs
             * Generated code is not 100% perfect as far as best-practise goes, hence you would use this as a base and modify where appropriate
         * Clients: useful to provide stubs for calling your APIs
