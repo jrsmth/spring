@@ -131,3 +131,9 @@
     * This is a similar practise to test-driven-development, insofar as we establish the contract of our endpoints first and code towards them
 * Swagger Editor: https://editor.swagger.io/
 * A useful exercise is to copy the JSON response from `http://localhost:8080/v2/api-docs` into the editor and then tweak it as you see fit
+* Code Generation:
+    * Swagger Editor is able to generate code based on the documentation that you create:
+        * Servers: useful as a base to develop your APIs
+            * Generated code is not 100% perfect as far as best-practise goes, hence you would use this as a base and modify where appropriate
+        * Clients: useful to provide stubs for calling your APIs
+    * Example: [spring-server-generated](./res/spring-server-generated/pom.xml)
