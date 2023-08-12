@@ -123,3 +123,11 @@
                     //...
                 }
             ```
+
+<br>
+
+## Swagger Editor
+* Using the Swagger Editor we are able to develop the documentation for our APIs first, before they are implemented
+    * This is a similar practise to test-driven-development, insofar as we establish the contract of our endpoints first and code towards them
+* Swagger Editor: https://editor.swagger.io/
+* A useful exercise is to copy the JSON response from `http://localhost:8080/v2/api-docs` into the editor and then tweak it as you see fit

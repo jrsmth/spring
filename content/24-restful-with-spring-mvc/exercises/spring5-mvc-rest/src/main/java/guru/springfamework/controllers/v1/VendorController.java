@@ -65,5 +65,5 @@ public class VendorController {
     public void deleteVendor(@PathVariable Long id){
         vendorService.deleteVendorById(id);
     }
-    
+
 }
