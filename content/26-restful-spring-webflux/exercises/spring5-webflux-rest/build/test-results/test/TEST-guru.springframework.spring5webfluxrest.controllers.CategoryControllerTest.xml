@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="guru.springframework.spring5webfluxrest.controllers.CategoryControllerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-08-14T16:31:25" hostname="Jamess-MacBook-Pro-3.local" time="1.493">
+  <properties/>
+  <testcase name="testCreateCateogry" classname="guru.springframework.spring5webfluxrest.controllers.CategoryControllerTest" time="1.199"/>
+  <testcase name="testPatchWithChanges" classname="guru.springframework.spring5webfluxrest.controllers.CategoryControllerTest" time="0.085"/>
+  <testcase name="getById" classname="guru.springframework.spring5webfluxrest.controllers.CategoryControllerTest" time="0.067"/>
+  <testcase name="testPatchNoChanges" classname="guru.springframework.spring5webfluxrest.controllers.CategoryControllerTest" time="0.048"/>
+  <testcase name="list" classname="guru.springframework.spring5webfluxrest.controllers.CategoryControllerTest" time="0.048"/>
+  <testcase name="testUpdate" classname="guru.springframework.spring5webfluxrest.controllers.CategoryControllerTest" time="0.044"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

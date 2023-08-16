@@ -5,8 +5,3 @@
 
 ## Exercises
 * [spring5-webflux-rest](./exercises/spring5-webflux-rest) `@SfgClone(branch="~final")` `@Modified`
-
-<br>
-
-## Overview
-* ...
