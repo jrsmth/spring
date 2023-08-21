@@ -9,7 +9,7 @@
 <br>
 
 ## Overview
-* Content Negotiation is the ability for a client request to determine which data format is returned by an API
+* Content Negotiation is the ability for a client request to determine which data format is returned by an API:
     * Typically `json` / `html` / `xml` but could also be `pdf` / `csv` / etc
 
 <br>
