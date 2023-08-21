@@ -41,6 +41,7 @@
     * [Section 24: RESTful Web Services with Spring MVC](./content/24-restful-with-spring-mvc)
     * [Section 25: Using Swagger with Spring Boot](./content/25-swagger-with-spring-boot)
     * [Section 26: RESTful Web Services with Spring WebFlux](./content/26-restful-spring-webflux)
+    * [Section 27: Spring MVC Content Negotiation](./content/27-content-negotiation)
 
 <br>
 
