@@ -4,7 +4,7 @@
 <br>
 
 ## Exercises
-* ...
+* [spring5-mvc-rest-content-neg](./exercises/spring5-mvc-rest-content-neg) `@SfgClone(branch="~final")` `@Modified`
 
 <br>
 
@@ -22,7 +22,9 @@
     * For example, when using Thymeleaf, our `DispatcherServlet` will return `html`
 * When using Spring Boot, a `ContentNegotiatingViewResolver` is auto-configured for us:
     * Note: in the absence of Spring Boot, you would be responsible for its configuration
-* Content-Type:
-    * The `Content-Type` HTTP Header is used to specify which data format you want in a response body:
+* Accept:
+    * The `Accept` HTTP Header is used to specify which data format you want in a response body:
         * e.g `application/json`, `application/xml`, `text/html`
-    * By convention: if a requested content type is not found, a `406 Not Acceptable` HTTP Status code is returned
+    * By convention: if a requested format is not found, a `406 Not Acceptable` HTTP Status code is returned
+    * Beware confusing the `Accept` header with `Content-Type`:
+        * `Content-Type` is used by the server to determine the format of a request body
