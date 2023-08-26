@@ -44,8 +44,9 @@
     * [Section 27: Spring MVC Content Negotiation](./content/27-content-negotiation)
     * Section 28:
     * Section 29:
+    * Section 30:
 
-    <!-- Sections 30+ ommitted for relevance -->
+    <!-- Sections 31+ ommitted for relevance -->
 
 <br>
 
