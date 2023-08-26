@@ -1,7 +1,5 @@
 package guru.springframework.api.v1.mapper;
 
-
-
 import guru.springframework.domain.Customer;
 import guru.springframework.model.CustomerDTO;
 import org.mapstruct.Mapper;
