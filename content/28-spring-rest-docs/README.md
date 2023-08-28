@@ -1,15 +1,15 @@
 # Spring Rest Docs
-*Generate documentation for our rest controllers*
+*Generate documentation for our REST controllers*
 
 <br>
 
 ## Exercises
-* ...
+* [brewery-rest-docs](./exercises/brewery-rest-docs) `@SfgClone(branch="~final")` `@Modified`
 
 <br>
 
 ## Overview
-* Spring REST docs is a tool that generates API documentation from your controller unit tests
+* Spring REST Docs is a tool that generates API documentation from your controller unit tests
 * Asciidoctor is used to compile the documentation snippets:
     * Which is a suped-up version of markdown
     * Generally its used for documentation longer than one page
@@ -27,16 +27,16 @@
                     * See Richarson Maturity Model: https://martinfowler.com/articles/richardsonMaturityModel.html
             * Its URI-centric
             * Heavily annotation-based, which can lead to an unpleasant writing experience
-    * Spring REST docs:
+    * Spring REST Docs:
         * Requires more set-up than Swagger but offers more comprehensive documentation
-        * The cornerstone of Spring REST docs is to avoid using the implementation to provide the documentation:
+        * The cornerstone of Spring REST Docs is to avoid using the implementation to provide the documentation:
             * Instead the test base is used
-        * Test-Driven-Documentation: If code changes, tests change then documentation changes automatically
+        * Test-Driven-Documentation: If code changes, tests change and then documentation changes automatically
 * Note:
-    * Whilst Spring REST docs might be a 'better' tool, Swagger in most real-world situation does the job well enough
+    * Whilst Spring REST Docs might be a 'better' tool, Swagger in most real-world situations does the job well enough
         * As with all things in Software Engineering, its a balance:
-            * Swagger is quick, Spring REST docs in richer
-            * Useful Swagger by default, then progress to Spring REST docs as your complexity grows
+            * Swagger is quick, Spring REST Docs in richer
+            * Useful Swagger by default, then progress to Spring REST Docs as your complexity grows
 * Sources:
     * [Documenting RESTful APIs - SpringOne2GX 2015](https://www.youtube.com/watch?v=k5ncCJBarRI&t=26m58s)
     * [DZone Q&A](https://dzone.com/articles/a-qa-with-andy-wilkinson-on-spring-rest-docs)
