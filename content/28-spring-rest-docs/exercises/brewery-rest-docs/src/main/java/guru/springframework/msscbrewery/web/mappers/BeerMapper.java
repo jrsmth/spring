@@ -14,3 +14,9 @@ public interface BeerMapper {
 
     Beer beerDtoToBeer(BeerDto dto);
 }
+// Error:
+// Note :: java.lang.NullPointerException: Cannot invoke "java.net.URL.toExternalForm()" because "resource" is null at org.mapstruct
+// Soln:
+// Note :: https://stackoverflow.com/questions/66591176/java-lang-nullpointerexception-cannot-invoke-java-net-url-toexternalform-be
+// Note :: File | Settings | Build, Execution, Deployment | Compiler | user-local build process vm options
+// Note :: -Djps.track.ap.dependencies=false

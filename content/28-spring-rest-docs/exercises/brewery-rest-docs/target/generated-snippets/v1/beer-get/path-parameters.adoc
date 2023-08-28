@@ -1,0 +1,8 @@
+.+/api/v1/beer/{beerId}+
+|===
+|Parameter|Description
+
+|`+beerId+`
+|UUID of desired beer to get.
+
+|===

@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+{"id":null,"beerName":"Beer1","beerStyle":"PALE_ALE","upc":123456789012,"createdDate":null,"lastUpdatedDate":null}
+----

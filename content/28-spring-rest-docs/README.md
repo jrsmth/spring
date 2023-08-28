@@ -1,4 +1,4 @@
-# Spring Rest Docs
+# Spring REST Docs
 *Generate documentation for our REST controllers*
 
 <br>
