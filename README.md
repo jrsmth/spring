@@ -43,7 +43,7 @@
     * [Section 26: RESTful Web Services with Spring WebFlux](./content/26-restful-spring-webflux)
     * [Section 27: Spring MVC Content Negotiation](./content/27-content-negotiation)
     * [Section 28: Spring REST Docs](./content/28-spring-rest-docs)
-    * Section 29:
+    * [Section 29: JMS Messaging](./content/29-jms-messaging)
     * Section 30:
 
     <!-- Sections 31+ ommitted for relevance -->
