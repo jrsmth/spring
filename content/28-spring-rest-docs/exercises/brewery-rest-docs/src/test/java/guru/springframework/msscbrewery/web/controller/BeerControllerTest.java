@@ -37,14 +37,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(BeerController.class)
 public class BeerControllerTest {
 
-    @MockBean
-    BeerService beerService;
-
-    @Autowired
-    MockMvc mockMvc;
-
-    @Autowired
-    ObjectMapper objectMapper;
+    @MockBean BeerService beerService;
+    @Autowired MockMvc mockMvc;
+    @Autowired ObjectMapper objectMapper;
 
     BeerDto validBeer;
 
