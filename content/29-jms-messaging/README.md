@@ -4,7 +4,7 @@
 <br>
 
 ## Exercises
-* [...](./exercises/...) `@SfgClone(branch="~final")` `@Modified`
+* [sfg-jms](./exercises/sfg-jms) `@SfgClone(branch="~final")` `@Modified`
 
 <br>
 
