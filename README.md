@@ -44,9 +44,9 @@
     * [Section 27: Spring MVC Content Negotiation](./content/27-content-negotiation)
     * [Section 28: Spring REST Docs](./content/28-spring-rest-docs)
     * [Section 29: JMS Messaging](./content/29-jms-messaging)
-    * Section 30:
+    * [Section 30: Troubleshooting Spring](./content/30-troubleshooting)
 
-    <!-- Sections 31+ ommitted for relevance -->
+    <!-- Sections 31+ ommitted for irrelevance -->
 
 <br>
 
