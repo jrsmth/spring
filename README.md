@@ -11,13 +11,13 @@
 
 <br>
 
-## Spring Certified Professional
+## Content
+
+### Spring Certified Professional
 * [Overview](./content/spring-certified-pro)
     * [Spring Core](./content/spring-certified-pro/01-spring-core)
 
-<br>
-
-## Spring Udemy
+### Spring Udemy
 * [Section 02: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
 * [Section 03: Dependency Injection with Spring](./content/03-dependency-injection)
 * [Section 04: Building a Jokes App](./content/04-build-jokes-app)
