@@ -14,8 +14,8 @@
 
 ## Content
 * Spring Certified Pro:
-    * [Master](./content/spring-certified-pro/01-spring-core)
-    * [Spring Core](./content/spring-certified-pro/00-master)
+    * [Master](./content/spring-certified-pro/00-master)
+    * [Spring Core](./content/spring-certified-pro/01-spring-core)
 * Spring Udemy:
     * [Section 02: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
     * [Section 03: Dependency Injection with Spring](./content/03-dependency-injection)

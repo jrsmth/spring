@@ -1,19 +1,28 @@
+# Spring Certified Professional
+
+<br>
+
+## Certification Topics
+
 ```mermaid
-mindmap
-  root((mindmap))
-    Origins
+Spring Certified Professional
+  root((Spring Certified Professional))
+    Spring Core
       Long history
       ::icon(fa fa-book)
       Popularisation
         British popular psychology author Tony Buzan
-    Research
+    Data Management
       On effectiveness<br/>and features
       On Automatic creation
         Uses
             Creative techniques
             Strategic planning
             Argument mapping
-    Tools
+    Spring MVC
       Pen and paper
       Mermaid
+    Testing
+    Security
+    Spring Boot
 ```
