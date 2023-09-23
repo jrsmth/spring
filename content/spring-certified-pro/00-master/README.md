@@ -27,5 +27,5 @@ mindmap
 ```mermaid
 graph LR;
     A-->B;
-    click A "../01-spring-core"
+    click A "../01-spring-core/README.md"
 ```
