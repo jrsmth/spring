@@ -20,6 +20,7 @@ mindmap
     Security
     Spring Boot
 ```
+<!-- Try to get links working on the mindmap -->
 
 <br>
 
