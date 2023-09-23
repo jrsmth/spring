@@ -22,7 +22,6 @@ mindmap
     4. Testing
     5. Security
     6. Spring Boot
-    id1["`**Root** with a second line Unicode works too: 🤓`"]
 ```
 
 <br>
