@@ -1,7 +1,8 @@
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-<!-- Badge for the date and score, with official link? -->
 
 # Spring Certified Professional
+*January 2024* <br>
+*50/75 (67%)*
 
 <br>
 <br>
