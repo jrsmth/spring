@@ -7,8 +7,8 @@
 ```mermaid
 mindmap
   root((Spring Pro))
-    A[Spring Core]
-    Click A "./## Certification Topics"
+    Spring Core
+    Click Spring Core "./## Certification Topics"
       Introduction to Spring Framework
       Java Configuration
         Define Spring Beans using Java code
