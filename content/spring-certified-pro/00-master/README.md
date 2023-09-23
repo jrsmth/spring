@@ -1,6 +1,7 @@
 # Spring Certified Professional
 
 <br>
+<br>
 
 ```mermaid
 mindmap
@@ -19,8 +20,6 @@ mindmap
     Security
     Spring Boot
 ```
-
-<br>
 
 ### [Spring Core](../01-spring-core)
 * [Introduction to Spring Framework]()
