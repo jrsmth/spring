@@ -7,7 +7,7 @@
 ```mermaid
 mindmap
   root((Spring Certified Professional))
-    A[<a href='../01-spring-core'>Spring Core</a>]
+    A[This is an <b>important</b> <a href='https://google.com'>link</a>]
       Long history
       ::icon(fa fa-book)
       Popularisation
