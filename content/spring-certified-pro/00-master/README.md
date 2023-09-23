@@ -7,7 +7,7 @@
 ```mermaid
 mindmap
   root((Spring Certified Professional))
-    Spring Core
+    [Spring Core](../01-spring-core)
       Long history
       ::icon(fa fa-book)
       Popularisation
