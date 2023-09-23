@@ -1,5 +1,5 @@
 # Spring Certified Professional
-*January 2024, 50/75 (66%)*
+*January 2024, 50/75 (67%)*
 
 <br>
 <br>
