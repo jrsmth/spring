@@ -21,3 +21,11 @@ mindmap
     Security
     Spring Boot
 ```
+
+<br>
+
+```mermaid
+graph LR;
+    A-->B;
+    click A "../01-spring-core"
+```
