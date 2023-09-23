@@ -2,7 +2,6 @@
 
 <br>
 <br>
-<br>
 
 ```mermaid
 mindmap
@@ -22,7 +21,11 @@ mindmap
     Spring Boot
 ```
 
+<br>
+
 ### [Spring Core](../01-spring-core)
 * [Introduction to Spring Framework]()
 * [Java Configuration]():
   * [Define Spring Beans using Java code]()
+
+### [Data Management](../02-data-management)
