@@ -2,7 +2,7 @@
 
 <br>
 
-## Certification Topics
+## Topics Map
 
 ```mermaid
 mindmap
@@ -22,7 +22,10 @@ mindmap
     Spring Boot
 ```
 
-### Spring Core
-* [Introduction to Spring Framework]()
-* [Java Configuration]():
-  * [Define Spring Beans using Java code]()
+<br>
+
+## Topics List
+* [Spring Core](../01-spring-core)
+  * [Introduction to Spring Framework]()
+  * [Java Configuration]():
+    * [Define Spring Beans using Java code]()
