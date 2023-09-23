@@ -7,7 +7,7 @@
 <br>
 <br>
 
-<img src="./resources/spring-icon.svg" alt="Spring Logo" width=300>
+<!-- <img src="./resources/spring-icon.svg" alt="Spring Logo" width=300> -->
 
 <br>
 <br>
