@@ -8,6 +8,7 @@
 mindmap
   root((Spring Certified Professional))
     [Spring Core](../01-spring-core)
+    A[<a href='../01-spring-core'>Spring Core</a>]
       Long history
       ::icon(fa fa-book)
       Popularisation
