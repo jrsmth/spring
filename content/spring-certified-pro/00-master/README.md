@@ -21,3 +21,8 @@ mindmap
     Security
     Spring Boot
 ```
+
+### Spring Core
+* [Introduction to Spring Framework]()
+* [Java Configuration]():
+  * [Define Spring Beans using Java code]()
