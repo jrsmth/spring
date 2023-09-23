@@ -8,7 +8,7 @@
 
 ```mermaid
 mindmap
-  root((Spring Pro))[I am a square]
+  root((Spring Pro))
     1. Spring Core
       1.1. Introduction to Spring Framework
       1.2. Java Configuration
@@ -22,6 +22,7 @@ mindmap
     4. Testing
     5. Security
     6. Spring Boot
+    id1["`**Root** with a second line Unicode works too: 🤓`"]
 ```
 
 <br>
