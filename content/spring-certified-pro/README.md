@@ -6,10 +6,10 @@
 ```mermaid
 mindmap
   root((Spring Pro))
-    Spring Core
-      Introduction to Spring Framework
-      Java Configuration
-        Define Spring Beans using Java code 
+    1. Spring Core
+      1.1. Introduction to Spring Framework
+      1.2. Java Configuration
+        1.2.1 Define Spring Beans using Java code 
         Access Beans in the Application Context
         Handle multiple configuration files
         Handle dependencies between Beans
