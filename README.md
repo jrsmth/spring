@@ -13,37 +13,13 @@
 <br>
 
 ## Content
-
-<br>
-<br>
-
-```mermaid
-mindmap
-  root((Spring Pro))
-    1. Spring Core
-      1.1. Introduction to Spring Framework
-      1.2. Java Configuration
-        1.2.1. Define Spring Beans using Java code 
-        1.2.2. Access Beans in the Application Context
-        1.2.3. Handle multiple configuration files
-        1.2.4. Handle dependencies between Beans
-        1.2.5. Explain and define Bean Scopes
-    2. Data Management
-    3. Spring MVC
-    4. Testing
-    5. Security
-    6. Spring Boot
-```
-
-<br>
-<br>
-
 * Spring Certified Professional:
-    * [1. Spring Core](../01-spring-core)
-        * [1.1. Introduction to Spring Framework]()
-        * [1.2. Java Configuration]()
-            * [1.2.1. Define Spring Beans using Java code]()
-    * [2. Data Management](../02-data-management)
+    * [Spring Core](./content/spring-certified-pro/01-spring-core)
+    * [Data Management](./content/spring-certified-pro/02-data-management)
+    * [Spring MVC](./content/spring-certified-pro/03-spring-mvc)
+    * [Testing](./content/spring-certified-pro/04-testing)
+    * [Security](./content/spring-certified-pro/05-security)
+    * [Spring Boot](./content/spring-certified-pro/06-spring-boot)
 * Spring Udemy :
     * [Section 02: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
     * [Section 03: Dependency Injection with Spring](./content/03-dependency-injection)
