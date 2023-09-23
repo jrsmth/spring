@@ -8,7 +8,7 @@
 
 ```mermaid
 mindmap
-  root((Spring Pro))
+  root((Spring Pro))[I am a square]
     1. Spring Core
       1.1. Introduction to Spring Framework
       1.2. Java Configuration
