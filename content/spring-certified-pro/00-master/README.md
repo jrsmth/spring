@@ -3,7 +3,6 @@
 <br>
 <br>
 <br>
-<br>
 
 ```mermaid
 mindmap
