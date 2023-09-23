@@ -10,7 +10,8 @@ mindmap
     Spring Core
       Introduction to Spring Framework
       Java Configuration
-        Define Spring Beans using Java code <a href='../01-spring-core'>(here)</a>
+        Define Spring Beans using Java code 
+        <a href='../01-spring-core'>(here)</a>
         Access Beans in the Application Context
         Handle multiple configuration files
         Handle dependencies between Beans
