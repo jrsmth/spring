@@ -13,11 +13,32 @@
 <br>
 
 ## Content
-* Spring Certified Pro:
-    * [Overview](./content/spring-certified-pro)
-        * [Spring Core](./content/spring-certified-pro/01-spring-core)
-        * [Data Management](./content/spring-certified-pro/02-data-management)
-* Spring Udemy:
+
+```mermaid
+mindmap
+  root((Spring Pro))
+    1. Spring Core
+      1.1. Introduction to Spring Framework
+      1.2. Java Configuration
+        1.2.1 Define Spring Beans using Java code 
+        Access Beans in the Application Context
+        Handle multiple configuration files
+        Handle dependencies between Beans
+        Explain and define Bean Scopes
+    Data Management
+    Spring MVC
+    Testing
+    Security
+    Spring Boot
+```
+
+* Spring Certified Professional:
+    * [1. Spring Core](../01-spring-core)
+        * [1.1. Introduction to Spring Framework]()
+        * [1.2. Java Configuration]()
+            * [1.2.1. Define Spring Beans using Java code]()
+    * [2. Data Management](../02-data-management)
+* Spring Udemy :
     * [Section 02: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
     * [Section 03: Dependency Injection with Spring](./content/03-dependency-injection)
     * [Section 04: Building a Jokes App](./content/04-build-jokes-app)
