@@ -14,13 +14,7 @@
 
 ## Content
 * Spring Certified Professional:
-    * [0. Overview](./content/spring-certified-pro)
-    * [1. Spring Core](./content/spring-certified-pro/01-spring-core)
-    * [2. Data Management](./content/spring-certified-pro/02-data-management)
-    * [3. Spring MVC](./content/spring-certified-pro/03-spring-mvc)
-    * [4. Testing](./content/spring-certified-pro/04-testing)
-    * [5. Security](./content/spring-certified-pro/05-security)
-    * [6. Spring Boot](./content/spring-certified-pro/06-spring-boot)
+    * [Overview](./content/spring-certified-pro)
 * Spring Udemy :
     * [Section 02: Building a Spring Boot Web App](./content/02-build-spring-boot-app)
     * [Section 03: Dependency Injection with Spring](./content/03-dependency-injection)
