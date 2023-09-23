@@ -5,7 +5,7 @@
 ## Certification Topics
 
 ```mermaid
-Spring Certified Professional
+mindmap
   root((Spring Certified Professional))
     Spring Core
       Long history
