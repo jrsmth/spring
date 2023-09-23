@@ -8,7 +8,6 @@
 mindmap
   root((Spring Pro))
     Spring Core
-    Click Spring Core "./## Certification Topics"
       Introduction to Spring Framework
       Java Configuration
         Define Spring Beans using Java code <a href='../01-spring-core>(here)</a>
