@@ -2,8 +2,6 @@
 
 <br>
 
-## Topics Map
-
 ```mermaid
 mindmap
   root((Spring Pro))
@@ -24,8 +22,7 @@ mindmap
 
 <br>
 
-## Topics List
-* [Spring Core](../01-spring-core)
-  * [Introduction to Spring Framework]()
-  * [Java Configuration]():
-    * [Define Spring Beans using Java code]()
+### [Spring Core](../01-spring-core)
+* [Introduction to Spring Framework]()
+* [Java Configuration]():
+  * [Define Spring Beans using Java code]()
