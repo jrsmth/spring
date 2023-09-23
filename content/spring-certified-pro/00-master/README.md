@@ -6,7 +6,7 @@
 
 ```mermaid
 mindmap
-  root((Spring Certified Professional))
+  root((Spring Pro))
     Spring Core
     Data Management
     Spring MVC
