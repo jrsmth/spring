@@ -1,9 +1,7 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/JRSmiffy/spring/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/JRSmiffy/spring/tree/main)
-[![codecov](https://codecov.io/gh/JRSmiffy/spring/branch/main/graph/badge.svg?token=AK2GQ281NA)](https://codecov.io/gh/JRSmiffy/spring)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+<!-- Badge for the date and score, with official link? -->
 
 # Spring Certified Professional
-*January 2024* <br>
-*50/75 (67%)*
 
 <br>
 <br>
