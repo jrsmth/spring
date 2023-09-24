@@ -1,7 +1,7 @@
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 
 # Spring Certified Professional
-*January 2024, 50/75 (67%)*
+![January 2024 - 50/75 (67%)](https://img.shields.io/badge/link-to-cert?)
 
 <br>
 <br>
