@@ -2,13 +2,14 @@
 [![codecov](https://codecov.io/gh/JRSmiffy/spring/branch/main/graph/badge.svg?token=AK2GQ281NA)](https://codecov.io/gh/JRSmiffy/spring)
 
 # Spring
-*Spring Training*
+*🌱 Spring Training* 
 
 <br>
 <br>
 
 <img src="./resources/spring-icon.svg" alt="Spring Logo" width=300>
 
+<br>
 <br>
 
 ## Spring Certified Professional

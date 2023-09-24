@@ -1,8 +1,7 @@
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white) 
 
 # Spring Certified Professional
-[![January 2024 - 50 / 75 (67%)](https://img.shields.io/static/v1?label=January+2024&message=50+%2F+75+(67%)&color=53c372)](https://)
-
+[![January 2024 - 50 / 75 (67%)](https://img.shields.io/static/v1?label=January+2024&message=50+%2F+75+(67%)&color=6db33f)](https://)
 
 <br>
 <br>
