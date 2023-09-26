@@ -10,7 +10,7 @@
 
 <br>
 
-* <details>
+* <details open>
     <summary>Spring Framework</summary>
 
     * Spring is a framework that enables developers to build web applications in Java or Kotlin
