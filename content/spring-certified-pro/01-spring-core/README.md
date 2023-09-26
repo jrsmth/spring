@@ -10,18 +10,12 @@
 
 <br>
 
-* <details open>
-    <summary>Spring Framework</summary>
-
+* Spring Framework:
     * Spring is a framework that enables developers to build web applications in Java or Kotlin
     * Spring takes care of many low-level aspects of building enterprise-grade applications
         * Allowing us to focus on business features rather than boiler plate code
     * Benefits & Drawbacks... <!-- TODO -->
-  </details>
-
-* <details>
-    <summary>Structure</summary>
-
+* Structure:
     * The Spring Framework is split into 5 modules:
         * `Core`: Supports core features - dependency injection (DI), validation, i18n and aspect-oriented programming
         * `Data Access`: Supports JTA (Java Transaction API), JPA (Java Persistence API) and JDBC (Java Database Connectivity)
@@ -30,14 +24,9 @@
         * `Testing`: Support for unit and integration testing by way of mocking, fixtures, context management and caching
     * An ecosystem of 'Spring Projects' has grown that is built upon Spring Framework:
         * <!-- TODO -->
-  </details>
-
-* <details>
-    <summary>Facts</summary>
-
+* Spring Facts:
     * The Spring Framework was created by Rod Johnson in 2003
     * It is an open-source project that is currently maintain by VMWare
-  </details>
 
 <br>
 
