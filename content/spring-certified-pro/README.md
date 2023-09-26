@@ -30,9 +30,9 @@ mindmap
 
 ## Topics
 * [1. Spring Core](./01-spring-core)
-    * [1.1. Introduction to Spring Framework](./01-spring-core/##1.1-Introduction-to-Spring-Framework)
-    * [1.2. Java Configuration]()
-        * [1.2.1. Define Spring Beans using Java code]()
+    * [1.1. Introduction to Spring Framework](./01-spring-core/#1.1)
+    * [1.2. Java Configuration](./01-spring-core/#1.2)
+        * [1.2.1. Define Spring Beans using Java code](./01-spring-core/#1.2.1)
 * [2. Data Management](../02-data-management)
 
 <br>

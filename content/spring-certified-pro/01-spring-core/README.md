@@ -2,11 +2,11 @@
 
 <br>
 
-## 1.1. Introduction to Spring Framework
+## <a name="1.1"></a> 1.1. Introduction to Spring Framework
 * 
 
 <br>
 
-## 1.2. Java Configuration
+## <a name="1.2"></a> 1.2. Java Configuration
 
-#### 1.2.1. Define Spring Beans using Java code
+#### <a name="1.2.1"></a> 1.2.1. Define Spring Beans using Java code
