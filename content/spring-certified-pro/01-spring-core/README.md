@@ -9,7 +9,6 @@
 <img src="../res/spring-overview.png" width="600px">
 
 <br>
-<br>
 
 * <details>
     <summary>Spring Framework</summary>
@@ -19,8 +18,6 @@
         * Allowing us to focus on business features rather than boiler plate code
     * Benefits & Drawbacks... <!-- TODO -->
   </details>
-
-<br>
 
 * <details>
     <summary>Structure</summary>
@@ -40,10 +37,8 @@
         * <!-- TODO -->
   </details>
 
-<br>
-
 * <details>
-    <summary>Spring Facts</summary>
+    <summary>Facts</summary>
 
     * The Spring Framework was created by Rod Johnson in 2003
     * It is an open-source project that is currently maintain by VMWare
