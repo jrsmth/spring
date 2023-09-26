@@ -23,16 +23,11 @@
     <summary>Structure</summary>
 
     * The Spring Framework is split into 5 modules:
-        * Core:
-            * Provides core features such as dependency injection (DI), validation, internationalisation (i18n) and aspect-oriented programming (AOP)
-        * Data Access:
-            * Supports data management through JTA (Java Transaction API), JPA (Java Persistence API) and JDBC (Java Database Connectivity)
-        * Web: 
-            * Supports the Servlet API (Spring MVC) and Reactive API (Spring WebFlux)
-        * Integration:
-            * Supports application integration through JMS (Java Messaging Service)
-        * Testing:
-            * Support for unit and integration testing by way of mocking, fixtures, context management and caching
+        * `Core`: Provides core features such as dependency injection (DI), validation, internationalisation (i18n) and aspect-oriented programming (AOP)
+        * `Data Access`: Supports data management through JTA (Java Transaction API), JPA (Java Persistence API) and JDBC (Java Database Connectivity)
+        * `Web`: Supports the Servlet API (Spring MVC) and Reactive API (Spring WebFlux)
+        * `Integration`: Supports application integration through JMS (Java Messaging Service)
+        * `Testing`: Support for unit and integration testing by way of mocking, fixtures, context management and caching
     * An ecosystem of 'Spring Projects' has grown that is built upon Spring Framework:
         * <!-- TODO -->
   </details>
