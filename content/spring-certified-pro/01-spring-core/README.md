@@ -9,10 +9,10 @@
 <img src="../res/spring-overview.png" width="600px">
 
 <br>
-<br>
 
 * Spring is a framework that enables developers to build web applications in Java or Kotlin
-    * Spring takes care of many low-level aspects of building enterprise-grade applications, which allows us to focus on business features rather than boiler plate code
+    * Spring takes care of many low-level aspects of building enterprise-grade applications
+        * Allowing us to focus on business features rather than boiler plate code
 * Spring Facts:
     * ...
 
