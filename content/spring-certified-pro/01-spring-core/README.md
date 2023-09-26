@@ -8,8 +8,6 @@
 
 <img src="../res/spring-overview.png" width="600px">
 
-<br>
-
 * Spring Framework:
     * Spring is a framework that enables developers to build web applications in Java or Kotlin
     * Spring takes care of many low-level aspects of building enterprise-grade applications
