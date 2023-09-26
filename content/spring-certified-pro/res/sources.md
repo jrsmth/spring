@@ -12,3 +12,4 @@
 * [Baeldung - Spring Intro](https://www.baeldung.com/spring-tutorial)
 * [Baeldung - Why choose Spring](https://www.baeldung.com/spring-why-to-choose)
 * [Spring Developer - What is Spring?](https://www.youtube.com/watch?v=Spzug_SjJnM)
+* [Spring Documentation - Intro](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/overview.html)

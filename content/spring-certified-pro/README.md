@@ -39,4 +39,4 @@ mindmap
 <br>
 
 ## Sources
-* [sources.md](./sources.md)
+* [sources.md](./res/sources.md)
