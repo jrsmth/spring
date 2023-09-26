@@ -24,7 +24,7 @@
         * `Spring Cloud`: Provides patterns for distributed systems, such as Service Discovery, Circuit Breaker and API gateway
         * `Spring Security`: Provides robust authentication and authorization management
         * `Spring Mobile`: Provides capability to detect runtime device and adapt behaviour accordingly
-        * `Spring Batch`: Provides a lightweight framework for developing batch applications for enterprise systems, like data archiving
+        * `Spring Batch`: Provides a lightweight framework to develop batch applications for enterprise systems(e.g data archiving)
 * Spring Facts:
     * The Spring Framework was created by Rod Johnson in 2003
     * It is an open-source project that is currently maintain by VMWare
