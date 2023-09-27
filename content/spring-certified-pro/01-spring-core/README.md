@@ -37,6 +37,23 @@
             * `In Spring, objects define their associations (dependencies) and do not worry about how they will get those dependencies. It is the responsibility of Spring to provide the required dependencies for creating objects.`
     * This enables the developer to create loosely-coupled applications, so that individual components of the software are easier to maintain, reuse and test
     * The ability to avoid the tight-coupling of software components is a key theme of the [SOLID](https://github.com/JRSmiffy/spring/tree/main/content/03-dependency-injection#the-solid-principles-of-oop) principles of object-oriented design
+        * Example:
+            ```java
+                class A {
+                    B b;
+                }
+
+                class B {
+                    // fields
+                    C c;
+                }
+            ```
+            * When we instantiate a dependency (Class `B`) of our class (Class `A`) with the `new` keyword, we tightly-couple the two classes together
+            * This is because the depedent class `A` must explicitly know of the dependency's (`B`'s) implementation in order to instantiate it (i.e how to provide Class `C`, etc)
+            * As a result, changes to the `B`'s implementation risks breaking the composite Class `A` that uses it
+                * If `C` was removed from `B`, it would break our `A` as `B b = new B(c)` would no longer be valid
+            * The ability for `A` to use `B` without being concerned with its implementation is the greatest benefit of DI:
+                * Allowing us to unit test `A` by mocking out `B`, reuse `B` across our application easily and make changes to `B`'s implementation without affecting `A` (providing the 'interface' that `A` interacts with remains unchanged)
 * IoC Container:
     * Inversion of Control is Spring's implementation of DI and the terms can be used interchangeably
         * Control is said to be 'inverted' as the object or 'Spring Bean' defines what it needs and lets the framework source it, rather than a more traditional approach of having the class itself instantiate the dependencies it needs
