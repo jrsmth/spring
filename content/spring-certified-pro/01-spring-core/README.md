@@ -40,8 +40,8 @@
 * IoC Container:
     * Inversion of Control is Spring's implementation of DI and the terms can be used interchangeably
         * Control is said to be 'inverted' as the object or 'Spring Bean' defines what it needs and lets the framework source it, rather than a more traditional approach of having the class itself instantiate the dependencies it needs
-    * Spring's IoC Container is responsible for instantiating, configuring, and assembling the objects to be injected as dependencies (i.e Spring Beans)
-        * The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata (discussed more in the next section)
+    * Spring's IoC Container is responsible for instantiating, configuring, and assembling the objects to be injected as dependencies
+        * The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata
 * Spring Beans:
     * A 'Bean' in Spring is an object that is managed by the IoC container
 * Application Context:
