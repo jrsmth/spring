@@ -45,6 +45,15 @@
 * Spring Beans:
     * A 'Bean' in Spring is an object that is managed by the IoC container
 * Application Context:
+    * `org.springframework.context.ApplicationContext` is an interface that represents Spring's IoC container, providing configuration information for the rest of your application
+    * The responsibilites of the ApplicationContext interface include:
+        * Bean Factory for application components
+        * Bean Injection
+        * Application Listeners
+        * Logging
+        * Loading config files (i.e. `.properties`, `.yaml`)
+    * Note:
+        * `SpringApplication.run()` in an application's `main()` method returns an instance of `ApplicationContext`
 
 <br>
 
