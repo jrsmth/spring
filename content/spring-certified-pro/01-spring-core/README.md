@@ -46,13 +46,30 @@
     * A 'Bean' in Spring is an object that is managed by the IoC container
 * Application Context:
     * `org.springframework.context.ApplicationContext` is an interface that represents Spring's IoC container, providing configuration information for the rest of your application
-    * The responsibilites of the ApplicationContext interface include:
+        * The `org.springframework.beans.factory.BeanFactory` interface provides an object pool where beans are created and managed by configuration
+        * `ApplicationContext` is a wrapper of this bean factory, providing additional functionality
+    * The responsibilites of the `ApplicationContext` interface include:
         * Bean Factory for application components
         * Bean Injection
         * Application Listeners
         * Logging
         * Loading config files (i.e. `.properties`, `.yaml`)
+    * Creating a new instance of `ApplicationContext`:
+        * Variants of the `ApplicationContext` exist within Spring:
+            * `FileSystemXmlApplicationContext`
+            * `ClassPathXmlApplicationContext`
+            * `AnnotationConfigApplicationContext`
+        * In most application scenarios, explicit user code is not required to instantiate one or more instances of a Spring IoC container:
+            * However, one could set up an application context in the following way:
+                ```java
+                    ApplicationContext context = new FileSystemXmlApplicationContext(“c:/knight.xml”); 
+                    ApplicationContext context = new ClassPathXmlApplicationContext(“knight.xml”); 
+                    ApplicationContext context = new AnnotationConfigApplicationContext( com.springinaction.knights.config.KnightConfig.class);
+                ```
+            * Further [examples](https://www.geeksforgeeks.org/spring-applicationcontext/) of standing up application contexts
     * Note:
+        * Multiple application contexts can exist in a single Spring application:
+            * Contexts can be arranged in a parent-child hierarchy, where many child contexts can share the same parent context
         * `SpringApplication.run()` in an application's `main()` method returns an instance of `ApplicationContext`
 
 <br>
@@ -60,7 +77,7 @@
 ## <a name="1.2"></a> 1.2. Java Configuration
 
 ### <a name="1.2.1"></a> 1.2.1. Define Spring Beans using Java code
-* Spring Beans...
+* Spring Beans - see https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html#beans-definition
 * Types of DI in Spring...
 
 ### 1.2.2.

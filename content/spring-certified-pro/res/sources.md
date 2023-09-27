@@ -13,6 +13,7 @@
 ## 1. Spring Core
 * [Baeldung - Spring Intro](https://www.baeldung.com/spring-tutorial)
 * [Baeldung - Why choose Spring](https://www.baeldung.com/spring-why-to-choose)
+* [Geeks For Geeks - Application Context](https://www.geeksforgeeks.org/spring-applicationcontext/)
 * [Spring Developer - What is Spring?](https://www.youtube.com/watch?v=Spzug_SjJnM)
 * [Spring Documentation - Intro](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/overview.html)
 * [Spring Documentation - IoC Container](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html)
