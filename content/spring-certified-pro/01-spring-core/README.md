@@ -49,6 +49,10 @@
 
                 class B {
                     C c;
+
+                    public B(C c) {
+                        this.c = c;
+                    }
                 }
             ```
             * When we instantiate a dependency (`B`) of our class (`A`) with the `new` keyword, we tightly-couple the two classes together
