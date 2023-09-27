@@ -59,7 +59,7 @@
             * `FileSystemXmlApplicationContext`
             * `ClassPathXmlApplicationContext`
             * `AnnotationConfigApplicationContext`
-        * In most application scenarios, explicit user code is not required to instantiate one or more instances of a Spring IoC container:
+        * In most application scenarios, explicit user code is not required to instantiate a Spring IoC container:
             * However, one could set up an application context in the following way:
                 ```java
                     ApplicationContext context = new FileSystemXmlApplicationContext(“c:/knight.xml”); 
