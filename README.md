@@ -58,10 +58,10 @@
 <br>
 
 ## Notes
-* Spring Certified Professional (SCP): 
+* Spring Certification:
     * [VMware Spring Certified Professional](https://www.vmware.com/learning/certification/spring-certified-pro.html)
         * [Certification Overview](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/certification/vmw-spring-certified-professional.pdf)
-        * [Spring Professional Develop Exam Guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/certification/vmw-spring-professional-develop-exam-guide.pdf) <img src="https://www.wppluginsforyou.com/wp-content/uploads/2020/05/tooltips.png" width="12px" /> `No guide provided for SCP(?)`
+        * [Spring Professional Develop Exam Guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/certification/vmw-spring-professional-develop-exam-guide.pdf) <img src="https://www.wppluginsforyou.com/wp-content/uploads/2020/05/tooltips.png" width="12px" /> closest exam guide
         * [Spring Core Training](https://mylearn.vmware.com/gw/learning/course/course-details/94106)
 * Spring Guru Udemy Course: 
     * [Spring Framework 5 - Beginner to Guru](https://www.udemy.com/course/spring-framework-5-beginner-to-guru/)
