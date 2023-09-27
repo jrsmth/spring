@@ -48,9 +48,9 @@
                     C c;
                 }
             ```
-            * When we instantiate a dependency (Class `B`) of our class (Class `A`) with the `new` keyword, we tightly-couple the two classes together
-            * This is because the depedent class `A` must explicitly know of the dependency's (`B`'s) implementation in order to instantiate it (i.e how to provide Class `C`, etc)
-            * As a result, changes to the `B`'s implementation risks breaking the composite Class `A` that uses it
+            * When we instantiate a dependency (class `B`) of our class (class `A`) with the `new` keyword, we tightly-couple the two classes together
+            * This is because the depedent class `A` must explicitly know of the dependency's (`B`'s) implementation in order to instantiate it (i.e how to provide class `C`, etc)
+            * As a result, changes to the `B`'s implementation risks breaking the composite class `A` that uses it
                 * If `C` was removed from `B`, it would break our `A` as `B b = new B(c)` would no longer be valid
             * The ability for `A` to use `B` without being concerned with its implementation is the greatest benefit of DI:
                 * Allowing us to unit test `A` by mocking out `B`, reuse `B` across our application easily and make changes to `B`'s implementation without affecting `A` (providing the 'interface' that `A` interacts with remains unchanged)
