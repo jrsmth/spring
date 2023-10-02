@@ -138,7 +138,6 @@
                     ...
                 }
             ```
-            * This can be applied to the main app class as `@SpringBootApplication` 
     * Annotation-based:
         * Introduced in Spring 3 (after annotations were added with Java 5)
         * Spring Beans are located via 'Component Scans', that search for the following class-level annotations:
