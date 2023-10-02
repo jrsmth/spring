@@ -131,7 +131,14 @@
         * This `*.xml` lives in our `/resources` and at minimum contains the bean name and a reference pointing to the class that it represents:
             * Bean names are defined using lowercase followed by camelcase - e.g `myExampleBean`
         * `@ImportResources` is applied to a class marked with `@Configuration` to include the XML config in the Component Scan:
-            * `@ImportResources` can be applied to the main app class as `@SpringBootApplication` = `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
+            ```java
+                @SpringBootApplication // = `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
+                @ImportResource("classpath:beans.xml") // *.xml is arbitrary
+                class MyApplication {
+                    ...
+                }
+            ```
+            * This can be applied to the main app class as `@SpringBootApplication` 
     * Annotation-based:
         * Introduced in Spring 3 (after annotations were added with Java 5)
         * Spring Beans are located via 'Component Scans', that search for the following class-level annotations:
