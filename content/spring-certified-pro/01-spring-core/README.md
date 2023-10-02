@@ -125,14 +125,14 @@
 
                 <!-- Example Bean 2 -->
                 <bean id="app" class="App" lazy-init="true"></bean>
-                <!-- Lazy-init tells the IoC container to only instantiate the bean when it is first requested, rather than at start-up -->
+                <!-- Lazy-init tells IoC container to only instantiate bean when first requested, rather than at start-up -->
             </beans>
         ```
-        * This is a `bean.xml`/`<PROJECT>-config.xml` that lives in our `/resources`
+        * This is a `<PROJECT>-config.xml` that lives in our `/resources`
             * In this file, all we need to specify is the name for the bean and point to the class that it represents
             * `@ImportResources` is applied to a class marked with `@Configuration` to include the XML config file in the Component Scan
                 * Note: `@ImportResources` can also be applied to the main application class (marked with `@SpringBootApplication`)
-                    * Reminder: `@SpringBootApplication` is equivalent to `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
+                    * `@SpringBootApplication` = `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
     * Annotation-based:
         * Introduced in Spring 3 (after annotations were added with Java 5)
         * Spring Beans are located via 'Component Scans' for class-level annotations:
