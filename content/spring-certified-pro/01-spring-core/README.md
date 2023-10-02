@@ -128,15 +128,15 @@
                 <!-- Lazy-init tells IoC container to only instantiate bean when first requested, rather than at start-up -->
             </beans>
         ```
-        * This is a `<PROJECT>-config.xml` that lives in our `/resources`
-            * In this file, all we need to specify is the name for the bean and point to the class that it represents
-            * `@ImportResources` is applied to a class marked with `@Configuration` to include the XML config file in the Component Scan
-                * Note: `@ImportResources` can also be applied to the main application class (marked with `@SpringBootApplication`)
-                    * `@SpringBootApplication` = `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
+        * This `*.xml` lives in our `/resources` and at minimum contains the bean name (defined using lowercase followed by camelcase) and a reference pointing to the class that it represents
+        * `@ImportResources` is applied to a class marked with `@Configuration` to include the XML config in the Component Scan:
+            * `@ImportResources` can be applied to the main application class because:
+                * `@SpringBootApplication` = `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
     * Annotation-based:
         * Introduced in Spring 3 (after annotations were added with Java 5)
-        * Spring Beans are located via 'Component Scans' for class-level annotations:
-            * Such as: `@Component`, `@Controller`, `@Service`, `@Repository`
+        * Spring Beans are located via 'Component Scans', that search for the following class-level annotations:
+            * `@Component`
+            * Stereotypes: `@Controller`, `@Service`, `@Repository`
         ```java
             @Service // Such 'stereotypes' are scanned by Spring and an @Bean is created implicity
             class MyService {
@@ -170,7 +170,7 @@
         * i.e. you don't have the ability to mark a class with `@Component` and scan it within your own packages
         * Example: using `ObjectMapper`, `RestTemplate`, etc
     * Annotation (`@Component`, Stereotypes):
-        * Typically used if you own the code and as such you can pick up an `@Component` (etc) annotation with a component scan of your application
+        * Typically used if you own the code and as such you can pick up `@Component` (etc) with a scan of your packages
 
 <br>
 
