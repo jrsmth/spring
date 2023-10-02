@@ -151,7 +151,7 @@
         ```
     * Java-based:
         * Introduced in Spring 3
-        * Java classes are used to define Beans
+        * Java classes are used to define Beans:
             * Such 'configuration' classes are annotated with `@Configuration`
             * Methods are used to return Spring Beans and are marked with `@Bean`
         ```java
@@ -171,12 +171,15 @@
 * Deciding upon a Bean Configuration method:
     * XML:
         * Typically used for legacy applications, where Java/Annotation-based definitions are not supported
+    * Annotation (`@Component`, Stereotypes):
+        * Typically used if you own the code and as such you can pick up `@Component` (etc) with a scan of your packages
     * Java (`@Configuration`, `@Bean`):
         * Typically used if you do not own the code
         * i.e. you don't have the ability to mark a class with `@Component` and scan it within your own packages
         * Example: using `ObjectMapper`, `RestTemplate`, etc
-    * Annotation (`@Component`, Stereotypes):
-        * Typically used if you own the code and as such you can pick up `@Component` (etc) with a scan of your packages
+        * Note:
+            * `final` classes cannot be marked with `@Configuration` because such config classes are extended by the Spring Container:
+                * This would otherwise breach the restriction on inheritance for `final` classes
 
 <br>
 
