@@ -101,8 +101,81 @@
 ## <a name="1.2"></a> 1.2. Java Configuration
 
 ### <a name="1.2.1"></a> 1.2.1. Define Spring Beans using Java code
-* Spring Beans - see https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html#beans-definition
-* Types of DI in Spring...
+* Spring Beans:
+    * As mentioned above, a Spring Bean is an object that is managed by the IoC Container for the purpose of dependency injection
+* Beans are created with configuration metadata that is supplied in three main forms:
+    * XML-based:
+        * Introduced in Spring 2
+        * Still used in legacy apps but modern apps favour annotation/Java-based for readability and flexibility
+        ```xml
+            <?xml version="1.0" encoding="UTF-8"?>
+            <beans xmlns="http://www.springframework.org/schema/beans"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:context="http://www.springframework.org/schema/context"
+                xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            
+                <!-- Example Bean 1 -->
+                <bean id="..." class="...">
+                    <!-- dependencies and configuration for this bean go here -->
+                </bean>
+
+                <!-- Example Bean 2 -->
+                <bean id="app" class="App" lazy-init="true"></bean>
+                <!-- Lazy-init tells the IoC container to only instantiate the bean when it is first requested, rather than at start-up -->
+            </beans>
+        ```
+        * This is a `bean.xml`/`<PROJECT>-config.xml` that lives in our `/resources`
+            * In this file, all we need to specify is the name for the bean and point to the class that it represents
+            * `@ImportResources` is applied to a class marked with `@Configuration` to include the XML config file in the Component Scan
+                * Note: `@ImportResources` can also be applied to the main application class (marked with `@SpringBootApplication`)
+                    * Reminder: `@SpringBootApplication` is equivalent to `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`
+    * Annotation-based:
+        * Introduced in Spring 3 (after annotations were added with Java 5)
+        * Spring Beans are located via 'Component Scans' for class-level annotations:
+            * Such as: `@Component`, `@Controller`, `@Service`, `@Repository`
+        ```java
+            @Service // Such 'stereotypes' are scanned by Spring and an @Bean is created implicity
+            class MyService {
+                ...
+            }
+        ```
+    * Java-based:
+        * Introduced in Spring 3
+        * Java classes are used to define Beans
+            * Such 'configuration' classes are annotated with `@Configuration`
+            * Methods are used to return Spring Beans and are marked with `@Bean`
+        ```java
+            @Configuration // tells Spring that we are defining @Bean's here
+            public class Config {
+
+                @Bean // This creates an ObjectMapper bean that can be injected throughout our app
+                public ObjectMapper objectMapper() {
+                    return new ObjectMapper();
+                }
+            }
+        ```
+    * Extra - Groovy-based:
+        * Introduced in Spring 4
+        * Beans can be defined via a Groovy DSL
+        * Borrowed from Grails; which is a framework built on top of Spring (using Groovy)
+* Deciding upon a Bean Configuration method:
+    * XML:
+        * Typically used for legacy applications, where Java/Annotation-based definitions are not supported
+    * Java (`@Configuration`, `@Bean`):
+        * Typically used if you do not own the code
+        * i.e. you don't have the ability to mark a class with `@Component` and scan it within your own packages
+        * Example: using `ObjectMapper`, `RestTemplate`, etc
+    * Annotation (`@Component`, Stereotypes):
+        * Typically used if you own the code and as such you can pick up an `@Component` (etc) annotation with a component scan of your application
+
+<br>
 
 ### 1.2.2.
+* inc Types of DI in Spring... constructor, method, field
+    https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html#beans-dependencies
+* manual get beans from Context
 * ...
