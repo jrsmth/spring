@@ -177,9 +177,14 @@
         * Typically used if you do not own the code
         * i.e. you don't have the ability to mark a class with `@Component` and scan it within your own packages
         * Example: using `ObjectMapper`, `RestTemplate`, etc
-        * Note:
-            * `final` classes cannot be marked with `@Configuration` because such config classes are extended by the Spring Container:
-                * This would otherwise breach the restriction on inheritance for `final` classes
+        * Note: `final` classes cannot be marked with `@Configuration` because such config classes are extended by the Spring Container:
+            * This would otherwise breach the restriction on inheritance for `final` classes
+
+<!-- What does the @Bean annotation do?
+
+What is the default bean id if you only use @Bean? How can you override this?
+
+Anymore? -->
 
 <br>
 
