@@ -251,3 +251,135 @@
                     }
                 }
             ```
+
+<br>
+
+### <a name="1.2.3"></a> 1.2.3. Handle Multiple Configuration Files
+* As the bean configuration for your application grows, it may become beneficial to modularise config for reuse and clarity
+* This can be done by partitioning bean definitions into multiple `@Configuration` classes, as below:
+    ```java
+        // Before - monolithic configuration
+        @Configuration
+        public class AppConfig {
+            @Bean
+            public ServiceA serviceA() { ... }
+
+            @Bean
+            public ServiceB serviceB() { ... }
+
+        // assume many bean definitions follow
+        }
+
+        // After - partitioned configuration
+        @Configuration
+        public class AppConfigA {
+            @Bean
+            public ServiceA serviceA() { ... }
+        }
+
+        @Configuration
+        public class AppConfigB {
+            @Bean
+            public ServiceB serviceB() { ... }
+        }
+    ```
+    * Note, we can retrieve the beans in the monolithic and partioned config in the same way:
+        ```java
+            // Before - Monolithic AppConfig
+            JavaConfigApplicationContext context = new JavaConfigApplicationContext(AppConfig.class);
+            ServiceA serviceA = context.getBean(ServiceA.class);
+            ServiceB serviceB = context.getBean(ServiceB.class);
+
+            // After - Partitioned Config A & B
+            JavaConfigApplicationContext context = new JavaConfigApplicationContext(AppConfigA.class, AppConfigB.class);
+            // Note :: we supply a String varargs of @Configuration classes to the constructor
+            ServiceA serviceA = context.getBean(ServiceA.class);
+            ServiceB serviceB = context.getBean(ServiceB.class);
+        ```
+* An `@Configuration` class may need to reference a bean defined in another config class or `.xml` bean-descriptor file
+    * The preferred mechanism for this reference within an `@Configuration` class is to use `@Autowired`
+    * Example:
+        ```java
+            @Configuration
+            public class ConfigOne {
+                @Bean
+                public AccountRepository accountRepository() {
+                    // create and return an AccountRepository object
+                }
+            }
+
+            @Configuration
+            // @AnnotationDrivenConfig -> deprecated annotation?
+            public class ConfigTwo {
+                @Autowired AccountRepository accountRepository; 
+                // Note :: autowired bean from another @Configuration class (could be .xml too)
+
+                @Bean
+                public TransferService transferService() {
+                    return new TransferServiceImpl(accountRepository);
+                }
+            }
+
+            // As discussed before, these can be retrieved directly from the context if required
+            JavaConfigApplicationContext ctx = new JavaConfigApplicationContext(ConfigOne.class, ConfigTwo.class);
+            TransferService service = ctx.getBean(TransferService.class);
+         ```
+* We can aggregate `@Configuration` classes through the use of `@Import`:
+    * By importing other `@Configuration` classes into a single config file, we need only specify one config class when generating an application context
+    * Example:
+        ```java
+            @Configuration
+            public class ConfigOne { }
+
+            @Configuration
+            public class ConfigTwo { }
+
+            @Configuration
+            @Import({ ConfigOne.class, ConfigTwo.class })
+            public class ConfigThree { }
+
+            JavaConfigApplicationContext ctx = new JavaConfigApplicationContext(ConfigThree.class);
+            // rather than new JavaConfigApplicationContext(ConfigOne.class, ConfigTwo.class, ConfigThree.class);
+        ```
+* Multiple `.xml` bean descriptor files:
+    * Similarly, when working with `.xml` bean config, we want to partition definitions as the application grows
+    * Consider:
+        ```xml
+            <!-- database-config.xml :: containing database-related config only -->
+            <beans xmlns="http://www.springframework.org/schema/beans"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.springframework.org/schema/beans/http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        
+            <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+                <property name="driverClassName">
+                    <value>com.mysql.jdbc.Driver</value>
+                </property>
+                <property name="url">
+                    <value>jdbc:mysql://localhost:3306/java2novice</value>
+                </property>
+                <property name="username"><value>root</value></property>
+                <property name="password"><value>password</value></property>
+            </bean>
+        </beans>
+
+        <!-- bean-config.xml :: containing all beans across the application only -->
+        <beans xmlns="http://www.springframework.org/schema/beans" 
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.springframework.org/schema/beans/http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+ 
+            <bean id="appDao" class="com.java2novice.beans.MyAppDao" />
+            <bean id="empEntity" class="com.java2novice.beans.Employee" />
+            <bean id="companyBean" class="com.java2novice.beans.Company" />
+        </beans> <!-- Note :: we could further partition beans into separate files and import them here -->
+
+        <!-- application-context.xml :: imports all configuration, i.e beans and jdbc config -->
+        <beans xmlns="http://www.springframework.org/schema/beans"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.springframework.org/schema/beans/http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+            <import resource="bean-config.xml" />
+            <import resource="database-config.xml" />
+        </beans>
+        ```
+
+* Then 1.2.4...
