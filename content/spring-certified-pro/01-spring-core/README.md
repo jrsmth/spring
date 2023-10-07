@@ -154,6 +154,7 @@
         * Java classes are used to define Beans:
             * Such 'configuration' classes are annotated with `@Configuration`
             * Methods are used to return Spring Beans and are marked with `@Bean`
+            * The default bean id is the method's name but this can be overriden with `@Bean(name=”name”)` or `@Bean(“name”)`
         ```java
             @Configuration // tells Spring that we are defining @Bean's here
             public class Config {
@@ -180,16 +181,73 @@
         * Note: `final` classes cannot be marked with `@Configuration` because such config classes are extended by the Spring Container:
             * This would otherwise breach the restriction on inheritance for `final` classes
 
-<!-- What does the @Bean annotation do?
-
-What is the default bean id if you only use @Bean? How can you override this?
-
-Anymore? -->
-
 <br>
 
-### 1.2.2.
-* inc Types of DI in Spring... constructor, method, field
-    https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html#beans-dependencies
-* manual get beans from Context
-* ...
+### <a name="1.2.2"></a> 1.2.2. Access Beans in the Application Context
+* Types of dependency injection in Spring:
+    * Constructor-based:
+        * Here, DI is instigated by Spring on the basis of a class' constructor arguments
+            * Example:
+                ```java
+                    // @Controller -> marks 'Controller' as a bean for injection elsewhere
+                    public class Controller {
+
+                        private Service Service;
+
+                        public Controller(Service service) {
+                            this.service = service;
+                        }
+                    }
+                ```
+            * Without any additional code, Spring takes this POJO and will instantiate a `Service` bean for us (provided it is picked up in the Component Scan) and provide an instance of it to the constructor of `Controller` when we come to use it at runtime
+    * Field-based:
+        * Here, we mark the fields of a class that we wish to have injected with the `@Autowired` annotation
+            * Otherwise referred to as 'Property-base' dependency injection
+            * Example:
+                ```java
+                    // @Controller -> marks 'Controller' as a bean for injection elsewhere
+                    public class Controller {
+
+                        @Autowired
+                        private Service Service;
+                    }
+                ```
+    * Setter-based:
+        * Here, the `@Autowired` annotation is applied a setter method
+            * Example:
+                ```java
+                    // @Controller -> marks 'Controller' as a bean for injection elsewhere
+                    public class Controller {
+
+                        private Service Service;
+
+                        @Autowired
+                        public void setService(Service service) {
+                            this.service = service;
+                        }
+                    }
+                ```
+* `@Autowired`:
+    * 'Autowiring' is the process by which an instance of a bean is injected into the desired field of another bean
+    * The `@Autowired` annotation marks that desired field for dependency injection at runtime
+* Constructor-based vs Property-based Injection:
+    * It is more idomatic Spring to write classes with constructor-based dependency injection:
+        * Dependencies are clearly identifiable
+        * Dependencies can be final
+        * Dependencies can be mocked in testing, without tricks like reflection
+* How to manually get Beans from the Application Context:
+    * Instances of the `ApplicationContext` offer us a `getBean()` method that can be used to explicitly retrieve beans from the IoC Container
+    * One way to get hold of the context is to use the return value from `SpringApplication.run()` in your 'main app' class
+    * Syntax: `contextInstance.getBean(<ClassName>.class)`
+        * Example:
+            ```java
+                @SpringBootApplication
+                public class MyApplication {
+
+                    public static void main(String[] args) {
+                        ApplicationContext ctx = SpringApplication.run(MyApplication.class, args);
+
+                        ctx.getBean(MyClass.class)
+                    }
+                }
+            ```
