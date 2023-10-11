@@ -450,7 +450,7 @@
                 ```
             * Setter-based Injection:
                 * In the absence of `@Lazy`, setter-based D.I is recommended because it too ensures that dependencies are not injected until they are needed
-                    * See [1.2.2](#1.2.2)
+                    * See [1.2.2](#1.2.2) ("Setter-based")
             * `@PostConstruct`:
                 * Example:
                     ```java
