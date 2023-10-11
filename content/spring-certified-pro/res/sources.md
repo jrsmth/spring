@@ -13,8 +13,10 @@
 ## 1. Spring Core
 * [Baeldung - Spring Intro](https://www.baeldung.com/spring-tutorial)
 * [Baeldung - Why choose Spring](https://www.baeldung.com/spring-why-to-choose)
+* [Baeldung - Circular Dependencies](https://www.baeldung.com/circular-dependencies-in-spring)
 * [Edcuba - Dependency Injection in Spring](https://www.educba.com/dependency-injection-in-spring/)
 * [Geeks For Geeks - Application Context](https://www.geeksforgeeks.org/spring-applicationcontext/)
+* [Geeks For Geeks - Circular Dependencies](https://www.geeksforgeeks.org/circular-dependencies-in-spring/)
 * [Java 2 Novice - Multiple Spring Bean Configuration Files](https://www.java2novice.com/spring/multiple-spring-bean-config-files/)
 * [Medium - Omar Elgabrys: Headstart on Bean Config](https://medium.com/omarelgabrys-blog/spring-a-head-start-beans-configuration-part-2-4a8c239b070a)
 * [Spring Developer - What is Spring?](https://www.youtube.com/watch?v=Spzug_SjJnM)
@@ -26,3 +28,4 @@
 * [Stack Overflow - What are DI and IoC?](https://stackoverflow.com/questions/9403155/what-is-dependency-injection-and-inversion-of-control-in-spring-framework)
 * [Stack Overflow - What in the world are Spring Beans?](https://stackoverflow.com/questions/17193365/what-in-the-world-are-spring-beans)
 * [Stack Overflow - Autowire on Properties vs Constructor](https://stackoverflow.com/questions/40620000/spring-autowire-on-properties-vs-constructor)
+* [Stack Overflow - Circular Dependency in Spring](https://stackoverflow.com/questions/3485347/circular-dependency-in-spring)

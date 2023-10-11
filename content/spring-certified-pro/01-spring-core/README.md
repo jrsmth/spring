@@ -382,4 +382,90 @@
         </beans>
         ```
 
-* Then 1.2.4...
+<br>
+
+### <a name="1.2.4"></a> 1.2.4. Handle Dependencies between Beans
+* Handling circular dependencies in Spring:
+    * In its simplest form, circular dependency is where one bean has a dependency on another bean and this second bean has a dependency on the first
+    * Example:
+        ```java
+            package circular;
+
+            public class CircularA {
+
+                private CircularB circularB;
+
+                public CircularA(CircularB circularB) {
+                    this.circularB = circularB;
+                }
+
+            }
+
+            package circular;
+
+            public class CircularB {
+
+                private CircularA circularA;
+
+                public CircularB(CircularA circularA) {
+                    this.circularA = circularA;
+                }
+
+            }
+        ```
+        ```xml
+            <bean id="circularA" class="circular.CircularA">
+                <property name="circularB" ref="circularB" />
+            </bean>
+
+            <bean id="circularB" class="circular.CircularB">
+                <property name="circularA" ref="circularA" />
+            </bean>
+        ```
+    * This leads to problematic instantiation, with Spring unable to inject each dependency, as they have not been initialised yet:
+        *   When the Spring context is loaded, the following error will be raised:
+            ```java
+                BeanCurrentlyInCreationException: Error creating bean with name 'circularA':
+                    Requested bean is currently in creation: Is there an unresolvable circular reference?
+            ```
+    * Solutions:
+        * Redesign: 
+            * When circular dependencies arise, it’s likely that there is a design issue and that responsibilities are not well separated
+        * `@Lazy`:
+            * The `@Lazy` annotation informs Spring that a dependency should only be injected when it is required:
+                * In the meantime, a proxy is injected in its place
+            * Here, we mark on our class' constructor parameters with `@Lazy` to ensure an attempt to fully initialise `CircularA` is not made
+                * This allows `CircularB` to instantiated normally
+            * Example:
+                ```java
+                    public class CircularA {
+
+                        private CircularB circularB;
+
+                        public CircularDependencyA(@Lazy CircularB circularB) {
+                            this.circularB = circularB;
+                        }
+
+                    }
+                ```
+            * Setter-based Injection:
+                * In the absence of `@Lazy`, setter-based D.I is recommended because it too ensures that dependencies are not injected until they are needed
+            * `@PostConstruct`:
+                * Example:
+                    ```java
+                        public class CircularA {
+
+                            @Autowired
+                            private CircularB circularB;
+
+                            @PostConstruct
+                            public void init() {
+                                circularB.setCircularA(this);
+                            }
+
+                            public CircularB getCircularB() {
+                                return circularB;
+                            }
+                        }
+                    ```
+                * This annotation is discussed further in [1.4.3](#1.2.1)
