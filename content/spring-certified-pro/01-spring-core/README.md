@@ -468,4 +468,4 @@
                             }
                         }
                     ```
-                * This annotation is discussed further in [1.4.3](#1.2.1)
+                * This annotation is discussed further in [1.4.3](#1.4.3)
