@@ -470,3 +470,68 @@
                         }
                     ```
                 * This annotation is discussed further in [1.4.3](#1.4.3)
+
+<br>
+
+### <a name="1.2.5"></a> 1.2.5. Explain and define Bean Scopes
+* What is Bean Scope?
+    * The scope of a bean defines its lifecycle and visibility in the contexts in which we use it:
+        * This involves how many instances of a bean can be created, when the instantiation will occur and how long those instances will live
+    * There are 6 types of Bean Scope:
+        * Singleton (the default scope)
+        * Prototype
+        * "Web-aware Scopes": only available in a web-aware application context
+            * Request
+            * Session
+            * Application
+            * WebSocket
+* Scope Types:
+    * Singleton Scope:
+        * A bean marked as 'singleton' only ever has a single instance created in the container
+        * Example:
+            ```java
+                @Bean
+                @Scope("singleton")
+                public Person personSingleton() {
+                    return new Person();
+                }
+            ```
+    * Prototype Scope:
+        * A bean with the 'prototype' scope will return a different instance every time it is requested from the container
+        * Example: see 'singleton' above and substitute: `@Scope("prototype")`
+    * Request Scope:
+        * Creates a bean instance for a single HTTP request
+        * Example:
+            ```java
+                @Bean
+                // Note :: proxy mode set to inject proxy when no active request at instantiation-time
+                // @Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
+                @RequestScope // ^equivalent
+                public HelloMessageGenerator requestScopedBean() {
+                    return new HelloMessageGenerator();
+                }
+            ```
+    * Session Scope:
+        * Creates a bean instance for an HTTP session
+        * Example: see 'request' above and substitute: `@SessionScope`
+    * Application Scope:
+        * Creates a bean instance for the lifecyle of a `ServletContext`
+        * Note, 'application' scope is comparable with 'singleton' insofar as you have one bean per `ServletContext`:
+            * It differs in that, with 'application' scope, a bean instance is shared across multiple servlet-based application running in the same `ServletContext`; by comparison, 'singleton' scoped beans occur once in the whole application context
+        * Example: see 'request' above and substitute: `@SessionScope`
+    * Websocket Scope:
+        * Create a bean instance for a particular `WebSocket` session
+        * It can be said that 'websocket'-scoped beans exhibit 'singleton' behaviour but only limited to a single `WebSocket` session
+* Bean instantiation techniques:
+    * Eager-loading: instantiation occurs immeadiately, with the instance ready before it is first requested
+        * 'Singleton'-scoped beans default to eager initialisation
+        * As 'singleton' is the default `@Bean` scope, eager-initialisation can be considered default too
+    * Lazy-loading: instantiation is deferred until the bean is requested for the first time
+        * 'Prototype'-scoped beans default to lazy initialisation
+        * Beans can be configured as lazy with the `@Lazy` annotation:
+            * This can be applied to:
+                * Methods marked with `@Bean`, that are defined inside `@Configuration` classes
+                * Classes marked with `@Configuration` themselves, such that all beans in the class will share annotation
+                * Classes marked with `@Component`, or related Stereotype annotation, as this signals to the Component Scan that the class itself is a bean
+
+<!-- 1.3 -->

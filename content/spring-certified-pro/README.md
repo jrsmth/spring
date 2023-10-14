@@ -33,6 +33,10 @@ mindmap
     * [1.1. Introduction to Spring Framework](./01-spring-core/#1.1)
     * [1.2. Java Configuration](./01-spring-core/#1.2)
         * [1.2.1. Define Spring Beans using Java code](./01-spring-core/#1.2.1)
+        * [1.2.2. Access Beans in the Application Context](./01-spring-core/#1.2.2)
+        * [1.2.3. Handle Multiple Configuration Files](./01-spring-core/#1.2.3)
+        * [1.2.4. Handle Dependencies between Beans](./01-spring-core/#1.2.4)
+        * [1.2.5. Explain and define Bean Scopes](./01-spring-core/#1.2.5)
 * [2. Data Management](../02-data-management)
 
 <br>
